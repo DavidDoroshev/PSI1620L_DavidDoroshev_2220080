@@ -4,12 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Trabalho_Marcações
+namespace Trabalho_marcacoes_novo
 {
     static class Program
     {
         /// <summary>
-        /// Ponto de entrada principal para o aplicativo.
+        /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
