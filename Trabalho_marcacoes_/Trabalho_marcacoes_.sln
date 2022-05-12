@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trabalho_marcacoes_", "Trabalho_marcacoes_\Trabalho_marcacoes_.csproj", "{3EF441AE-4239-4AC1-92E2-D22C951EA6C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EF441AE-4239-4AC1-92E2-D22C951EA6C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EF441AE-4239-4AC1-92E2-D22C951EA6C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EF441AE-4239-4AC1-92E2-D22C951EA6C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EF441AE-4239-4AC1-92E2-D22C951EA6C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89435136-4605-4FF7-8C5C-FF8A7E2E95FF}
+	EndGlobalSection
+EndGlobal
