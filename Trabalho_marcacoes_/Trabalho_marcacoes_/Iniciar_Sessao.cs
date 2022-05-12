@@ -14,8 +14,8 @@ namespace Trabalho_marcacoes_
 {
     public partial class Iniciar_Sessao : Form
     {
-        //public static string connectionString = ConfigurationManager.ConnectionStrings["cnPSI"].ConnectionString;
-        //public static SqlConnection ligarDB = new SqlConnection(connectionString);
+        private static string connectionString = ConfigurationManager.ConnectionStrings["ligarDB"].ConnectionString;
+        private static SqlConnection ligarDB = new SqlConnection(connectionString);
 
         public Iniciar_Sessao()
         {
@@ -24,29 +24,29 @@ namespace Trabalho_marcacoes_
 
         private void entrar_menu_Click(object sender, EventArgs e)
         {
-            //ligarDB.Open();
+            ligarDB.Open();
 
-            //string query = "SELECT * FROM cliente WHERE nome = '" + nome_entrar.Text + "' AND password= '" + password_entrar.Text + "' ";
-            //SqlDataAdapter dp = new SqlDataAdapter(query, ligarDB);
-            //DataTable dt = new DataTable();
-            //dp.Fill(dt);
-            //ligarDB.Close();
+            string query = "SELECT * FROM cliente WHERE nome = '" + nome_entrar.Text + "' AND password= '" + password_entrar.Text + "' ";
+            SqlDataAdapter dp = new SqlDataAdapter(query, ligarDB);
+            DataTable dt = new DataTable();
+            dp.Fill(dt);
+            ligarDB.Close();
 
-            //if (dt.Rows.Count == 1)
-            //{
+            if (dt.Rows.Count == 1)
+            {
 
-            //    Form2 principal = new Form2();
-            //    this.Hide();
-            //    principal.Show();
-            //}
-            //else
-            //{
+                Form2 principal = new Form2();
+                this.Hide();
+                principal.Show();
+            }
+            else
+            {
 
-            //    MessageBox.Show("Nome ou a Password está incorreta", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    nome_entrar.Text = "";
-            //    password_entrar.Text = "";
-            //    nome_entrar.Select();
-            //}
+                MessageBox.Show("Nome ou a Password está incorreta", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                nome_entrar.Text = "";
+                password_entrar.Text = "";
+                nome_entrar.Select();
+            }
         }
 
         private void nome_entrar_TextChanged(object sender, EventArgs e)

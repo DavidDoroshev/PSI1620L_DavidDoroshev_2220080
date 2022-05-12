@@ -13,15 +13,20 @@ using System.Windows.Forms;
 namespace Trabalho_marcacoes_
 {
     
-    public partial class Form1 : Form
+    public partial class Form1 : Form 
     {
-        private static string connectionString = ConfigurationManager.ConnectionStrings["cnPSI"].ConnectionString;
-        private static SqlConnection ligarDB = new SqlConnection(connectionString);
+        static string _connectionString = ConfigurationManager.ConnectionStrings["ligarDB"].ConnectionString;
+        static SqlConnection db = new SqlConnection(_connectionString);
 
         public Form1()
         {
+            try
+            {
+                db.Open();
+            }
+            catch (Exception) { }
             InitializeComponent();
-            iniciar_botoa.Select();
+            
         }
 
         private void iniciar_botoa_Click(object sender, EventArgs e)

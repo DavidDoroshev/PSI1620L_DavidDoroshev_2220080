@@ -36,6 +36,7 @@ namespace Trabalho_marcacoes_
             this.password_guardar = new System.Windows.Forms.TextBox();
             this.guardar_cliente = new System.Windows.Forms.Button();
             this.voltar_iniciar = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -101,11 +102,21 @@ namespace Trabalho_marcacoes_
             this.voltar_iniciar.UseVisualStyleBackColor = true;
             this.voltar_iniciar.Click += new System.EventHandler(this.voltar_iniciar_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(134, 197);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 8;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.voltar_iniciar);
             this.Controls.Add(this.guardar_cliente);
             this.Controls.Add(this.password_guardar);
@@ -131,5 +142,6 @@ namespace Trabalho_marcacoes_
         private System.Windows.Forms.TextBox password_guardar;
         private System.Windows.Forms.Button guardar_cliente;
         private System.Windows.Forms.Button voltar_iniciar;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -38,7 +38,7 @@ namespace Trabalho_marcacoes_
             // 
             // entrar_menu
             // 
-            this.entrar_menu.Location = new System.Drawing.Point(351, 73);
+            this.entrar_menu.Location = new System.Drawing.Point(369, 63);
             this.entrar_menu.Name = "entrar_menu";
             this.entrar_menu.Size = new System.Drawing.Size(170, 74);
             this.entrar_menu.TabIndex = 0;

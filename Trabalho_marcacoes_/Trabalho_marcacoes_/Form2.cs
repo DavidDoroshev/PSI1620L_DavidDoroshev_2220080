@@ -13,7 +13,9 @@ namespace Trabalho_marcacoes_
 {
     public partial class Form2 : Form
     {
-        
+        static string connectionString = ConfigurationManager.ConnectionStrings["ligarDB"].ConnectionString;
+        static SqlConnection ligarDB = new SqlConnection(connectionString);
+
 
         public Form2()
         {
@@ -39,12 +41,13 @@ namespace Trabalho_marcacoes_
         {
             SqlCommand command = new SqlCommand();
 
-            command.Connection = conexao;
+            command.Connection = ligarDB;
 
             command.CommandText = "SELECT * FROM filmes WHERE Nome = @nome";
-            command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = valor_selecionado;
-
-            conexao.Open();
+            command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = nome_guardar;
+            command.Parameters.Add("@password", System.Data.SqlDbType.VarChar).Value = password_guardar;
+            command.Parameters.Add("@codigo_postal_cliente", System.Data.SqlDbType.VarChar).Value = password_guardar;
+            ligarDB.Open();
 
             SqlDataReader commandReader = command.ExecuteReader();
             commandReader.Read();
@@ -56,6 +59,11 @@ namespace Trabalho_marcacoes_
             Form1 voltar = new Form1();
             voltar.Show();
             this.Hide();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
