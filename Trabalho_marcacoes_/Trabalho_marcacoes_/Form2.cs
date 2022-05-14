@@ -82,8 +82,25 @@ namespace Trabalho_marcacoes_
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ligarDB.Open();
 
+            try
+            {
 
+                SqlCommand postal = new SqlCommand("select (distrito_codigo) from codigo_postal ");
+                SqlDataReader reader;
+                reader = postal.ExecuteReader();
+                DataTable dtc = new DataTable();
+                dtc.Columns.Add("codigo_postal", typeof(string));
+                dtc.Load(reader);
+                comboBox1.ValueMember = "distrito_codigo";
+                comboBox1.DataSource = dtc;
+
+            }
+            catch (Exception)
+            {
+
+            }
 
 
 
