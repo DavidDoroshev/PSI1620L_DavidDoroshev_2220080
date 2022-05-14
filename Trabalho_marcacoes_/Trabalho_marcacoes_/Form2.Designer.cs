@@ -72,7 +72,7 @@ namespace Trabalho_marcacoes_
             this.nome_guardar.Name = "nome_guardar";
             this.nome_guardar.Size = new System.Drawing.Size(100, 22);
             this.nome_guardar.TabIndex = 4;
-            this.nome_guardar.TextChanged += new System.EventHandler(this.nome_guardar_TextChanged);
+
             // 
             // password_guardar
             // 
@@ -80,7 +80,7 @@ namespace Trabalho_marcacoes_
             this.password_guardar.Name = "password_guardar";
             this.password_guardar.Size = new System.Drawing.Size(100, 22);
             this.password_guardar.TabIndex = 5;
-            this.password_guardar.TextChanged += new System.EventHandler(this.password_guardar_TextChanged);
+
             // 
             // guardar_cliente
             // 
