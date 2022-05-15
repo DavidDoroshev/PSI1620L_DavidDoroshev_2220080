@@ -35,6 +35,8 @@ namespace Trabalho_marcacoes_
                     comboBox1.Items.Add(reader["codigo_postal"].ToString());
                 }
                 ligarDB.Close();
+
+                textconselho.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -75,6 +77,16 @@ namespace Trabalho_marcacoes_
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void textconselho_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textdistrito_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
