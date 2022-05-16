@@ -35,7 +35,7 @@ namespace Trabalho_marcacoes_
             if (dt.Rows.Count == 1)
             {
 
-                Form2 principal = new Form2();
+                Menu principal = new Menu();
                 this.Hide();
                 principal.Show();
             }

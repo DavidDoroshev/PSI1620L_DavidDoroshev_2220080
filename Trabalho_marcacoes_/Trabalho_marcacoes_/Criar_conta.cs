@@ -22,6 +22,7 @@ namespace Trabalho_marcacoes_
             try
             {
                 ligarDB.Open();
+
                 InitializeComponent();
                 SqlCommand command = new SqlCommand();
                 command.Connection = ligarDB;
@@ -34,9 +35,11 @@ namespace Trabalho_marcacoes_
                 {
                     comboBox1.Items.Add(reader["codigo_postal"].ToString());
                 }
+
                 ligarDB.Close();
 
                 textconselho.Enabled = false;
+                textdistrito.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -51,17 +54,25 @@ namespace Trabalho_marcacoes_
 
         private void guardar_cliente_Click(object sender, EventArgs e)
         {
+            ligarDB.Close();
+
             ligarDB.Open();
             SqlCommand command = new SqlCommand();
 
             command.Connection = ligarDB;
 
-            command.CommandText = "SELECT * FROM codigo_postal WHERE Nome = @nome";
-            command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = nome_guardar;
-            command.Parameters.Add("@password", System.Data.SqlDbType.VarChar).Value = password_guardar;
-            command.Parameters.Add("@codigo_postal_cliente", System.Data.SqlDbType.VarChar).Value = comboBox1;
-            
+            command.CommandText = "INSERT INTO cliente(nome, password, codigo_postal_cliente) VALUES(@nome, @password, @codigo)";
+            command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = nome_guardar.Text;
+            command.Parameters.Add("@password", System.Data.SqlDbType.VarChar).Value = password_guardar.Text;
+            command.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = comboBox1.SelectedItem.ToString();
 
+            command.ExecuteNonQuery();
+
+            ligarDB.Close();
+
+            MessageBox.Show("Utilizador adicionado com sucesso");
+
+            this.Close();
             
 
 
@@ -76,7 +87,23 @@ namespace Trabalho_marcacoes_
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            SqlCommand command = new SqlCommand();
+            command.Connection = ligarDB;
+
+            ligarDB.Open();
+
+            command.CommandText = "SELECT codigo_postal, distrito, conselho FROM codigo_postal INNER JOIN distrito_tabela ON distrito_codigo = distrito_tabela.distrito INNER JOIN conselho_tabela ON conselho_distrito = conselho_tabela.conselho WHERE codigo_postal = @codigo";
+
+            command.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = comboBox1.Text;
+
+            SqlDataReader reader = command.ExecuteReader();
+            reader.Read();
+
+            string concelho = reader["conselho"].ToString();
+            string distrito = reader["distrito"].ToString();
+
+            textconselho.Text = concelho;
+            textdistrito.Text = distrito;
         }
 
         private void textconselho_TextChanged(object sender, EventArgs e)
