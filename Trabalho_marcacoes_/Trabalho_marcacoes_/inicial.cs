@@ -24,7 +24,10 @@ namespace Trabalho_marcacoes_
             {
                 db.Open();
             }
-            catch (Exception) { }
+            catch (Exception)
+            {
+
+            }
             InitializeComponent();
             
         }
@@ -45,7 +48,9 @@ namespace Trabalho_marcacoes_
 
         private void trabalhador_botao_Click(object sender, EventArgs e)
         {
-
+            trabalhador_criar ligar = new trabalhador_criar();
+            ligar.Show();
+            this.Hide();
         }
     }
 }

@@ -32,8 +32,9 @@ namespace Trabalho_marcacoes_
             reader.Read();
 
             string nome = reader["nome"].ToString();
-
             textonome.Text = nome;
+            textonome.Refresh();
+            ligarDB.Close();
         }
 
         private void Perfil_Click(object sender, EventArgs e)
@@ -49,8 +50,11 @@ namespace Trabalho_marcacoes_
         private void textonome_Click(object sender, EventArgs e)
         {
             
+        }
 
-            
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
