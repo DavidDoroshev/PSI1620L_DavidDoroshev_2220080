@@ -1,7 +1,7 @@
 ﻿
 namespace Trabalho_marcacoes_
 {
-    partial class Form1
+    partial class inicial
     {
         /// <summary>
         /// Required designer variable.

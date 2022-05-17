@@ -11,13 +11,13 @@ using Microsoft.Data.SqlClient;
 using System.Configuration;
 namespace Trabalho_marcacoes_
 {
-    public partial class Form2 : Form
+    public partial class criar_conta : Form
     {
         static string connectionString = ConfigurationManager.ConnectionStrings["ligarDB"].ConnectionString;
         static SqlConnection ligarDB = new SqlConnection(connectionString);
 
 
-        public Form2()
+        public criar_conta()
         {
             try
             {
@@ -80,7 +80,7 @@ namespace Trabalho_marcacoes_
 
         private void voltar_iniciar_Click(object sender, EventArgs e)
         {
-            Form1 voltar = new Form1();
+            inicial voltar = new inicial();
             voltar.Show();
             this.Hide();
         }

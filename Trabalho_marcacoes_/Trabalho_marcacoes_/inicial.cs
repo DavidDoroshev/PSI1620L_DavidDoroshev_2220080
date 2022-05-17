@@ -13,12 +13,12 @@ using System.Windows.Forms;
 namespace Trabalho_marcacoes_
 {
     
-    public partial class Form1 : Form 
+    public partial class inicial : Form 
     {
         static string _connectionString = ConfigurationManager.ConnectionStrings["ligarDB"].ConnectionString;
         static SqlConnection db = new SqlConnection(_connectionString);
 
-        public Form1()
+        public inicial()
         {
             try
             {
@@ -38,7 +38,7 @@ namespace Trabalho_marcacoes_
 
         private void cliente_botao_Click(object sender, EventArgs e)
         {
-            Form2 ligar = new Form2();
+            criar_conta ligar = new criar_conta();
             ligar.Show();
             this.Hide();
         }
