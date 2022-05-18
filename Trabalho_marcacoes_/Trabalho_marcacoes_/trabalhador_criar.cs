@@ -23,5 +23,10 @@ namespace Trabalho_marcacoes_
             voltar.Show();
             this.Hide();
         }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

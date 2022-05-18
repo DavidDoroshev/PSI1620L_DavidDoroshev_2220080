@@ -26,6 +26,7 @@ namespace Trabalho_marcacoes_
             ligarDB.Open();
 
             command.CommandText = "SELECT nome FROM CLIENTE";
+            textonome.Refresh();
             command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = textonome.Text;
 
             SqlDataReader reader = command.ExecuteReader();
@@ -33,7 +34,7 @@ namespace Trabalho_marcacoes_
 
             string nome = reader["nome"].ToString();
             textonome.Text = nome;
-            textonome.Refresh();
+           
             ligarDB.Close();
         }
 
