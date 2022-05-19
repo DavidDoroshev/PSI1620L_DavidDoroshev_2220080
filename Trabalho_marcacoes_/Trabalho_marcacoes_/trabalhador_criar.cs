@@ -49,12 +49,6 @@ namespace Trabalho_marcacoes_
             voltar.Show();
             this.Hide();
         }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void trabalhador_criar_Load(object sender, EventArgs e)
         {
             
@@ -105,18 +99,21 @@ namespace Trabalho_marcacoes_
 
             command.Connection = ligarDB;
 
-            command.CommandText = "INSERT INTO cliente(nome, password, codigo_postal_cliente) VALUES(@nome, @password, @codigo)";
-            //command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = nome_guardar.Text;
-            //command.Parameters.Add("@password", System.Data.SqlDbType.VarChar).Value = password_guardar.Text;
-            //command.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = comboBox1.SelectedItem.ToString();
+            command.CommandText = "INSERT INTO cliente(nome, password, codigo_postal_trabalhador, especialidade_tabela_trabalhador) VALUES(@nome, @password, @codigo_psotal, @especialidade)";
+            command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = nome_trabalhador.Text;
+            command.Parameters.Add("@password", System.Data.SqlDbType.VarChar).Value = password_trabalhador.Text;
+            command.Parameters.Add("@codigo_postal", System.Data.SqlDbType.VarChar).Value = codigo_postal_trabalhador.SelectedItem.ToString();
+            command.Parameters.Add("@especialidade", System.Data.SqlDbType.VarChar).Value = especialidade_select.SelectedItem.ToString();
 
             command.ExecuteNonQuery();
 
             ligarDB.Close();
 
-            MessageBox.Show("Utilizador adicionado com sucesso");
+            MessageBox.Show("Trabalhador adicionado com sucesso");
 
             this.Close();
         }
+
+        
     }
 }

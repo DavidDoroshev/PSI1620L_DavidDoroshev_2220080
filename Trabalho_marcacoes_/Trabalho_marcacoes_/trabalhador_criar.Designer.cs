@@ -38,13 +38,13 @@ namespace Trabalho_marcacoes_
             this.label7 = new System.Windows.Forms.Label();
             this.password_trabalhador = new System.Windows.Forms.TextBox();
             this.nome_trabalhador = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.codigo_postal_trabalhador = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.guardar_button = new System.Windows.Forms.Button();
             this.profissao_select = new System.Windows.Forms.ComboBox();
             this.especialidade_select = new System.Windows.Forms.ComboBox();
+            this.distrito_trabalhador = new System.Windows.Forms.TextBox();
+            this.conselho_trabalhador = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -126,33 +126,14 @@ namespace Trabalho_marcacoes_
             this.nome_trabalhador.Size = new System.Drawing.Size(100, 22);
             this.nome_trabalhador.TabIndex = 8;
             // 
-            // textBox4
+            // codigo_postal_trabalhador
             // 
-            this.textBox4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox4.Location = new System.Drawing.Point(376, 174);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 11;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox6.Location = new System.Drawing.Point(559, 174);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 13;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(144, 173);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 14;
+            this.codigo_postal_trabalhador.FormattingEnabled = true;
+            this.codigo_postal_trabalhador.Location = new System.Drawing.Point(147, 169);
+            this.codigo_postal_trabalhador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.codigo_postal_trabalhador.Name = "codigo_postal_trabalhador";
+            this.codigo_postal_trabalhador.Size = new System.Drawing.Size(121, 24);
+            this.codigo_postal_trabalhador.TabIndex = 14;
             // 
             // button1
             // 
@@ -197,18 +178,32 @@ namespace Trabalho_marcacoes_
             this.especialidade_select.Size = new System.Drawing.Size(121, 24);
             this.especialidade_select.TabIndex = 18;
             // 
+            // distrito_trabalhador
+            // 
+            this.distrito_trabalhador.Location = new System.Drawing.Point(375, 171);
+            this.distrito_trabalhador.Name = "distrito_trabalhador";
+            this.distrito_trabalhador.Size = new System.Drawing.Size(100, 22);
+            this.distrito_trabalhador.TabIndex = 19;
+            // 
+            // conselho_trabalhador
+            // 
+            this.conselho_trabalhador.Location = new System.Drawing.Point(566, 169);
+            this.conselho_trabalhador.Name = "conselho_trabalhador";
+            this.conselho_trabalhador.Size = new System.Drawing.Size(100, 22);
+            this.conselho_trabalhador.TabIndex = 20;
+            // 
             // trabalhador_criar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.conselho_trabalhador);
+            this.Controls.Add(this.distrito_trabalhador);
             this.Controls.Add(this.especialidade_select);
             this.Controls.Add(this.profissao_select);
             this.Controls.Add(this.guardar_button);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.codigo_postal_trabalhador);
             this.Controls.Add(this.nome_trabalhador);
             this.Controls.Add(this.password_trabalhador);
             this.Controls.Add(this.label7);
@@ -239,12 +234,12 @@ namespace Trabalho_marcacoes_
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox password_trabalhador;
         private System.Windows.Forms.TextBox nome_trabalhador;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox codigo_postal_trabalhador;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button guardar_button;
         private System.Windows.Forms.ComboBox profissao_select;
         private System.Windows.Forms.ComboBox especialidade_select;
+        private System.Windows.Forms.TextBox distrito_trabalhador;
+        private System.Windows.Forms.TextBox conselho_trabalhador;
     }
 }
