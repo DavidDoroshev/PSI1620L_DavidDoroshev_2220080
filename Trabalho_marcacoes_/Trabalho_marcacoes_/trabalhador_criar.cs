@@ -7,14 +7,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
+using System.Configuration;
 
 namespace Trabalho_marcacoes_
 {
     public partial class trabalhador_criar : Form
     {
+        static string connectionString = ConfigurationManager.ConnectionStrings["ligarDB"].ConnectionString;
+        static SqlConnection ligarDB = new SqlConnection(connectionString);
+
         public trabalhador_criar()
         {
-            InitializeComponent();
+            try
+            {
+                ligarDB.Open();
+
+                InitializeComponent();
+                SqlCommand command = new SqlCommand();
+                command.Connection = ligarDB;
+                command.CommandText = "select distinct * from profissao_tabela";
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    profissao_select.Items.Add(reader["profissao"].ToString());
+                }
+
+                ligarDB.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -27,6 +53,70 @@ namespace Trabalho_marcacoes_
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void trabalhador_criar_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void profissao_select_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ligarDB.Close();
+
+            SqlCommand command = new SqlCommand();
+            command.Connection = ligarDB;
+
+            
+
+            try
+            {
+                especialidade_select.Items.Clear();
+                especialidade_select.Text = "";
+
+                ligarDB.Open();
+                command.CommandText = "SELECT especialidade_tabela.especialidade FROM profissao_tabela INNER JOIN especialidade_tabela on especialidade_tabela.profissao  = profissao_tabela.id_profissao WHERE profissao_tabela.profissao = @profissao";
+                //command.CommandText = "SELECT codigo_postal, distrito_tabela.distrito, conselho_tabela.conselho FROM codigo_postal INNER JOIN distrito_tabela ON distrito_codigo = distrito_tabela.distrito INNER JOIN conselho_tabela ON conselho_distrito = conselho_tabela.conselho WHERE codigo_postal = @codigo";
+
+                command.Parameters.Add("@profissao", System.Data.SqlDbType.VarChar).Value = profissao_select.Text;
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    especialidade_select.Items.Add(reader.GetString(0));
+                }
+
+                ligarDB.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            
+        }
+
+        private void guardar_button_Click(object sender, EventArgs e)
+        {
+            ligarDB.Open();
+            SqlCommand command = new SqlCommand();
+
+            command.Connection = ligarDB;
+
+            command.CommandText = "INSERT INTO cliente(nome, password, codigo_postal_cliente) VALUES(@nome, @password, @codigo)";
+            //command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = nome_guardar.Text;
+            //command.Parameters.Add("@password", System.Data.SqlDbType.VarChar).Value = password_guardar.Text;
+            //command.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = comboBox1.SelectedItem.ToString();
+
+            command.ExecuteNonQuery();
+
+            ligarDB.Close();
+
+            MessageBox.Show("Utilizador adicionado com sucesso");
+
+            this.Close();
         }
     }
 }

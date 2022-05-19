@@ -92,7 +92,7 @@ namespace Trabalho_marcacoes_
 
             ligarDB.Open();
 
-            command.CommandText = "SELECT codigo_postal, distrito, conselho FROM codigo_postal INNER JOIN distrito_tabela ON distrito_codigo = distrito_tabela.distrito INNER JOIN conselho_tabela ON conselho_distrito = conselho_tabela.conselho WHERE codigo_postal = @codigo";
+            command.CommandText = "SELECT codigo_postal, distrito_tabela.distrito, conselho_tabela.conselho FROM codigo_postal INNER JOIN distrito_tabela ON distrito_codigo = distrito_tabela.distrito INNER JOIN conselho_tabela ON conselho_distrito = conselho_tabela.conselho WHERE codigo_postal = @codigo"; 
 
             command.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = comboBox1.Text;
 
