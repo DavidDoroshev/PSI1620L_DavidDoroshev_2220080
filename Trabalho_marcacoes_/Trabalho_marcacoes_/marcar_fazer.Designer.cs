@@ -29,7 +29,6 @@ namespace Trabalho_marcacoes_
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,15 +37,11 @@ namespace Trabalho_marcacoes_
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.mostrar = new System.Windows.Forms.ListView();
+            this.nome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.especialidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 12);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(776, 147);
-            this.listBox1.TabIndex = 0;
             // 
             // label1
             // 
@@ -118,11 +113,46 @@ namespace Trabalho_marcacoes_
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 0;
             // 
+            // mostrar
+            // 
+            this.mostrar.BackColor = System.Drawing.SystemColors.Menu;
+            this.mostrar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mostrar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.nome,
+            this.especialidade,
+            this.cp});
+            this.mostrar.FullRowSelect = true;
+            this.mostrar.HideSelection = false;
+            this.mostrar.Location = new System.Drawing.Point(28, 12);
+            this.mostrar.Name = "mostrar";
+            this.mostrar.Size = new System.Drawing.Size(750, 144);
+            this.mostrar.TabIndex = 8;
+            this.mostrar.UseCompatibleStateImageBehavior = false;
+            this.mostrar.View = System.Windows.Forms.View.Details;
+            this.mostrar.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.mostrar_ColumnWidthChanging);
+            this.mostrar.SelectedIndexChanged += new System.EventHandler(this.mostrar_SelectedIndexChanged);
+            // 
+            // nome
+            // 
+            this.nome.Text = "Nome";
+            this.nome.Width = 250;
+            // 
+            // especialidade
+            // 
+            this.especialidade.Text = "Especialidade";
+            this.especialidade.Width = 250;
+            // 
+            // cp
+            // 
+            this.cp.Text = "Código Postal";
+            this.cp.Width = 250;
+            // 
             // marcar_fazer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.mostrar);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -131,7 +161,6 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox1);
             this.Name = "marcar_fazer";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -140,8 +169,6 @@ namespace Trabalho_marcacoes_
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -150,5 +177,9 @@ namespace Trabalho_marcacoes_
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ListView mostrar;
+        private System.Windows.Forms.ColumnHeader nome;
+        private System.Windows.Forms.ColumnHeader especialidade;
+        private System.Windows.Forms.ColumnHeader cp;
     }
 }

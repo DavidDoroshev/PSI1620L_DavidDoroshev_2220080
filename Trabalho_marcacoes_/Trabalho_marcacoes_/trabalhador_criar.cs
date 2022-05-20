@@ -19,46 +19,33 @@ namespace Trabalho_marcacoes_
 
         public trabalhador_criar()
         {
-            try
-            {
+            
                 ligarDB.Open();
 
                 InitializeComponent();
                 SqlCommand command = new SqlCommand();
-
-                //command.Connection = ligarDB;
-                //command.CommandText = "select distinct * from profissao_tabela";
-                //command.ExecuteReader();
-
-                //ligarDB.Close();
-                //ligarDB.Open();
-
-                //command.CommandText = "select * from codigo_postal";
-                //command.ExecuteReader();
-
-                //SqlDataReader reader = command.ExecuteReader();
-
-                //while (reader.Read())
-                //{
-                //    profissao_select.Items.Add(reader["profissao"].ToString());
-                //    codigo_postal_trabalhador.Items.Add(reader["codigo_postal"].ToString());
-                //}
-                //reader.Close();
                 command.Connection = ligarDB;
                 command.CommandText = "select distinct * from profissao_tabela";
-                command.ExecuteReader();
+            
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+
+                profissao_select.Items.Add(reader["profissao"].ToString());
+            }
+            ligarDB.Close();
+            reader.Close();
+
+            
                 ligarDB.Close();
                 ligarDB.Open();
                 command.CommandText = "select * from codigo_postal";
                 
-                command.ExecuteReader();
-                ligarDB.Close();
-                //Aqui por o outro command.CommandText = "código q queres";
-                ligarDB.Open();
-                SqlDataReader reader = command.ExecuteReader();
+                
+                reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    profissao_select.Items.Add(reader["profissao"].ToString());
+                    
                     codigo_postal_trabalhador.Items.Add(reader["codigo_postal"].ToString());
                 }
                 ligarDB.Close();
@@ -71,11 +58,7 @@ namespace Trabalho_marcacoes_
                 
                 ligarDB.Close();
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -136,7 +119,7 @@ namespace Trabalho_marcacoes_
             ligarDB.Open();
             
 
-            command.CommandText = "INSERT INTO cliente(nome, password, codigo_postal_trabalhador, especialidade_tabela_trabalhador) VALUES(@nome, @password, @codigo_postal, @especialidade)";
+            command.CommandText = "INSERT INTO trabalhadores(nome, password, codigo_postal_trabalhador, especialidade_tabela_trabalhador) VALUES(@nome, @password, @codigo_postal, @especialidade)";
             command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = nome_trabalhador.Text;
             command.Parameters.Add("@password", System.Data.SqlDbType.VarChar).Value = password_trabalhador.Text;
             command.Parameters.Add("@codigo_postal", System.Data.SqlDbType.VarChar).Value = codigo_postal_trabalhador.SelectedItem.ToString();

@@ -24,8 +24,8 @@ namespace Trabalho_marcacoes_
 
         private void entrar_menu_Click(object sender, EventArgs e)
         {
-            ligarDB.Open();
 
+            ligarDB.Open();
             string query = "SELECT * FROM cliente WHERE nome = '" + nome_entrar.Text + "' AND password= '" + password_entrar.Text + "' ";
             SqlDataAdapter dp = new SqlDataAdapter(query, ligarDB);
             DataTable dt = new DataTable();
@@ -47,6 +47,10 @@ namespace Trabalho_marcacoes_
                 password_entrar.Text = "";
                 nome_entrar.Select();
             }
+            
+
+
+
         }
 
         private void nome_entrar_TextChanged(object sender, EventArgs e)

@@ -41,7 +41,7 @@ namespace Trabalho_marcacoes_
             // 
             this.entrar_menu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.entrar_menu.Location = new System.Drawing.Point(278, 20);
-            this.entrar_menu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.entrar_menu.Margin = new System.Windows.Forms.Padding(2);
             this.entrar_menu.Name = "entrar_menu";
             this.entrar_menu.Size = new System.Drawing.Size(128, 60);
             this.entrar_menu.TabIndex = 0;
@@ -71,8 +71,8 @@ namespace Trabalho_marcacoes_
             // 
             // nome_entrar
             // 
-            this.nome_entrar.Location = new System.Drawing.Point(118, 41);
-            this.nome_entrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nome_entrar.Location = new System.Drawing.Point(118, 38);
+            this.nome_entrar.Margin = new System.Windows.Forms.Padding(2);
             this.nome_entrar.Name = "nome_entrar";
             this.nome_entrar.Size = new System.Drawing.Size(76, 20);
             this.nome_entrar.TabIndex = 6;
@@ -81,7 +81,7 @@ namespace Trabalho_marcacoes_
             // password_entrar
             // 
             this.password_entrar.Location = new System.Drawing.Point(118, 106);
-            this.password_entrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.password_entrar.Margin = new System.Windows.Forms.Padding(2);
             this.password_entrar.Name = "password_entrar";
             this.password_entrar.Size = new System.Drawing.Size(76, 20);
             this.password_entrar.TabIndex = 7;
@@ -109,7 +109,8 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.entrar_menu);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "Iniciar_Sessao";
             this.Text = "Iniciar_Sessao";
             this.ResumeLayout(false);
