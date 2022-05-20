@@ -27,12 +27,20 @@ namespace Trabalho_marcacoes_
                 SqlCommand command = new SqlCommand();
                 command.Connection = ligarDB;
                 command.CommandText = "select distinct * from profissao_tabela";
+                command.ExecuteNonQuery();
+                //command.CommandText = "select * from codigo_postal";
+                //command.ExecuteNonQuery();
                 SqlDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
                 {
                     profissao_select.Items.Add(reader["profissao"].ToString());
+
                 }
+
+                textconselho.Enabled = false;
+                textdistrito.Enabled = false;
+
 
                 ligarDB.Close();
 
@@ -70,7 +78,7 @@ namespace Trabalho_marcacoes_
 
                 ligarDB.Open();
                 command.CommandText = "SELECT especialidade_tabela.especialidade FROM profissao_tabela INNER JOIN especialidade_tabela on especialidade_tabela.profissao  = profissao_tabela.id_profissao WHERE profissao_tabela.profissao = @profissao";
-                //command.CommandText = "SELECT codigo_postal, distrito_tabela.distrito, conselho_tabela.conselho FROM codigo_postal INNER JOIN distrito_tabela ON distrito_codigo = distrito_tabela.distrito INNER JOIN conselho_tabela ON conselho_distrito = conselho_tabela.conselho WHERE codigo_postal = @codigo";
+               
 
                 command.Parameters.Add("@profissao", System.Data.SqlDbType.VarChar).Value = profissao_select.Text;
 
@@ -94,12 +102,14 @@ namespace Trabalho_marcacoes_
 
         private void guardar_button_Click(object sender, EventArgs e)
         {
-            ligarDB.Open();
             SqlCommand command = new SqlCommand();
 
             command.Connection = ligarDB;
 
-            command.CommandText = "INSERT INTO cliente(nome, password, codigo_postal_trabalhador, especialidade_tabela_trabalhador) VALUES(@nome, @password, @codigo_psotal, @especialidade)";
+            ligarDB.Open();
+            
+
+            command.CommandText = "INSERT INTO cliente(nome, password, codigo_postal_trabalhador, especialidade_tabela_trabalhador) VALUES(@nome, @password, @codigo_postal, @especialidade)";
             command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = nome_trabalhador.Text;
             command.Parameters.Add("@password", System.Data.SqlDbType.VarChar).Value = password_trabalhador.Text;
             command.Parameters.Add("@codigo_postal", System.Data.SqlDbType.VarChar).Value = codigo_postal_trabalhador.SelectedItem.ToString();
@@ -114,6 +124,26 @@ namespace Trabalho_marcacoes_
             this.Close();
         }
 
-        
+        private void codigo_postal_trabalhador_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlCommand command = new SqlCommand();
+            command.Connection = ligarDB;
+            ligarDB.Open();
+
+           
+
+            command.CommandText = "SELECT codigo_postal, distrito_tabela.distrito, conselho_tabela.conselho FROM codigo_postal INNER JOIN distrito_tabela ON distrito_codigo = distrito_tabela.distrito INNER JOIN conselho_tabela ON conselho_distrito = conselho_tabela.conselho WHERE codigo_postal = @codigo";
+
+            command.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = codigo_postal_trabalhador.Text;
+
+            SqlDataReader reader = command.ExecuteReader();
+            reader.Read();
+
+            string concelho = reader["conselho"].ToString();
+            string distrito = reader["distrito"].ToString();
+
+            textconselho.Text = concelho;
+            textdistrito.Text = distrito;
+        }
     }
 }

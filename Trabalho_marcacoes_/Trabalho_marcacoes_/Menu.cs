@@ -20,22 +20,6 @@ namespace Trabalho_marcacoes_
         {
             InitializeComponent();
 
-            SqlCommand command = new SqlCommand();
-            command.Connection = ligarDB;
-
-            ligarDB.Open();
-
-            command.CommandText = "SELECT nome FROM CLIENTE";
-            textonome.Refresh();
-            command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = textonome.Text;
-
-            SqlDataReader reader = command.ExecuteReader();
-            reader.Read();
-
-            string nome = reader["nome"].ToString();
-            textonome.Text = nome;
-           
-            ligarDB.Close();
         }
 
         private void Perfil_Click(object sender, EventArgs e)
@@ -45,7 +29,9 @@ namespace Trabalho_marcacoes_
 
         private void marcar_Click(object sender, EventArgs e)
         {
-
+            marcar_fazer ir = new marcar_fazer();
+            ir.Show();
+            this.Close();
         }
 
         private void textonome_Click(object sender, EventArgs e)
@@ -56,6 +42,11 @@ namespace Trabalho_marcacoes_
         private void Menu_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Marcações_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

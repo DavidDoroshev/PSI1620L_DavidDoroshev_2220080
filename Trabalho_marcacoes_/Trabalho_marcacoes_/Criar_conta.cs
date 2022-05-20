@@ -33,7 +33,7 @@ namespace Trabalho_marcacoes_
                 
                 while(reader.Read())
                 {
-                    comboBox1.Items.Add(reader["codigo_postal"].ToString());
+                    codigo_guardar.Items.Add(reader["codigo_postal"].ToString());
                 }
 
                 ligarDB.Close();
@@ -47,10 +47,7 @@ namespace Trabalho_marcacoes_
             }
         }
 
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void guardar_cliente_Click(object sender, EventArgs e)
         {
@@ -64,7 +61,7 @@ namespace Trabalho_marcacoes_
             command.CommandText = "INSERT INTO cliente(nome, password, codigo_postal_cliente) VALUES(@nome, @password, @codigo)";
             command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = nome_guardar.Text;
             command.Parameters.Add("@password", System.Data.SqlDbType.VarChar).Value = password_guardar.Text;
-            command.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = comboBox1.SelectedItem.ToString();
+            command.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = codigo_guardar.SelectedItem.ToString();
 
             command.ExecuteNonQuery();
 
@@ -85,7 +82,7 @@ namespace Trabalho_marcacoes_
             this.Hide();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void codigo_guardar_SelectedIndexChanged(object sender, EventArgs e)
         {
             SqlCommand command = new SqlCommand();
             command.Connection = ligarDB;
@@ -94,7 +91,7 @@ namespace Trabalho_marcacoes_
 
             command.CommandText = "SELECT codigo_postal, distrito_tabela.distrito, conselho_tabela.conselho FROM codigo_postal INNER JOIN distrito_tabela ON distrito_codigo = distrito_tabela.distrito INNER JOIN conselho_tabela ON conselho_distrito = conselho_tabela.conselho WHERE codigo_postal = @codigo"; 
 
-            command.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = comboBox1.Text;
+            command.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = codigo_guardar.Text;
 
             SqlDataReader reader = command.ExecuteReader();
             reader.Read();
