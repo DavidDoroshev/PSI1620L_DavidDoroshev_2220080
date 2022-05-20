@@ -25,23 +25,50 @@ namespace Trabalho_marcacoes_
 
                 InitializeComponent();
                 SqlCommand command = new SqlCommand();
+
+                //command.Connection = ligarDB;
+                //command.CommandText = "select distinct * from profissao_tabela";
+                //command.ExecuteReader();
+
+                //ligarDB.Close();
+                //ligarDB.Open();
+
+                //command.CommandText = "select * from codigo_postal";
+                //command.ExecuteReader();
+
+                //SqlDataReader reader = command.ExecuteReader();
+
+                //while (reader.Read())
+                //{
+                //    profissao_select.Items.Add(reader["profissao"].ToString());
+                //    codigo_postal_trabalhador.Items.Add(reader["codigo_postal"].ToString());
+                //}
+                //reader.Close();
                 command.Connection = ligarDB;
                 command.CommandText = "select distinct * from profissao_tabela";
-                command.ExecuteNonQuery();
-                //command.CommandText = "select * from codigo_postal";
-                //command.ExecuteNonQuery();
+                command.ExecuteReader();
+                ligarDB.Close();
+                ligarDB.Open();
+                command.CommandText = "select * from codigo_postal";
+                
+                command.ExecuteReader();
+                ligarDB.Close();
+                //Aqui por o outro command.CommandText = "código q queres";
+                ligarDB.Open();
                 SqlDataReader reader = command.ExecuteReader();
-
                 while (reader.Read())
                 {
                     profissao_select.Items.Add(reader["profissao"].ToString());
-
+                    codigo_postal_trabalhador.Items.Add(reader["codigo_postal"].ToString());
                 }
+                ligarDB.Close();
+                reader.Close();
+
 
                 textconselho.Enabled = false;
                 textdistrito.Enabled = false;
 
-
+                
                 ligarDB.Close();
 
             }
