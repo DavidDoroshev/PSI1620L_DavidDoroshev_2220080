@@ -31,87 +31,75 @@ namespace Trabalho_marcacoes_
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Marcar = new System.Windows.Forms.Button();
+            this.voltar = new System.Windows.Forms.Button();
+            this.tempo_guardar = new System.Windows.Forms.DateTimePicker();
             this.mostrar = new System.Windows.Forms.ListView();
             this.nome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.especialidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codigo_pesquisar = new System.Windows.Forms.ComboBox();
+            this.horas_guardar = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 176);
+            this.label1.Location = new System.Drawing.Point(34, 222);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(100, 17);
             this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.label1.Text = "Codigo-Postal:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(214, 176);
+            this.label2.Location = new System.Drawing.Point(289, 222);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(50, 17);
             this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(214, 267);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "label3";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 267);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "label4";
+            this.label2.Text = "Horas:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(387, 176);
+            this.label5.Location = new System.Drawing.Point(516, 217);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(33, 17);
             this.label5.TabIndex = 5;
-            this.label5.Text = "label5";
+            this.label5.Text = "Dia:";
             // 
-            // button1
+            // Marcar
             // 
-            this.button1.Location = new System.Drawing.Point(664, 383);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 43);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Marcar.Location = new System.Drawing.Point(897, 353);
+            this.Marcar.Margin = new System.Windows.Forms.Padding(4);
+            this.Marcar.Name = "Marcar";
+            this.Marcar.Size = new System.Drawing.Size(140, 53);
+            this.Marcar.TabIndex = 6;
+            this.Marcar.Text = "MARCAR";
+            this.Marcar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // voltar
             // 
-            this.button2.Location = new System.Drawing.Point(15, 383);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 43);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.voltar.Location = new System.Drawing.Point(37, 352);
+            this.voltar.Margin = new System.Windows.Forms.Padding(4);
+            this.voltar.Name = "voltar";
+            this.voltar.Size = new System.Drawing.Size(140, 54);
+            this.voltar.TabIndex = 7;
+            this.voltar.Text = "Voltar";
+            this.voltar.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // tempo_guardar
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(428, 176);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 0;
+            this.tempo_guardar.Location = new System.Drawing.Point(549, 216);
+            this.tempo_guardar.Margin = new System.Windows.Forms.Padding(4);
+            this.tempo_guardar.Name = "tempo_guardar";
+            this.tempo_guardar.Size = new System.Drawing.Size(265, 22);
+            this.tempo_guardar.TabIndex = 0;
             // 
             // mostrar
             // 
@@ -123,9 +111,10 @@ namespace Trabalho_marcacoes_
             this.cp});
             this.mostrar.FullRowSelect = true;
             this.mostrar.HideSelection = false;
-            this.mostrar.Location = new System.Drawing.Point(28, 12);
+            this.mostrar.Location = new System.Drawing.Point(37, 15);
+            this.mostrar.Margin = new System.Windows.Forms.Padding(4);
             this.mostrar.Name = "mostrar";
-            this.mostrar.Size = new System.Drawing.Size(750, 144);
+            this.mostrar.Size = new System.Drawing.Size(1000, 177);
             this.mostrar.TabIndex = 8;
             this.mostrar.UseCompatibleStateImageBehavior = false;
             this.mostrar.View = System.Windows.Forms.View.Details;
@@ -147,20 +136,37 @@ namespace Trabalho_marcacoes_
             this.cp.Text = "Código Postal";
             this.cp.Width = 250;
             // 
+            // codigo_pesquisar
+            // 
+            this.codigo_pesquisar.FormattingEnabled = true;
+            this.codigo_pesquisar.Location = new System.Drawing.Point(141, 222);
+            this.codigo_pesquisar.Name = "codigo_pesquisar";
+            this.codigo_pesquisar.Size = new System.Drawing.Size(121, 24);
+            this.codigo_pesquisar.TabIndex = 9;
+            // 
+            // horas_guardar
+            // 
+            this.horas_guardar.Location = new System.Drawing.Point(339, 222);
+            this.horas_guardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.horas_guardar.Name = "horas_guardar";
+            this.horas_guardar.Size = new System.Drawing.Size(100, 22);
+            this.horas_guardar.TabIndex = 10;
+            // 
             // marcar_fazer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 420);
+            this.Controls.Add(this.horas_guardar);
+            this.Controls.Add(this.codigo_pesquisar);
             this.Controls.Add(this.mostrar);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.tempo_guardar);
+            this.Controls.Add(this.voltar);
+            this.Controls.Add(this.Marcar);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "marcar_fazer";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -171,15 +177,15 @@ namespace Trabalho_marcacoes_
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button Marcar;
+        private System.Windows.Forms.Button voltar;
+        private System.Windows.Forms.DateTimePicker tempo_guardar;
         private System.Windows.Forms.ListView mostrar;
         private System.Windows.Forms.ColumnHeader nome;
         private System.Windows.Forms.ColumnHeader especialidade;
         private System.Windows.Forms.ColumnHeader cp;
+        private System.Windows.Forms.ComboBox codigo_pesquisar;
+        private System.Windows.Forms.TextBox horas_guardar;
     }
 }

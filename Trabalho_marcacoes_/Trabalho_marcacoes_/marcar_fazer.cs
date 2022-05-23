@@ -54,13 +54,16 @@ namespace Trabalho_marcacoes_
         }
 
         private void mostrar_SelectedIndexChanged(object sender, EventArgs e)
+        
         {
-            MessageBox.Show("Nome: " + mostrar.SelectedItems[1].SubItems[0].Text.ToString());
+            MessageBox.Show("Nome: " + mostrar.SelectedItems[0].SubItems[0].Text.ToString());
             MessageBox.Show("Especialidade: " + mostrar.SelectedItems[0].SubItems[1].Text.ToString());
             MessageBox.Show("Código Postal: " + mostrar.SelectedItems[0].SubItems[2].Text.ToString());
 
             mostrar.SelectedItems.Clear();
             mostrar.SelectedIndices.Clear();
         }
+
+        
     }
 }
