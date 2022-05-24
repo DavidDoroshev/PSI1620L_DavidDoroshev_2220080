@@ -40,7 +40,7 @@ namespace Trabalho_marcacoes_
             this.especialidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.codigo_pesquisar = new System.Windows.Forms.ComboBox();
-            this.horas_guardar = new System.Windows.Forms.TextBox();
+            this.horas_guardar = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -82,6 +82,7 @@ namespace Trabalho_marcacoes_
             this.Marcar.TabIndex = 6;
             this.Marcar.Text = "MARCAR";
             this.Marcar.UseVisualStyleBackColor = true;
+            this.Marcar.Click += new System.EventHandler(this.Marcar_Click);
             // 
             // voltar
             // 
@@ -113,13 +114,13 @@ namespace Trabalho_marcacoes_
             this.mostrar.HideSelection = false;
             this.mostrar.Location = new System.Drawing.Point(37, 15);
             this.mostrar.Margin = new System.Windows.Forms.Padding(4);
+            this.mostrar.MultiSelect = false;
             this.mostrar.Name = "mostrar";
             this.mostrar.Size = new System.Drawing.Size(1000, 177);
             this.mostrar.TabIndex = 8;
             this.mostrar.UseCompatibleStateImageBehavior = false;
             this.mostrar.View = System.Windows.Forms.View.Details;
             this.mostrar.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.mostrar_ColumnWidthChanging);
-            this.mostrar.SelectedIndexChanged += new System.EventHandler(this.mostrar_SelectedIndexChanged);
             // 
             // nome
             // 
@@ -146,11 +147,12 @@ namespace Trabalho_marcacoes_
             // 
             // horas_guardar
             // 
-            this.horas_guardar.Location = new System.Drawing.Point(339, 222);
-            this.horas_guardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.horas_guardar.Location = new System.Drawing.Point(336, 219);
+            this.horas_guardar.Mask = "00:00:00";
             this.horas_guardar.Name = "horas_guardar";
-            this.horas_guardar.Size = new System.Drawing.Size(100, 22);
+            this.horas_guardar.Size = new System.Drawing.Size(56, 22);
             this.horas_guardar.TabIndex = 10;
+            this.horas_guardar.ValidatingType = typeof(System.DateTime);
             // 
             // marcar_fazer
             // 
@@ -186,6 +188,6 @@ namespace Trabalho_marcacoes_
         private System.Windows.Forms.ColumnHeader especialidade;
         private System.Windows.Forms.ColumnHeader cp;
         private System.Windows.Forms.ComboBox codigo_pesquisar;
-        private System.Windows.Forms.TextBox horas_guardar;
+        private System.Windows.Forms.MaskedTextBox horas_guardar;
     }
 }

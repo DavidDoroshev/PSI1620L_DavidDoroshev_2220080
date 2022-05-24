@@ -37,10 +37,10 @@ namespace Trabalho_marcacoes_
             // cliente_botao
             // 
             this.cliente_botao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cliente_botao.Location = new System.Drawing.Point(111, 173);
-            this.cliente_botao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cliente_botao.Location = new System.Drawing.Point(148, 213);
+            this.cliente_botao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cliente_botao.Name = "cliente_botao";
-            this.cliente_botao.Size = new System.Drawing.Size(131, 65);
+            this.cliente_botao.Size = new System.Drawing.Size(175, 80);
             this.cliente_botao.TabIndex = 0;
             this.cliente_botao.Text = "Cliente";
             this.cliente_botao.UseVisualStyleBackColor = true;
@@ -49,10 +49,10 @@ namespace Trabalho_marcacoes_
             // iniciar_botoa
             // 
             this.iniciar_botoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iniciar_botoa.Location = new System.Drawing.Point(224, 78);
-            this.iniciar_botoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iniciar_botoa.Location = new System.Drawing.Point(299, 96);
+            this.iniciar_botoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iniciar_botoa.Name = "iniciar_botoa";
-            this.iniciar_botoa.Size = new System.Drawing.Size(131, 65);
+            this.iniciar_botoa.Size = new System.Drawing.Size(175, 80);
             this.iniciar_botoa.TabIndex = 1;
             this.iniciar_botoa.Text = "Iniciar Sessão";
             this.iniciar_botoa.UseVisualStyleBackColor = true;
@@ -61,10 +61,10 @@ namespace Trabalho_marcacoes_
             // trabalhador_botao
             // 
             this.trabalhador_botao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.trabalhador_botao.Location = new System.Drawing.Point(333, 173);
-            this.trabalhador_botao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trabalhador_botao.Location = new System.Drawing.Point(444, 213);
+            this.trabalhador_botao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.trabalhador_botao.Name = "trabalhador_botao";
-            this.trabalhador_botao.Size = new System.Drawing.Size(131, 65);
+            this.trabalhador_botao.Size = new System.Drawing.Size(175, 80);
             this.trabalhador_botao.TabIndex = 2;
             this.trabalhador_botao.Text = "Trabalhador";
             this.trabalhador_botao.UseVisualStyleBackColor = true;
@@ -72,13 +72,13 @@ namespace Trabalho_marcacoes_
             // 
             // inicial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.trabalhador_botao);
             this.Controls.Add(this.iniciar_botoa);
             this.Controls.Add(this.cliente_botao);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "inicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marcações";

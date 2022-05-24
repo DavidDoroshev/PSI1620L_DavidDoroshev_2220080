@@ -53,17 +53,42 @@ namespace Trabalho_marcacoes_
                 e.NewWidth = mostrar.Columns[e.ColumnIndex].Width;
         }
 
-        private void mostrar_SelectedIndexChanged(object sender, EventArgs e)
-        
+        private void Marcar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Nome: " + mostrar.SelectedItems[0].SubItems[0].Text.ToString());
-            MessageBox.Show("Especialidade: " + mostrar.SelectedItems[0].SubItems[1].Text.ToString());
-            MessageBox.Show("Código Postal: " + mostrar.SelectedItems[0].SubItems[2].Text.ToString());
+            SqlCommand command = new SqlCommand();
 
-            mostrar.SelectedItems.Clear();
-            mostrar.SelectedIndices.Clear();
+            command.Connection = ligarDB;
+
+            ligarDB.Open();
+
+            int i;
+            for ( i = 0; i<3; i++)
+            {
+                MessageBox.Show(mostrar.SelectedItems[0].SubItems[i].Text);
+            }
+            MessageBox.Show(horas_guardar.Text + tempo_guardar.Text);
+
+            
+
+
+            command.CommandText = "INSERT INTO marcacaoes_cliente(dia_marcacao, hora, codigo_postal_marcar, nome_cliente_id, nome_trabalhador_id, especialidade_marcacao ) VALUES(@dia, @hora, @codigo_postal,@nome_cliente, @nome_trabalhador, @especialidade)";
+            command.Parameters.Add("@dia", System.Data.SqlDbType.VarChar).Value = tempo_guardar.Text;
+            command.Parameters.Add("@hora", System.Data.SqlDbType.VarChar).Value = horas_guardar.Text;
+            command.Parameters.Add("@codigo_postal", System.Data.SqlDbType.VarChar).Value = mostrar.Items[i].SubItems[3].ToString();
+            //command.Parameters.Add("@nome_cliente", System.Data.SqlDbType.VarChar).Value = ();
+            command.Parameters.Add("@nome_trabalhador", System.Data.SqlDbType.VarChar).Value = mostrar.Items[i].SubItems[1].ToString();
+            command.Parameters.Add("@especialidade", System.Data.SqlDbType.VarChar).Value = mostrar.Items[i].SubItems[2].ToString();
+
+
+            command.ExecuteNonQuery();
+
+            ligarDB.Close();
+
+            MessageBox.Show("Trabalhador adicionado com sucesso");
+
+
         }
 
-        
+       
     }
 }
