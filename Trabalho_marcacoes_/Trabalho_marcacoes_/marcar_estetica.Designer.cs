@@ -1,7 +1,7 @@
 ﻿
 namespace Trabalho_marcacoes_
 {
-    partial class marcar_fazer
+    partial class marcar_estetica
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace Trabalho_marcacoes_
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(marcar_estetica));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,39 +47,35 @@ namespace Trabalho_marcacoes_
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 222);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(26, 180);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 17);
+            this.label1.Size = new System.Drawing.Size(75, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Codigo-Postal:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(289, 222);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(217, 180);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 17);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Horas:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(516, 217);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(387, 176);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 17);
+            this.label5.Size = new System.Drawing.Size(26, 13);
             this.label5.TabIndex = 5;
             this.label5.Text = "Dia:";
             // 
             // Marcar
             // 
-            this.Marcar.Location = new System.Drawing.Point(897, 353);
-            this.Marcar.Margin = new System.Windows.Forms.Padding(4);
+            this.Marcar.Location = new System.Drawing.Point(673, 287);
             this.Marcar.Name = "Marcar";
-            this.Marcar.Size = new System.Drawing.Size(140, 53);
+            this.Marcar.Size = new System.Drawing.Size(105, 43);
             this.Marcar.TabIndex = 6;
             this.Marcar.Text = "MARCAR";
             this.Marcar.UseVisualStyleBackColor = true;
@@ -86,20 +83,18 @@ namespace Trabalho_marcacoes_
             // 
             // voltar
             // 
-            this.voltar.Location = new System.Drawing.Point(37, 352);
-            this.voltar.Margin = new System.Windows.Forms.Padding(4);
+            this.voltar.Location = new System.Drawing.Point(28, 286);
             this.voltar.Name = "voltar";
-            this.voltar.Size = new System.Drawing.Size(140, 54);
+            this.voltar.Size = new System.Drawing.Size(105, 44);
             this.voltar.TabIndex = 7;
             this.voltar.Text = "Voltar";
             this.voltar.UseVisualStyleBackColor = true;
             // 
             // tempo_guardar
             // 
-            this.tempo_guardar.Location = new System.Drawing.Point(549, 216);
-            this.tempo_guardar.Margin = new System.Windows.Forms.Padding(4);
+            this.tempo_guardar.Location = new System.Drawing.Point(412, 176);
             this.tempo_guardar.Name = "tempo_guardar";
-            this.tempo_guardar.Size = new System.Drawing.Size(265, 22);
+            this.tempo_guardar.Size = new System.Drawing.Size(200, 20);
             this.tempo_guardar.TabIndex = 0;
             // 
             // mostrar
@@ -112,15 +107,15 @@ namespace Trabalho_marcacoes_
             this.cp});
             this.mostrar.FullRowSelect = true;
             this.mostrar.HideSelection = false;
-            this.mostrar.Location = new System.Drawing.Point(37, 15);
-            this.mostrar.Margin = new System.Windows.Forms.Padding(4);
+            this.mostrar.Location = new System.Drawing.Point(28, 12);
             this.mostrar.MultiSelect = false;
             this.mostrar.Name = "mostrar";
-            this.mostrar.Size = new System.Drawing.Size(1000, 177);
+            this.mostrar.Size = new System.Drawing.Size(750, 144);
             this.mostrar.TabIndex = 8;
             this.mostrar.UseCompatibleStateImageBehavior = false;
             this.mostrar.View = System.Windows.Forms.View.Details;
             this.mostrar.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.mostrar_ColumnWidthChanging);
+            this.mostrar.SelectedIndexChanged += new System.EventHandler(this.mostrar_SelectedIndexChanged);
             // 
             // nome
             // 
@@ -140,25 +135,29 @@ namespace Trabalho_marcacoes_
             // codigo_pesquisar
             // 
             this.codigo_pesquisar.FormattingEnabled = true;
-            this.codigo_pesquisar.Location = new System.Drawing.Point(141, 222);
+            this.codigo_pesquisar.Location = new System.Drawing.Point(106, 180);
+            this.codigo_pesquisar.Margin = new System.Windows.Forms.Padding(2);
             this.codigo_pesquisar.Name = "codigo_pesquisar";
-            this.codigo_pesquisar.Size = new System.Drawing.Size(121, 24);
+            this.codigo_pesquisar.Size = new System.Drawing.Size(92, 21);
             this.codigo_pesquisar.TabIndex = 9;
+            this.codigo_pesquisar.SelectedIndexChanged += new System.EventHandler(this.codigo_pesquisar_SelectedIndexChanged);
+            this.codigo_pesquisar.Enter += new System.EventHandler(this.codigo_pesquisar_Enter);
             // 
             // horas_guardar
             // 
-            this.horas_guardar.Location = new System.Drawing.Point(336, 219);
+            this.horas_guardar.Location = new System.Drawing.Point(252, 178);
+            this.horas_guardar.Margin = new System.Windows.Forms.Padding(2);
             this.horas_guardar.Mask = "00:00:00";
             this.horas_guardar.Name = "horas_guardar";
-            this.horas_guardar.Size = new System.Drawing.Size(56, 22);
+            this.horas_guardar.Size = new System.Drawing.Size(43, 20);
             this.horas_guardar.TabIndex = 10;
             this.horas_guardar.ValidatingType = typeof(System.DateTime);
             // 
-            // marcar_fazer
+            // marcar_estetica
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 420);
+            this.ClientSize = new System.Drawing.Size(800, 341);
             this.Controls.Add(this.horas_guardar);
             this.Controls.Add(this.codigo_pesquisar);
             this.Controls.Add(this.mostrar);
@@ -168,8 +167,8 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "marcar_fazer";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "marcar_estetica";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

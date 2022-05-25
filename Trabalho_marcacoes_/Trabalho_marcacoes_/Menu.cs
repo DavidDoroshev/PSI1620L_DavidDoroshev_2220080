@@ -14,8 +14,6 @@ namespace Trabalho_marcacoes_
 {
     public partial class Menu : Form
     {
-        private static string connectionString = ConfigurationManager.ConnectionStrings["ligarDB"].ConnectionString;
-        private static SqlConnection ligarDB = new SqlConnection(connectionString);
         public Menu()
         {
             InitializeComponent();
@@ -29,9 +27,7 @@ namespace Trabalho_marcacoes_
 
         private void marcar_Click(object sender, EventArgs e)
         {
-            marcar_fazer ir = new marcar_fazer();
-            ir.Show();
-            this.Close();
+            
         }
 
         private void textonome_Click(object sender, EventArgs e)
@@ -44,9 +40,20 @@ namespace Trabalho_marcacoes_
 
         }
 
-        private void Marcações_Click(object sender, EventArgs e)
+        
+
+        private void marcar_estetica_Click(object sender, EventArgs e)
         {
-            
+            marcar_estetica ir = new marcar_estetica();
+            ir.Show();
+            this.Close();
+        }
+
+        private void ir_medico_Click(object sender, EventArgs e)
+        {
+            marcar_medico ir = new marcar_medico();
+            ir.Show();
+            this.Close();
         }
     }
 }

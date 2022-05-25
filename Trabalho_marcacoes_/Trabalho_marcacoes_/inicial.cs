@@ -15,43 +15,35 @@ namespace Trabalho_marcacoes_
     
     public partial class inicial : Form 
     {
-        static string _connectionString = ConfigurationManager.ConnectionStrings["ligarDB"].ConnectionString;
-        static SqlConnection db = new SqlConnection(_connectionString);
+        public int teste { get; set; }
 
         public inicial()
-        {
-            try
-            {
-                db.Open();
-            }
-            catch (Exception)
-            {
-
-            }
+        {        
             InitializeComponent();
             
         }
 
         private void iniciar_botoa_Click(object sender, EventArgs e)
         {
-            Iniciar_Sessao voltar = new Iniciar_Sessao();
-            voltar.Show();
-            this.Hide();
+            this.DialogResult = DialogResult.OK;
+            teste = 3;
         }
 
         private void cliente_botao_Click(object sender, EventArgs e)
         {
-            criar_conta ligar = new criar_conta();
-            ligar.Show();
-            this.Hide();
+            this.DialogResult = DialogResult.OK;
+            teste = 1;
         }
 
         private void trabalhador_botao_Click(object sender, EventArgs e)
         {
-            trabalhador_criar ligar = new trabalhador_criar();
-            ligar.Show();
-            this.Hide();
+            this.DialogResult = DialogResult.OK;
+            teste = 2;
         }
 
+        private void inicial_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

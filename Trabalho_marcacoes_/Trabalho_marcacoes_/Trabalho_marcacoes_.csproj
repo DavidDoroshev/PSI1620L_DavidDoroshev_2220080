@@ -180,11 +180,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="marcar_fazer.cs">
+    <Compile Include="marcar_medico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="marcar_fazer.Designer.cs">
-      <DependentUpon>marcar_fazer.cs</DependentUpon>
+    <Compile Include="marcar_medico.Designer.cs">
+      <DependentUpon>marcar_medico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="marcar_estetica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="marcar_estetica.Designer.cs">
+      <DependentUpon>marcar_estetica.cs</DependentUpon>
     </Compile>
     <Compile Include="inicial.cs">
       <SubType>Form</SubType>
@@ -228,8 +234,11 @@
     <EmbeddedResource Include="Iniciar_Sessao.resx">
       <DependentUpon>Iniciar_Sessao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="marcar_fazer.resx">
-      <DependentUpon>marcar_fazer.cs</DependentUpon>
+    <EmbeddedResource Include="marcar_estetica.resx">
+      <DependentUpon>marcar_estetica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="marcar_medico.resx">
+      <DependentUpon>marcar_medico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
