@@ -33,6 +33,8 @@ namespace Trabalho_marcacoes_
             this.marcar = new System.Windows.Forms.Button();
             this.marcar_estetica = new System.Windows.Forms.Button();
             this.ir_medico = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.current_user = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Perfil
@@ -81,11 +83,32 @@ namespace Trabalho_marcacoes_
             this.ir_medico.UseVisualStyleBackColor = true;
             this.ir_medico.Click += new System.EventHandler(this.ir_medico_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(37, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Bem vindo ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // current_user
+            // 
+            this.current_user.AutoSize = true;
+            this.current_user.Location = new System.Drawing.Point(107, 35);
+            this.current_user.Name = "current_user";
+            this.current_user.Size = new System.Drawing.Size(0, 13);
+            this.current_user.TabIndex = 8;
+            this.current_user.Click += new System.EventHandler(this.current_user_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 292);
+            this.Controls.Add(this.current_user);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ir_medico);
             this.Controls.Add(this.marcar_estetica);
             this.Controls.Add(this.marcar);
@@ -95,8 +118,9 @@ namespace Trabalho_marcacoes_
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
-            this.Load += new System.EventHandler(this.Menu_Load);
+            this.Load += new System.EventHandler(this.Menu_Load_1);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -105,5 +129,7 @@ namespace Trabalho_marcacoes_
         private System.Windows.Forms.Button marcar;
         private System.Windows.Forms.Button marcar_estetica;
         private System.Windows.Forms.Button ir_medico;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label current_user;
     }
 }

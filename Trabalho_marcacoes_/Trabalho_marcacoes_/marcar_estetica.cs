@@ -71,16 +71,15 @@ namespace Trabalho_marcacoes_
             ligarDB.Close();
             ligarDB.Open();
 
-            command.CommandText = "SELECT nome FROM CLIENTE";
+            //command.CommandText = "SELECT nome FROM CLIENTE";
 
 
-            SqlDataReader reader = command.ExecuteReader();
-            reader.Read();
+            //SqlDataReader reader = command.ExecuteReader();
+            //reader.Read();
 
-            string nome = reader["nome"].ToString();
+            //string nome = reader["nome"].ToString();
 
 
-            reader.Close();
             command.CommandText = "INSERT INTO marcacaoes_cliente(dia_marcacao, hora, nome_cliente_id, nome_trabalhador_id, especialidade_marcacao ) VALUES(@dia, @hora ,@nome_cliente, @nome_trabalhador, @especialidade)";
             command.Parameters.Add("@dia", System.Data.SqlDbType.VarChar).Value = tempo_guardar.Text;
             command.Parameters.Add("@hora", System.Data.SqlDbType.VarChar).Value = horas_guardar.Text;

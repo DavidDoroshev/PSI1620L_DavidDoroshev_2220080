@@ -40,7 +40,7 @@ namespace Trabalho_marcacoes_
             // entrar_menu
             // 
             this.entrar_menu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.entrar_menu.Location = new System.Drawing.Point(278, 20);
+            this.entrar_menu.Location = new System.Drawing.Point(324, 26);
             this.entrar_menu.Margin = new System.Windows.Forms.Padding(2);
             this.entrar_menu.Name = "entrar_menu";
             this.entrar_menu.Size = new System.Drawing.Size(128, 60);
@@ -83,6 +83,7 @@ namespace Trabalho_marcacoes_
             this.password_entrar.Location = new System.Drawing.Point(118, 106);
             this.password_entrar.Margin = new System.Windows.Forms.Padding(2);
             this.password_entrar.Name = "password_entrar";
+            this.password_entrar.PasswordChar = '*';
             this.password_entrar.Size = new System.Drawing.Size(76, 20);
             this.password_entrar.TabIndex = 7;
             this.password_entrar.TextChanged += new System.EventHandler(this.password_entrar_TextChanged);
@@ -90,7 +91,7 @@ namespace Trabalho_marcacoes_
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(278, 141);
+            this.button1.Location = new System.Drawing.Point(339, 131);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 24);

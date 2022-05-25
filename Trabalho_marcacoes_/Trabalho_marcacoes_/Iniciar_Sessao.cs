@@ -20,6 +20,8 @@ namespace Trabalho_marcacoes_
         public Iniciar_Sessao()
         {
             InitializeComponent();
+
+            Focus();
         }
 
         private void entrar_menu_Click(object sender, EventArgs e)
@@ -59,6 +61,11 @@ namespace Trabalho_marcacoes_
         }
 
         private void password_entrar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }
