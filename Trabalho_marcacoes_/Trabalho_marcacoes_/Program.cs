@@ -21,7 +21,7 @@ namespace Trabalho_marcacoes_
 
             inicial login = new inicial();
 
-            int i = 3;
+            
 
             DialogResult result = login.ShowDialog();
 

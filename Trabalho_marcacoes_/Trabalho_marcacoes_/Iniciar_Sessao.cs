@@ -23,7 +23,7 @@ namespace Trabalho_marcacoes_
 
             password_entrar.UseSystemPasswordChar = true;
 
-
+            mostrar_.Appearance = Appearance.Button;
         }
 
         private async void entrar_menu_Click(object sender, EventArgs e)
@@ -60,6 +60,7 @@ namespace Trabalho_marcacoes_
                     principal.Show();
                     ligarDB.Close();
                 }
+                
                 else
                 {
                     MessageBox.Show("Nome ou a Password está incorreta", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -70,18 +71,7 @@ namespace Trabalho_marcacoes_
                 }
             }
         }
-
-        private void nome_entrar_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void password_entrar_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mostrar__CheckedChanged(object sender, EventArgs e)
+      private void mostrar__CheckedChanged(object sender, EventArgs e)
         {
                 if (mostrar_.Checked)
                 {
@@ -91,6 +81,11 @@ namespace Trabalho_marcacoes_
                 {
                 password_entrar.UseSystemPasswordChar = true;
                 }    
+        }
+
+        private void Iniciar_Sessao_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
