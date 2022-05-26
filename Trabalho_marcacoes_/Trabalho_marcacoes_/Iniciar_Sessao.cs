@@ -21,38 +21,54 @@ namespace Trabalho_marcacoes_
         {
             InitializeComponent();
 
-            Focus();
+            password_entrar.UseSystemPasswordChar = true;
+
+
         }
 
-        private void entrar_menu_Click(object sender, EventArgs e)
+        private async void entrar_menu_Click(object sender, EventArgs e)
         {
 
             ligarDB.Open();
-            string query = "SELECT * FROM cliente WHERE nome = '" + nome_entrar.Text + "' AND password= '" + password_entrar.Text + "' ";
-            SqlDataAdapter dp = new SqlDataAdapter(query, ligarDB);
-            DataTable dt = new DataTable();
-            dp.Fill(dt);
-            ligarDB.Close();
+            string query = "SELECT * FROM trabalhadores WHERE nome = @nome AND password = @password";
+            SqlCommand cmd = new SqlCommand(query, ligarDB);
+            cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = nome_entrar.Text;
+            cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = password_entrar.Text;
+            SqlDataReader reader = cmd.ExecuteReader();
+            await reader.ReadAsync();
 
-            if (dt.Rows.Count == 1)
+            if (reader.HasRows)
             {
-
-                Menu principal = new Menu();
+                menu_cliente principal = new menu_cliente();
                 this.Hide();
                 principal.Show();
+                ligarDB.Close();
             }
             else
             {
-
-                MessageBox.Show("Nome ou a Password está incorreta", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                nome_entrar.Text = "";
-                password_entrar.Text = "";
-                nome_entrar.Select();
+                query = "SELECT * FROM cliente WHERE nome = @nome AND password = @password";
+                cmd = new SqlCommand(query, ligarDB);
+                cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = nome_entrar.Text;
+                cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = password_entrar.Text;
+                reader.Close();
+                reader = cmd.ExecuteReader();
+                await reader.ReadAsync();
+                if (reader.HasRows)
+                {
+                    menu_trabalhador principal = new menu_trabalhador();
+                    this.Hide();
+                    principal.Show();
+                    ligarDB.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Nome ou a Password está incorreta", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    nome_entrar.Text = "";
+                    password_entrar.Text = "";
+                    nome_entrar.Select();
+                    ligarDB.Close();
+                }
             }
-            
-
-
-
         }
 
         private void nome_entrar_TextChanged(object sender, EventArgs e)
@@ -65,9 +81,16 @@ namespace Trabalho_marcacoes_
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void mostrar__CheckedChanged(object sender, EventArgs e)
         {
-
+                if (mostrar_.Checked)
+                {
+                password_entrar.UseSystemPasswordChar = false;
+                }
+                else
+                {
+                password_entrar.UseSystemPasswordChar = true;
+                }    
         }
     }
 }

@@ -12,12 +12,12 @@ using System.Configuration;
 
 namespace Trabalho_marcacoes_
 {
-    public partial class Menu : Form
+    public partial class menu_cliente : Form
     {
         private static string connectionString = ConfigurationManager.ConnectionStrings["ligarDB"].ConnectionString;
         private static SqlConnection ligarDB = new SqlConnection(connectionString);
 
-        public Menu()
+        public menu_cliente()
         {
             InitializeComponent();
 
@@ -26,7 +26,7 @@ namespace Trabalho_marcacoes_
 
             ligarDB.Open();
 
-            command.CommandText = "SELECT nome FROM CLIENTE";
+            command.CommandText = "SELECT nome FROM trabalhadores";
             command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = current_user.Text;
 
             SqlDataReader reader = command.ExecuteReader();
@@ -36,8 +36,7 @@ namespace Trabalho_marcacoes_
 
             current_user.Text = nome;
 
-
-
+            ligarDB.Close();
         }
 
         private void Perfil_Click(object sender, EventArgs e)

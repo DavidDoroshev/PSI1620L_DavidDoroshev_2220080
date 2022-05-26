@@ -82,7 +82,6 @@ namespace Trabalho_marcacoes_
             this.Name = "inicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marcações";
-            this.Load += new System.EventHandler(this.inicial_Load);
             this.ResumeLayout(false);
 
         }

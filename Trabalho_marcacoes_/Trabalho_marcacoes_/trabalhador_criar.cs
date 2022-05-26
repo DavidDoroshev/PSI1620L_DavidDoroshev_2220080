@@ -132,9 +132,10 @@ namespace Trabalho_marcacoes_
             MessageBox.Show("Trabalhador adicionado com sucesso");
 
             this.Close();
+
         }
 
-        private void codigo_postal_trabalhador_SelectedIndexChanged(object sender, EventArgs e)
+        private void codigo_postal_trabalhador_SelectedIndexChanged(object sender, EventArgs e) 
         {
             SqlCommand command = new SqlCommand();
             command.Connection = ligarDB;
@@ -154,6 +155,8 @@ namespace Trabalho_marcacoes_
 
             textconselho.Text = concelho;
             textdistrito.Text = distrito;
+
+            ligarDB.Close();
         }
     }
 }

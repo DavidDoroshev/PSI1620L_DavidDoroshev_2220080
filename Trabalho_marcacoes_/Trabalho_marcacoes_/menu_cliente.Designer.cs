@@ -1,7 +1,7 @@
 ﻿
 namespace Trabalho_marcacoes_
 {
-    partial class Menu
+    partial class menu_cliente
     {
         /// <summary>
         /// Required designer variable.

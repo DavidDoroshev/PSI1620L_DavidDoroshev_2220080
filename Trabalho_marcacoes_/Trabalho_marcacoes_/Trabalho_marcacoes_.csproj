@@ -211,11 +211,17 @@
     <Compile Include="Iniciar_Sessao.Designer.cs">
       <DependentUpon>Iniciar_Sessao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="menu_cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="menu_cliente.Designer.cs">
+      <DependentUpon>menu_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu_trabalhador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu_trabalhador.Designer.cs">
+      <DependentUpon>menu_trabalhador.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -240,8 +246,11 @@
     <EmbeddedResource Include="marcar_medico.resx">
       <DependentUpon>marcar_medico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <EmbeddedResource Include="menu_cliente.resx">
+      <DependentUpon>menu_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu_trabalhador.resx">
+      <DependentUpon>menu_trabalhador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

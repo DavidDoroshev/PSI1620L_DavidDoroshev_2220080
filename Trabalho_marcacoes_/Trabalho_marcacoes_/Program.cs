@@ -21,6 +21,8 @@ namespace Trabalho_marcacoes_
 
             inicial login = new inicial();
 
+            int i = 3;
+
             DialogResult result = login.ShowDialog();
 
             if (result == DialogResult.OK)
@@ -39,7 +41,7 @@ namespace Trabalho_marcacoes_
                         Application.Run(new Iniciar_Sessao());
                         break;
                 }
-            }
+            }  
         }
     }
 }

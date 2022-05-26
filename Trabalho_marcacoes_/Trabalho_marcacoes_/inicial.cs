@@ -20,6 +20,8 @@ namespace Trabalho_marcacoes_
         public inicial()
         {        
             InitializeComponent();
+
+            
             
         }
 
@@ -41,9 +43,6 @@ namespace Trabalho_marcacoes_
             teste = 2;
         }
 
-        private void inicial_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

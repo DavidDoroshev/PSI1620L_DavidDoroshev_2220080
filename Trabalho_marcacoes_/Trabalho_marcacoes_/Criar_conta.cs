@@ -101,6 +101,8 @@ namespace Trabalho_marcacoes_
 
             textconselho.Text = concelho;
             textdistrito.Text = distrito;
+
+            ligarDB.Close();
         }
 
         private void textconselho_TextChanged(object sender, EventArgs e)
