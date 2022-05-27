@@ -71,21 +71,13 @@ namespace Trabalho_marcacoes_
             ligarDB.Close();
             ligarDB.Open();
 
-            //command.CommandText = "SELECT nome FROM CLIENTE";
-
-
-            //SqlDataReader reader = command.ExecuteReader();
-            //reader.Read();
-
-            //string nome = reader["nome"].ToString();
-
-
-            command.CommandText = "INSERT INTO marcacaoes_cliente(dia_marcacao, hora, nome_cliente_id, nome_trabalhador_id, especialidade_marcacao ) VALUES(@dia, @hora ,@nome_cliente, @nome_trabalhador, @especialidade)";
-            command.Parameters.Add("@dia", System.Data.SqlDbType.VarChar).Value = tempo_guardar.Text;
-            command.Parameters.Add("@hora", System.Data.SqlDbType.VarChar).Value = horas_guardar.Text;
-            command.Parameters.Add("@nome_cliente", System.Data.SqlDbType.VarChar).Value = nome ;
-            command.Parameters.Add("@nome_trabalhador", System.Data.SqlDbType.VarChar).Value = mostrar.Items[0].SubItems[0].ToString();
-            command.Parameters.Add("@especialidade", System.Data.SqlDbType.VarChar).Value = mostrar.Items[0].SubItems[1].ToString();
+            string query = "INSERT INTO marcacaoes_cliente(dia_marcacao, hora, nome_cliente_id, nome_trabalhador_id, especialidade_marcacao ) VALUES(@dia, @hora ,@nome_cliente, @nome_trabalhador, @especialidade)";
+            SqlCommand cmd = new SqlCommand(query, ligarDB);
+            cmd.Parameters.Add("@dia", System.Data.SqlDbType.VarChar).Value = tempo_guardar.Text;
+            cmd.Parameters.Add("@hora", System.Data.SqlDbType.VarChar).Value = horas_guardar.Text;
+            cmd.Parameters.Add("@nome_cliente", System.Data.SqlDbType.VarChar).Value = Iniciar_Sessao.utilizador; ;
+            cmd.Parameters.Add("@nome_trabalhador", System.Data.SqlDbType.VarChar).Value = mostrar.Items[0].SubItems[0].ToString();
+            cmd.Parameters.Add("@especialidade", System.Data.SqlDbType.VarChar).Value = mostrar.Items[0].SubItems[1].ToString();
 
             
             command.ExecuteNonQuery();

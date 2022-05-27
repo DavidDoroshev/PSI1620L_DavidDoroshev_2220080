@@ -100,7 +100,6 @@ namespace Trabalho_marcacoes_
             this.current_user.Name = "current_user";
             this.current_user.Size = new System.Drawing.Size(0, 13);
             this.current_user.TabIndex = 8;
-            this.current_user.Click += new System.EventHandler(this.current_user_Click);
             // 
             // Menu
             // 

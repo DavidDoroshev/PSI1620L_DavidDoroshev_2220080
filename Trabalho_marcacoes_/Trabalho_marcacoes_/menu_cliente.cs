@@ -20,23 +20,6 @@ namespace Trabalho_marcacoes_
         public menu_cliente()
         {
             InitializeComponent();
-
-            SqlCommand command = new SqlCommand();
-            command.Connection = ligarDB;
-
-            ligarDB.Open();
-
-            command.CommandText = "SELECT nome FROM trabalhadores";
-            command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = current_user.Text;
-
-            SqlDataReader reader = command.ExecuteReader();
-            reader.Read();
-
-            string nome = reader["nome"].ToString();
-
-            current_user.Text = nome;
-
-            ligarDB.Close();
         }
 
         private void Perfil_Click(object sender, EventArgs e)
@@ -51,16 +34,8 @@ namespace Trabalho_marcacoes_
 
         private void textonome_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void Menu_Load(object sender, EventArgs e)
-        {
 
         }
-
-        
-
         private void marcar_estetica_Click(object sender, EventArgs e)
         {
             marcar_estetica ir = new marcar_estetica();
@@ -77,15 +52,10 @@ namespace Trabalho_marcacoes_
 
         private void Menu_Load_1(object sender, EventArgs e)
         {
-
+            current_user.Text = Iniciar_Sessao.utilizador;
         }
 
         private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void current_user_Click(object sender, EventArgs e)
         {
 
         }

@@ -38,20 +38,19 @@ namespace Trabalho_marcacoes_
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(32, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 17);
+            this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 13;
             this.label1.Text = "Bem vindo ";
             // 
             // ver_marcacoes_trabalhador
             // 
             this.ver_marcacoes_trabalhador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ver_marcacoes_trabalhador.Location = new System.Drawing.Point(346, 110);
-            this.ver_marcacoes_trabalhador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ver_marcacoes_trabalhador.Location = new System.Drawing.Point(260, 89);
+            this.ver_marcacoes_trabalhador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ver_marcacoes_trabalhador.Name = "ver_marcacoes_trabalhador";
-            this.ver_marcacoes_trabalhador.Size = new System.Drawing.Size(171, 74);
+            this.ver_marcacoes_trabalhador.Size = new System.Drawing.Size(128, 60);
             this.ver_marcacoes_trabalhador.TabIndex = 10;
             this.ver_marcacoes_trabalhador.Text = "Marcações";
             this.ver_marcacoes_trabalhador.UseVisualStyleBackColor = true;
@@ -59,31 +58,34 @@ namespace Trabalho_marcacoes_
             // perfil_trabalhador
             // 
             this.perfil_trabalhador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.perfil_trabalhador.Location = new System.Drawing.Point(46, 110);
-            this.perfil_trabalhador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.perfil_trabalhador.Location = new System.Drawing.Point(34, 89);
+            this.perfil_trabalhador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.perfil_trabalhador.Name = "perfil_trabalhador";
-            this.perfil_trabalhador.Size = new System.Drawing.Size(171, 74);
+            this.perfil_trabalhador.Size = new System.Drawing.Size(128, 60);
             this.perfil_trabalhador.TabIndex = 9;
             this.perfil_trabalhador.Text = "Perfil";
             this.perfil_trabalhador.UseVisualStyleBackColor = true;
+            this.perfil_trabalhador.Click += new System.EventHandler(this.perfil_trabalhador_Click);
             // 
             // trabalhador_atual
             // 
             this.trabalhador_atual.AutoSize = true;
-            this.trabalhador_atual.Location = new System.Drawing.Point(129, 44);
+            this.trabalhador_atual.Location = new System.Drawing.Point(97, 36);
+            this.trabalhador_atual.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.trabalhador_atual.Name = "trabalhador_atual";
-            this.trabalhador_atual.Size = new System.Drawing.Size(0, 17);
+            this.trabalhador_atual.Size = new System.Drawing.Size(0, 13);
             this.trabalhador_atual.TabIndex = 14;
             // 
             // menu_trabalhador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 242);
+            this.ClientSize = new System.Drawing.Size(440, 197);
             this.Controls.Add(this.trabalhador_atual);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ver_marcacoes_trabalhador);
             this.Controls.Add(this.perfil_trabalhador);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "menu_trabalhador";
             this.Text = "menu_trabalhador";
             this.ResumeLayout(false);

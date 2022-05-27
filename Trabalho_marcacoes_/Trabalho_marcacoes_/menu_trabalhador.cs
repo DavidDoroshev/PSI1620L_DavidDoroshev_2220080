@@ -18,27 +18,12 @@ namespace Trabalho_marcacoes_
         private static SqlConnection ligarDB = new SqlConnection(connectionString);
         public menu_trabalhador()
         {
-            InitializeComponent();
-
-            SqlCommand command = new SqlCommand();
-            command.Connection = ligarDB;
-
-            ligarDB.Open();
-
-            //command.CommandText = "SELECT nome FROM trabalhadores";
-
-            command.CommandText = "UPDATE trabalhadores SET nome = '"+ trabalhador_atual.Text + "' " ;
-            command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = trabalhador_atual.Text;
-
-            SqlDataReader reader = command.ExecuteReader();
-            reader.Read();
-
-            string nome = reader["nome"].ToString();
-
-            trabalhador_atual.Text = nome;
-            ligarDB.Close();
+            InitializeComponent();            
         }
 
-        
+        private void perfil_trabalhador_Click(object sender, EventArgs e)
+        {
+            trabalhador_atual.Text = Iniciar_Sessao.trabalhador;
+        }
     }
 }

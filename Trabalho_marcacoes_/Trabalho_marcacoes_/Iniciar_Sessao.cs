@@ -23,9 +23,12 @@ namespace Trabalho_marcacoes_
 
             password_entrar.UseSystemPasswordChar = true;
 
-            mostrar_.Appearance = Appearance.Button;
+            string nome = nome_entrar.Text;
+  
         }
 
+        public static string utilizador = "";
+        public static string trabalhador = "";
         private async void entrar_menu_Click(object sender, EventArgs e)
         {
 
@@ -39,7 +42,8 @@ namespace Trabalho_marcacoes_
 
             if (reader.HasRows)
             {
-                menu_cliente principal = new menu_cliente();
+                trabalhador = nome_entrar.Text;
+                menu_trabalhador principal = new menu_trabalhador();
                 this.Hide();
                 principal.Show();
                 ligarDB.Close();
@@ -55,7 +59,8 @@ namespace Trabalho_marcacoes_
                 await reader.ReadAsync();
                 if (reader.HasRows)
                 {
-                    menu_trabalhador principal = new menu_trabalhador();
+                    utilizador = nome_entrar.Text;
+                    menu_cliente principal = new menu_cliente();
                     this.Hide();
                     principal.Show();
                     ligarDB.Close();
@@ -71,21 +76,18 @@ namespace Trabalho_marcacoes_
                 }
             }
         }
-      private void mostrar__CheckedChanged(object sender, EventArgs e)
+
+        private void ver_CheckedChanged(object sender, EventArgs e)
         {
-                if (mostrar_.Checked)
-                {
+            if (ver.Checked)
+            {
                 password_entrar.UseSystemPasswordChar = false;
-                }
-                else
-                {
+            }
+            else
+            {
                 password_entrar.UseSystemPasswordChar = true;
-                }    
+            }
         }
 
-        private void Iniciar_Sessao_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

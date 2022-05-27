@@ -35,7 +35,7 @@ namespace Trabalho_marcacoes_
             this.nome_entrar = new System.Windows.Forms.TextBox();
             this.password_entrar = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.mostrar_ = new System.Windows.Forms.CheckBox();
+            this.ver = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // entrar_menu
@@ -97,14 +97,15 @@ namespace Trabalho_marcacoes_
             this.button1.Text = "Voltar";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // mostrar_
+            // ver
             // 
-            this.mostrar_.AutoSize = true;
-            this.mostrar_.Location = new System.Drawing.Point(200, 121);
-            this.mostrar_.Name = "mostrar_";
-            this.mostrar_.Size = new System.Drawing.Size(15, 14);
-            this.mostrar_.TabIndex = 9;
-            this.mostrar_.UseVisualStyleBackColor = true;
+            this.ver.AutoSize = true;
+            this.ver.Location = new System.Drawing.Point(199, 122);
+            this.ver.Name = "ver";
+            this.ver.Size = new System.Drawing.Size(15, 14);
+            this.ver.TabIndex = 9;
+            this.ver.UseVisualStyleBackColor = true;
+            this.ver.CheckedChanged += new System.EventHandler(this.ver_CheckedChanged);
             // 
             // Iniciar_Sessao
             // 
@@ -112,7 +113,7 @@ namespace Trabalho_marcacoes_
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(490, 176);
-            this.Controls.Add(this.mostrar_);
+            this.Controls.Add(this.ver);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.password_entrar);
             this.Controls.Add(this.nome_entrar);
@@ -136,6 +137,6 @@ namespace Trabalho_marcacoes_
         private System.Windows.Forms.TextBox nome_entrar;
         private System.Windows.Forms.TextBox password_entrar;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox mostrar_;
+        private System.Windows.Forms.CheckBox ver;
     }
 }
