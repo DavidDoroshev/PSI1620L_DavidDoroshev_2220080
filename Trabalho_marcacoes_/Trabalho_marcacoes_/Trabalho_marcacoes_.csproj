@@ -180,6 +180,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="guardar_nome.cs" />
     <Compile Include="marcar_medico.cs">
       <SubType>Form</SubType>
     </Compile>
