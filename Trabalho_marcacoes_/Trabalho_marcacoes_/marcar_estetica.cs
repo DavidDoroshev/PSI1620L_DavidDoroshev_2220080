@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 using System.Configuration;
+using System.Text.RegularExpressions;
 
 namespace Trabalho_marcacoes_
 {
@@ -59,6 +60,8 @@ namespace Trabalho_marcacoes_
         {
            //TODO- guardar a marcação 
             int i;
+            cima:
+
             for (i = 0; i < 3; i++)
             {
                 MessageBox.Show(mostrar.SelectedItems[0].SubItems[i].Text);
@@ -83,6 +86,16 @@ namespace Trabalho_marcacoes_
             command.ExecuteNonQuery();
 
             ligarDB.Close();
+
+            //Regex reg = new Regex("^(2[0-3]|[01]d)([:][0-5]d)$");
+
+            //bool result = reg.IsMatch(tempo_guardar.Text);
+
+            //if(result = false)
+            //{
+            //    goto cima;
+            //}
+
 
             MessageBox.Show("Marcação feita com sucesso");
 

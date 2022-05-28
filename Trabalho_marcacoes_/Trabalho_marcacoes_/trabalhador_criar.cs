@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 using System.Configuration;
+using System.Text.RegularExpressions;
 
 namespace Trabalho_marcacoes_
 {
@@ -117,7 +118,22 @@ namespace Trabalho_marcacoes_
             command.Connection = ligarDB;
 
             ligarDB.Open();
-            
+
+
+            var input = password_trabalhador.Text;
+
+            Regex valid = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8}");
+
+            if (input == "")
+            {
+                MessageBox.Show("Tem de ter passs");
+                return;
+            }
+            else if (!valid.IsMatch(input))
+            {
+                MessageBox.Show("Tem alguma coisa de errado");
+                return;
+            }
 
             command.CommandText = "INSERT INTO trabalhadores(nome, password, codigo_postal_trabalhador, especialidade_tabela_trabalhador) VALUES(@nome, @password, @codigo_postal, @especialidade)";
             command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = nome_trabalhador.Text;
@@ -139,6 +155,7 @@ namespace Trabalho_marcacoes_
         {
             SqlCommand command = new SqlCommand();
             command.Connection = ligarDB;
+            ligarDB.Close();
             ligarDB.Open();
 
            

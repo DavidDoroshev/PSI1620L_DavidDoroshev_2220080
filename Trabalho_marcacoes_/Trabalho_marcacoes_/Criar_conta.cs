@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 using System.Configuration;
+using System.Text.RegularExpressions;
+
 namespace Trabalho_marcacoes_
 {
     public partial class criar_conta : Form
@@ -47,15 +49,31 @@ namespace Trabalho_marcacoes_
             }
         }
 
-       
-
-        private void guardar_cliente_Click(object sender, EventArgs e)
+        public void guardar_cliente_Click( object sender, EventArgs e)
         {
+
             ligarDB.Close();
 
             ligarDB.Open();
+
+            var input = password_guardar.Text;
+
+            Regex valid = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8}");
+
+            if(input == "" )
+            {
+                MessageBox.Show("Tem de ter passs");
+                return;
+            }
+            else if(!valid.IsMatch(input))
+            {
+                MessageBox.Show("Tem alguma coisa de errado");
+                return;
+            }
+
             SqlCommand command = new SqlCommand();
 
+            
             command.Connection = ligarDB;
 
             command.CommandText = "INSERT INTO cliente(nome, password, codigo_postal_cliente) VALUES(@nome, @password, @codigo)";
@@ -69,6 +87,8 @@ namespace Trabalho_marcacoes_
 
             MessageBox.Show("Utilizador adicionado com sucesso");
 
+            
+
             this.Close();
             
 
@@ -81,12 +101,14 @@ namespace Trabalho_marcacoes_
             voltar.Show();
             this.Hide();
         }
-
+       
         private void codigo_guardar_SelectedIndexChanged(object sender, EventArgs e)
         {
             SqlCommand command = new SqlCommand();
             command.Connection = ligarDB;
 
+
+            ligarDB.Close();
             ligarDB.Open();
 
             command.CommandText = "SELECT codigo_postal, distrito_tabela.distrito, conselho_tabela.conselho FROM codigo_postal INNER JOIN distrito_tabela ON distrito_codigo = distrito_tabela.distrito INNER JOIN conselho_tabela ON conselho_distrito = conselho_tabela.conselho WHERE codigo_postal = @codigo"; 
@@ -114,5 +136,6 @@ namespace Trabalho_marcacoes_
         {
 
         }
+        
     }
 }
