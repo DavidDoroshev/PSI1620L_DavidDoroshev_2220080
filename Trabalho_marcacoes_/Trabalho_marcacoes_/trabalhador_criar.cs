@@ -122,7 +122,7 @@ namespace Trabalho_marcacoes_
 
             var input = password_trabalhador.Text;
 
-            Regex valid = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8}");
+            Regex valid = new Regex("^(?!.*[!@#$%^&*()_+=\\[/{}];:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8}");
 
             if (input == "")
             {
@@ -131,6 +131,8 @@ namespace Trabalho_marcacoes_
             }
             else if (!valid.IsMatch(input))
             {
+
+                password_trabalhador.Text = "";
                 MessageBox.Show("Tem alguma coisa de errado");
                 return;
             }

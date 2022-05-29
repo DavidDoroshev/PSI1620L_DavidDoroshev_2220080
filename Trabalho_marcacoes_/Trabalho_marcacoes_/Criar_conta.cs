@@ -21,15 +21,12 @@ namespace Trabalho_marcacoes_
 
         public criar_conta()
         {
-            try
-            {
+           
                 ligarDB.Open();
 
                 InitializeComponent();
                 SqlCommand command = new SqlCommand();
                 command.Connection = ligarDB;
-                /* SqlDataReader commandReader = command.ExecuteReader();
-                commandReader.Read(); */
                 command.CommandText = "select * from codigo_postal";
                 SqlDataReader reader = command.ExecuteReader();
                 
@@ -42,11 +39,7 @@ namespace Trabalho_marcacoes_
 
                 textconselho.Enabled = false;
                 textdistrito.Enabled = false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
         }
 
         public void guardar_cliente_Click( object sender, EventArgs e)

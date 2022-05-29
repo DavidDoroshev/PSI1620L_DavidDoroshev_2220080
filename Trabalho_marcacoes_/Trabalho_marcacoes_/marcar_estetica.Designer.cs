@@ -114,9 +114,7 @@ namespace Trabalho_marcacoes_
             this.mostrar.TabIndex = 8;
             this.mostrar.UseCompatibleStateImageBehavior = false;
             this.mostrar.View = System.Windows.Forms.View.Details;
-            this.mostrar.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.mostrar_ColumnWidthChanging);
-            this.mostrar.SelectedIndexChanged += new System.EventHandler(this.mostrar_SelectedIndexChanged);
-            // 
+            this.mostrar.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.mostrar_ColumnWidthChanging);            // 
             // nome
             // 
             this.nome.Text = "Nome";
@@ -147,11 +145,12 @@ namespace Trabalho_marcacoes_
             // 
             this.horas_guardar.Location = new System.Drawing.Point(252, 178);
             this.horas_guardar.Margin = new System.Windows.Forms.Padding(2);
-            this.horas_guardar.Mask = "00:00:00";
+            this.horas_guardar.Mask = "00:00";
             this.horas_guardar.Name = "horas_guardar";
-            this.horas_guardar.Size = new System.Drawing.Size(43, 20);
+            this.horas_guardar.Size = new System.Drawing.Size(33, 20);
             this.horas_guardar.TabIndex = 10;
             this.horas_guardar.ValidatingType = typeof(System.DateTime);
+            this.horas_guardar.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.horas_guardar_MaskInputRejected);
             // 
             // marcar_estetica
             // 
