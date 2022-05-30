@@ -130,10 +130,9 @@ namespace Trabalho_marcacoes_
                 return;
             }
             else if (!valid.IsMatch(input))
-            {
-
-                password_trabalhador.Text = "";
+            {        
                 MessageBox.Show("Tem alguma coisa de errado");
+                password_trabalhador.Text = "";
                 return;
             }
 

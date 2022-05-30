@@ -11,6 +11,7 @@ using Microsoft.Data.SqlClient;
 using System.Configuration;
 using System.Text.RegularExpressions;
 
+
 namespace Trabalho_marcacoes_
 {
     public partial class marcar_estetica : Form
@@ -74,9 +75,21 @@ namespace Trabalho_marcacoes_
 
         private void Marcar_Click(object sender, EventArgs e)
         {
-           //TODO- guardar a marcação 
+            Regex ver = new Regex("^(?:[01]?[0-9]|2[0-3]):[0-5][0-9]$");
+
+            var veri = horas_guardar.Text;
+
+            
+
+            if(!ver.IsMatch(veri))
+            {
+                MessageBox.Show("Não pode por essas horas");
+                return;
+            }
+
             int i;
             for (i = 0; i < 3; i++)
+
             {
                 MessageBox.Show(mostrar.SelectedItems[0].SubItems[i].Text);
             }
@@ -88,16 +101,35 @@ namespace Trabalho_marcacoes_
             ligarDB.Close();
             ligarDB.Open();
 
-            string query = "INSERT INTO marcacaoes_cliente(dia_marcacao, hora, nome_cliente_id, nome_trabalhador_id, especialidade_marcacao ) VALUES(@dia, @hora ,@nome_cliente, @nome_trabalhador, @especialidade)";
-            SqlCommand cmd = new SqlCommand(query, ligarDB);
-            cmd.Parameters.Add("@dia", System.Data.SqlDbType.VarChar).Value = tempo_guardar.Text;
-            cmd.Parameters.Add("@hora", System.Data.SqlDbType.VarChar).Value = horas_guardar.Text;
-            cmd.Parameters.Add("@nome_cliente", System.Data.SqlDbType.VarChar).Value = Iniciar_Sessao.utilizador;
-            cmd.Parameters.Add("@nome_trabalhador", System.Data.SqlDbType.VarChar).Value = mostrar.Items[0].SubItems[0].ToString();
-            cmd.Parameters.Add("@especialidade", System.Data.SqlDbType.VarChar).Value = mostrar.Items[0].SubItems[1].ToString();
+            string query  = "INSERT INTO marcacoes_cliente(dia_marcacao, hora, nome_cliente_id, nome_trabalhador_id, especialidade_marcacao ) VALUES(@dia, @hora ,@id, @nome_trabalhador, @especialidade)";
+            string query2 = "SELECT id FROM cliente WHERE nome = @id";
+            string query3 = "SELECT id FROM trabalhadores WHERE nome = @nome";
 
-            
-            command.ExecuteNonQuery();
+            SqlCommand cmd = new SqlCommand(query, ligarDB);
+            SqlCommand ns = new SqlCommand(query2, ligarDB);
+            SqlCommand command2 = new SqlCommand(query3, ligarDB);
+
+            ns.Parameters.Add("@id", SqlDbType.VarChar).Value = Iniciar_Sessao.utilizador;
+            command2.Parameters.Add("@nome", SqlDbType.VarChar).Value = mostrar.Items[0].SubItems[0].Text.ToString();
+
+            SqlDataReader reader = ns.ExecuteReader();
+            reader.Read();
+            int id = Convert.ToInt32(reader["id"]);
+            reader.Close();
+
+            reader = command2.ExecuteReader();
+            reader.Read();
+
+            int idtrabalhador = Convert.ToInt32(reader["id"]);
+            reader.Close();
+
+            cmd.Parameters.Add("@dia", System.Data.SqlDbType.Date).Value = tempo_guardar.Text;
+            cmd.Parameters.Add("@hora", System.Data.SqlDbType.Time).Value = horas_guardar.Text;
+            cmd.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = id;
+            cmd.Parameters.Add("@nome_trabalhador", System.Data.SqlDbType.VarChar).Value = idtrabalhador;
+            cmd.Parameters.Add("@especialidade", System.Data.SqlDbType.VarChar).Value = mostrar.Items[0].SubItems[1].Text.ToString();
+
+            cmd.ExecuteNonQuery();
 
             ligarDB.Close();
 
@@ -106,36 +138,36 @@ namespace Trabalho_marcacoes_
 
 
         }
-
-        private void codigo_pesquisar_Enter(object sender, EventArgs e)
+        private void voltar_Click(object sender, EventArgs e)
         {
+            menu_cliente principal = new menu_cliente();
+            this.Hide();
+            principal.Show();     
+            ligarDB.Close();
+        }
+
+        private void codigo_pesquisar_Click(object sender, EventArgs e)
+        {
+
+
+            ligarDB.Open();
+
+            InitializeComponent();
             SqlCommand command = new SqlCommand();
             command.Connection = ligarDB;
-            try
+            string query = "SELECT * FROM trabalhadores WHERE codigo_postal_trabalhador = @codigo";
+            SqlDataReader reader = command.ExecuteReader();
+
+            SqlCommand ns = new SqlCommand(query, ligarDB);
+
+            //if(ns.Parameters.Add)
+            while (reader.Read())
             {
-
-                ligarDB.Open();
-
-                command.CommandText = "SELECT codigo_postal, distrito_tabela.distrito, conselho_tabela.conselho FROM codigo_postal INNER JOIN distrito_tabela ON distrito_codigo = distrito_tabela.distrito INNER JOIN conselho_tabela ON conselho_distrito = conselho_tabela.conselho WHERE codigo_postal = @codigo";
-
-                command.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = codigo_pesquisar.Text;
-
-                SqlDataReader reader = command.ExecuteReader();
-                reader.Read();
+                mostrar.Items.Add(reader["codigo_postal"].ToString());
             }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
 
-        private void codigo_pesquisar_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            ligarDB.Close();
 
-        }
-
-        private void horas_guardar_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
 
         }
     }
