@@ -25,10 +25,18 @@ namespace Trabalho_marcacoes_
 
             SqlCommand comando = new SqlCommand();
             comando.Connection = ligarDB;
-            comando.CommandText = "SELECT * FROM trabalhadores INNER JOIN especialidade_tabela on trabalhadores.especialidade_tabela_trabalhador = especialidade_tabela.especialidade inner join profissao_tabela on especialidade_tabela.profissao = profissao_tabela.id_profissao where profissao_tabela.profissao like 'Estética'";
+
+
+            
+            string query = "SELECT * FROM trabalhadores INNER JOIN especialidade_tabela on trabalhadores.especialidade_tabela_trabalhador = especialidade_tabela.especialidade INNER JOIN profissao_tabela ON especialidade_tabela.profissao = profissao_tabela.id_profissao WHERE profissao_tabela.profissao like 'Estética' ";
+            string query2 = "SELECT * FROM codigo_postal where codigo_postal = @codigo";
+
+            SqlCommand cmd = new SqlCommand(query, ligarDB);
+            SqlCommand cmd2 = new SqlCommand(query2, ligarDB);
+
 
             ligarDB.Open();
-            SqlDataReader Reader = comando.ExecuteReader();
+            SqlDataReader Reader = cmd.ExecuteReader();
 
             mostrar.Items.Clear();
 
@@ -40,18 +48,18 @@ namespace Trabalho_marcacoes_
             }
 
             ligarDB.Close();
-            Reader.Close(); 
+            Reader.Close();
+
 
             ligarDB.Close();
             ligarDB.Open();
-            comando.CommandText = "select * from codigo_postal";
 
-
-            Reader = comando.ExecuteReader();
+            Reader = cmd2.ExecuteReader();
             while (Reader.Read())
             {
 
-                codigo_pesquisar.Items.Add(Reader["codigo_postal"].ToString());
+             codigo_pesquisar.Items.Add(Reader["codigo_postal"].ToString());                                       
+
             }
             ligarDB.Close();
             Reader.Close();
@@ -79,21 +87,11 @@ namespace Trabalho_marcacoes_
 
             var veri = horas_guardar.Text;
 
-            
-
             if(!ver.IsMatch(veri))
             {
                 MessageBox.Show("Não pode por essas horas");
                 return;
             }
-
-            int i;
-            for (i = 0; i < 3; i++)
-
-            {
-                MessageBox.Show(mostrar.SelectedItems[0].SubItems[i].Text);
-            }
-            MessageBox.Show(horas_guardar.Text + tempo_guardar.Text);
 
             SqlCommand command = new SqlCommand();
 
@@ -148,26 +146,6 @@ namespace Trabalho_marcacoes_
 
         private void codigo_pesquisar_Click(object sender, EventArgs e)
         {
-
-
-            ligarDB.Open();
-
-            InitializeComponent();
-            SqlCommand command = new SqlCommand();
-            command.Connection = ligarDB;
-            string query = "SELECT * FROM trabalhadores WHERE codigo_postal_trabalhador = @codigo";
-            SqlDataReader reader = command.ExecuteReader();
-
-            SqlCommand ns = new SqlCommand(query, ligarDB);
-
-            //if(ns.Parameters.Add)
-            while (reader.Read())
-            {
-                mostrar.Items.Add(reader["codigo_postal"].ToString());
-            }
-
-            ligarDB.Close();
-
 
         }
     }

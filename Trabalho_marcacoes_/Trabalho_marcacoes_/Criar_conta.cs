@@ -42,49 +42,64 @@ namespace Trabalho_marcacoes_
             
         }
 
-        public void guardar_cliente_Click( object sender, EventArgs e)
+        public async void  guardar_cliente_Click( object sender, EventArgs e)
         {
 
             ligarDB.Close();
 
             ligarDB.Open();
 
-            var input = password_guardar.Text;
+            //var input = password_guardar.Text;
 
-            Regex valid = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8}");
+            //Regex valid = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8}");
 
-            if(input == "" )
+            //if(input == "" )
+            //{
+            //    MessageBox.Show("Tem de ter passs");
+            //    return;
+            //}
+            //else if(!valid.IsMatch(input))
+            //{
+            //    MessageBox.Show("Tem alguma coisa de errado");
+            //    return;
+            //}
+
+            SqlCommand commando = new SqlCommand();
+
+
+            string query = "SELECT * FROM cliente WHERE nome = '" + nome_guardar.Text + "'";
+            commando = new SqlCommand(query, ligarDB);
+            SqlDataReader reader = await commando.ExecuteReaderAsync();
+            await reader.ReadAsync();
+            if (reader.HasRows)
             {
-                MessageBox.Show("Tem de ter passs");
+
+                MessageBox.Show("Nome ja se encontra registado");
+                nome_guardar.Text = "";
+                nome_guardar.Select();
+
+                reader.Close();
+                ligarDB.Close();
                 return;
+
             }
-            else if(!valid.IsMatch(input))
+            else
             {
-                MessageBox.Show("Tem alguma coisa de errado");
-                return;
+
+                reader.Close();
+                commando.CommandText = "INSERT INTO cliente(nome, password, codigo_postal_cliente) VALUES(@nome, @password, @codigo)";
+                commando.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = nome_guardar.Text;
+                commando.Parameters.Add("@password", System.Data.SqlDbType.VarChar).Value = password_guardar.Text;
+                commando.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = codigo_guardar.SelectedItem.ToString();
+                await commando.ExecuteNonQueryAsync();
+
+                inicial voltar = new inicial();
+                voltar.Show();
+                this.Close();
+
+                ligarDB.Close();
+
             }
-
-            SqlCommand command = new SqlCommand();
-
-            
-            command.Connection = ligarDB;
-
-            command.CommandText = "INSERT INTO cliente(nome, password, codigo_postal_cliente) VALUES(@nome, @password, @codigo)";
-            command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = nome_guardar.Text;
-            command.Parameters.Add("@password", System.Data.SqlDbType.VarChar).Value = password_guardar.Text;
-            command.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = codigo_guardar.SelectedItem.ToString();
-
-            command.ExecuteNonQuery();
-
-            ligarDB.Close();
-
-            MessageBox.Show("Utilizador adicionado com sucesso");
-
-            
-
-            this.Close();
-            
-
 
         }
 

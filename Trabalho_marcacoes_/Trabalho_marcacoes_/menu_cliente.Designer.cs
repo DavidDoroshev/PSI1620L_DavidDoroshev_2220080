@@ -59,7 +59,6 @@ namespace Trabalho_marcacoes_
             this.marcar.TabIndex = 4;
             this.marcar.Text = "Marcações";
             this.marcar.UseVisualStyleBackColor = true;
-            this.marcar.Click += new System.EventHandler(this.marcar_Click);
             // 
             // marcar_estetica
             // 
@@ -91,7 +90,6 @@ namespace Trabalho_marcacoes_
             this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "Bem vindo ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // current_user
             // 
