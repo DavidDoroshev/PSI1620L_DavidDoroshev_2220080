@@ -33,7 +33,7 @@ namespace Trabalho_marcacoes_
         {
 
             ligarDB.Open();
-            string query = "SELECT * FROM trabalhadores WHERE nome = @nome AND password = @password";
+            string query = "SELECT * FROM trabalhadores WHERE nome = @nome AND password = @password ";
             SqlCommand cmd = new SqlCommand(query, ligarDB);
             cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = nome_entrar.Text;
             cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = password_entrar.Text;

@@ -22,13 +22,41 @@ namespace Trabalho_marcacoes_
         {
             InitializeComponent();
 
-            SqlCommand comando = new SqlCommand();
+            //SqlCommand comando = new SqlCommand();
 
-            comando.CommandText = "SELECT * FROM trabalhadores INNER JOIN especialidade_tabela on trabalhadores.especialidade_tabela_trabalhador = especialidade_tabela.especialidade inner join profissao_tabela on especialidade_tabela.profissao = profissao_tabela.id_profissao where profissao_tabela.profissao like 'Medico'";
+            //comando.CommandText = "SELECT * FROM trabalhadores INNER JOIN especialidade_tabela on trabalhadores.especialidade_tabela_trabalhador = especialidade_tabela.especialidade inner join profissao_tabela on especialidade_tabela.profissao = profissao_tabela.id_profissao where profissao_tabela.profissao like 'Medico'";
+
+            //comando.Connection = ligarDB;
+
+            //ligarDB.Open();
+            //SqlDataReader Reader = comando.ExecuteReader();
+
+            //mostrar_medico.Items.Clear();
+
+            //while (Reader.Read())
+            //{
+
+            //    string[] bomdia = new string[] { Reader["nome"].ToString(), Reader["especialidade_tabela_trabalhador"].ToString(), Reader["codigo_postal_trabalhador"].ToString() };
+            //    mostrar_medico.Items.Add(new ListViewItem(bomdia));
+            //}
+
+            //Reader.Close();
+            //ligarDB.Close();
+
+            SqlCommand comando = new SqlCommand();
             comando.Connection = ligarDB;
 
+
+
+            string query = "SELECT * FROM trabalhadores INNER JOIN especialidade_tabela on trabalhadores.especialidade_tabela_trabalhador = especialidade_tabela.especialidade INNER JOIN profissao_tabela ON especialidade_tabela.profissao = profissao_tabela.id_profissao WHERE profissao_tabela.profissao like 'Medico' ";
+            string query2 = "SELECT * FROM codigo_postal ";
+
+            SqlCommand cmd = new SqlCommand(query, ligarDB);
+            SqlCommand cmd2 = new SqlCommand(query2, ligarDB);
+
+
             ligarDB.Open();
-            SqlDataReader Reader = comando.ExecuteReader();
+            SqlDataReader Reader = cmd.ExecuteReader();
 
             mostrar_medico.Items.Clear();
 
@@ -39,9 +67,24 @@ namespace Trabalho_marcacoes_
                 mostrar_medico.Items.Add(new ListViewItem(bomdia));
             }
 
-            Reader.Close();
             ligarDB.Close();
+            Reader.Close();
 
+
+            ligarDB.Close();
+            ligarDB.Open();
+
+            Reader = cmd2.ExecuteReader();
+            while (Reader.Read())
+            {
+
+                codigo_pesquisar.Items.Add(Reader["codigo_postal"].ToString());
+
+
+
+            }
+            ligarDB.Close();
+            Reader.Close();
             int itemHeight = 20;
             ImageList imgList = new ImageList();
             imgList.ImageSize = new Size(1, itemHeight);
@@ -105,6 +148,10 @@ namespace Trabalho_marcacoes_
 
 
             MessageBox.Show("Marcação feita com sucesso");
+
+            menu_cliente principal = new menu_cliente();
+            this.Hide();
+            principal.Show();
         }
 
         private void voltar_Click(object sender, EventArgs e)
@@ -112,7 +159,35 @@ namespace Trabalho_marcacoes_
             menu_cliente principal = new menu_cliente();
             this.Hide();
             principal.Show();
+
+        }
+
+        private void codigo_pesquisar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ligarDB.Open();
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = ligarDB;
+
+            comando.CommandText = "SELECT * FROM trabalhadores INNER JOIN especialidade_tabela on trabalhadores.especialidade_tabela_trabalhador = especialidade_tabela.especialidade INNER JOIN profissao_tabela ON especialidade_tabela.profissao = profissao_tabela.id_profissao WHERE profissao_tabela.profissao like 'Medico' AND trabalhadores.codigo_postal_trabalhador = @codigo ";
+            comando.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = codigo_pesquisar.SelectedItem.ToString();
+            SqlDataReader Reader = comando.ExecuteReader();
+
+
+            mostrar_medico.Items.Clear();
+
+            while (Reader.Read())
+            {
+
+
+                string[] bomdia = new string[] { Reader["nome"].ToString(), Reader["especialidade_tabela_trabalhador"].ToString(), Reader["codigo_postal_trabalhador"].ToString() };
+
+                mostrar_medico.Items.Add(new ListViewItem(bomdia));
+
+            }
+            Reader.Close();
             ligarDB.Close();
         }
+
+
     }
 }

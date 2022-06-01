@@ -15,32 +15,41 @@ namespace Trabalho_marcacoes_
     
     public partial class inicial : Form 
     {
-        public int teste { get; set; }
+        //public int teste { get; set; }
 
         public inicial()
         {        
             InitializeComponent();
 
-            
-            
         }
 
         private void iniciar_botoa_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            teste = 3;
+            Iniciar_Sessao ir = new Iniciar_Sessao();
+            this.Hide();
+            ir.Show();
+            
+
+            //this.DialogResult = DialogResult.OK;
+            //teste = 3;
         }
 
         private void cliente_botao_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            teste = 1;
+            criar_conta ir = new criar_conta();
+            this.Hide();
+            ir.Show();
+            //this.DialogResult = DialogResult.OK;
+            //teste = 1;
         }
 
         private void trabalhador_botao_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            teste = 2;
+            trabalhador_criar ir = new trabalhador_criar();
+            this.Hide();
+            ir.Show();
+            //this.DialogResult = DialogResult.OK;
+            //teste = 2;
         }
 
         

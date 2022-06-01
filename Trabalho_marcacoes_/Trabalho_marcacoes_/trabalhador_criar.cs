@@ -148,7 +148,9 @@ namespace Trabalho_marcacoes_
 
             MessageBox.Show("Trabalhador adicionado com sucesso");
 
-            this.Close();
+            inicial voltar = new inicial();
+            voltar.Show();
+            this.Hide();
 
         }
 

@@ -29,7 +29,7 @@ namespace Trabalho_marcacoes_
 
             
             string query = "SELECT * FROM trabalhadores INNER JOIN especialidade_tabela on trabalhadores.especialidade_tabela_trabalhador = especialidade_tabela.especialidade INNER JOIN profissao_tabela ON especialidade_tabela.profissao = profissao_tabela.id_profissao WHERE profissao_tabela.profissao like 'Estética' ";
-            string query2 = "SELECT * FROM codigo_postal where codigo_postal = @codigo";
+            string query2 = "SELECT * FROM codigo_postal ";
 
             SqlCommand cmd = new SqlCommand(query, ligarDB);
             SqlCommand cmd2 = new SqlCommand(query2, ligarDB);
@@ -58,14 +58,15 @@ namespace Trabalho_marcacoes_
             while (Reader.Read())
             {
 
-             codigo_pesquisar.Items.Add(Reader["codigo_postal"].ToString());                                       
+             codigo_pesquisar.Items.Add(Reader["codigo_postal"].ToString());         
+             
+
 
             }
             ligarDB.Close();
             Reader.Close();
 
-            Reader.Close();
-            ligarDB.Close();
+           
 
             int itemHeight = 20;
             ImageList imgList = new ImageList();
@@ -123,7 +124,7 @@ namespace Trabalho_marcacoes_
 
             cmd.Parameters.Add("@dia", System.Data.SqlDbType.Date).Value = tempo_guardar.Text;
             cmd.Parameters.Add("@hora", System.Data.SqlDbType.Time).Value = horas_guardar.Text;
-            cmd.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = id;
+            cmd.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = id; 
             cmd.Parameters.Add("@nome_trabalhador", System.Data.SqlDbType.VarChar).Value = idtrabalhador;
             cmd.Parameters.Add("@especialidade", System.Data.SqlDbType.VarChar).Value = mostrar.Items[0].SubItems[1].Text.ToString();
 
@@ -134,6 +135,10 @@ namespace Trabalho_marcacoes_
 
             MessageBox.Show("Marcação feita com sucesso");
 
+            menu_cliente principal = new menu_cliente();
+            this.Hide();
+            principal.Show();
+       
 
         }
         private void voltar_Click(object sender, EventArgs e)
@@ -141,11 +146,34 @@ namespace Trabalho_marcacoes_
             menu_cliente principal = new menu_cliente();
             this.Hide();
             principal.Show();     
-            ligarDB.Close();
+   
         }
 
-        private void codigo_pesquisar_Click(object sender, EventArgs e)
+
+        private void codigo_pesquisar_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ligarDB.Open();
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = ligarDB;
+
+            comando.CommandText = "SELECT * FROM trabalhadores INNER JOIN especialidade_tabela on trabalhadores.especialidade_tabela_trabalhador = especialidade_tabela.especialidade INNER JOIN profissao_tabela ON especialidade_tabela.profissao = profissao_tabela.id_profissao WHERE profissao_tabela.profissao like 'Estética' AND trabalhadores.codigo_postal_trabalhador = @codigo ";
+            comando.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = codigo_pesquisar.SelectedItem.ToString();
+            SqlDataReader Reader = comando.ExecuteReader();
+
+            
+            mostrar.Items.Clear();
+
+            while (Reader.Read())
+            {
+
+
+                string[] bomdia = new string[] { Reader["nome"].ToString(), Reader["especialidade_tabela_trabalhador"].ToString(), Reader["codigo_postal_trabalhador"].ToString() };
+
+                mostrar.Items.Add(new ListViewItem(bomdia));
+                
+            }
+            Reader.Close();
+            ligarDB.Close();
 
         }
     }
