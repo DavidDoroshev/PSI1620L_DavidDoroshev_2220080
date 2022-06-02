@@ -40,8 +40,8 @@ namespace Trabalho_marcacoes_
 
             while (Reader.Read())
             {
-
-                string[] bomdia = new string[] { Reader["trabalhadores.nome"].ToString(), Reader["marcacoes_cliente.especialidade_marcacao"].ToString(), Reader["marcacoes_cliente.dia_marcacao"].ToString(), Reader["marcacoes_cliente.hora"].ToString() };
+                
+                string[] bomdia = new string[] { Reader["nome"].ToString(), Reader["especialidade_marcacao"].ToString(), ((DateTime)Reader["dia_marcacao"]).ToShortDateString(), Reader["hora"].ToString() };
                 mostrar.Items.Add(new ListViewItem(bomdia));
             }
 

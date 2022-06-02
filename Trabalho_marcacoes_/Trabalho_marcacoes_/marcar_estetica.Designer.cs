@@ -100,7 +100,7 @@ namespace Trabalho_marcacoes_
             this.tempo_guardar.Name = "tempo_guardar";
             this.tempo_guardar.Size = new System.Drawing.Size(200, 20);
             this.tempo_guardar.TabIndex = 0;
-            this.tempo_guardar.Value = new System.DateTime(2022, 5, 30, 15, 2, 18, 0);
+            this.tempo_guardar.Value = new System.DateTime(2022, 5, 30, 0, 0, 0, 0);
             // 
             // mostrar
             // 

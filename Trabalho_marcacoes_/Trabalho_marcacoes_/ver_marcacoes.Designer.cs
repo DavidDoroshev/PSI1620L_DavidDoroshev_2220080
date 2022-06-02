@@ -39,9 +39,10 @@ namespace Trabalho_marcacoes_
             // 
             // voltar
             // 
-            this.voltar.Location = new System.Drawing.Point(262, 357);
+            this.voltar.Location = new System.Drawing.Point(196, 290);
+            this.voltar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.voltar.Name = "voltar";
-            this.voltar.Size = new System.Drawing.Size(134, 38);
+            this.voltar.Size = new System.Drawing.Size(100, 31);
             this.voltar.TabIndex = 1;
             this.voltar.Text = "Voltar";
             this.voltar.UseVisualStyleBackColor = true;
@@ -57,11 +58,10 @@ namespace Trabalho_marcacoes_
             this.hora});
             this.mostrar.FullRowSelect = true;
             this.mostrar.HideSelection = false;
-            this.mostrar.Location = new System.Drawing.Point(12, 13);
-            this.mostrar.Margin = new System.Windows.Forms.Padding(4);
+            this.mostrar.Location = new System.Drawing.Point(9, 11);
             this.mostrar.MultiSelect = false;
             this.mostrar.Name = "mostrar";
-            this.mostrar.Size = new System.Drawing.Size(701, 297);
+            this.mostrar.Size = new System.Drawing.Size(526, 241);
             this.mostrar.TabIndex = 9;
             this.mostrar.UseCompatibleStateImageBehavior = false;
             this.mostrar.View = System.Windows.Forms.View.Details;
@@ -88,11 +88,12 @@ namespace Trabalho_marcacoes_
             // 
             // ver_marcacoes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 450);
+            this.ClientSize = new System.Drawing.Size(547, 366);
             this.Controls.Add(this.mostrar);
             this.Controls.Add(this.voltar);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ver_marcacoes";
             this.Text = "ver_marcacoes";
             this.ResumeLayout(false);
