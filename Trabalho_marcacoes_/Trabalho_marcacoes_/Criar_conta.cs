@@ -19,9 +19,6 @@ namespace Trabalho_marcacoes_
         static SqlConnection ligarDB = new SqlConnection(connectionString);
 
 
-        //public static string codigo;
-
-
         public criar_conta()
         {
            
@@ -52,16 +49,30 @@ namespace Trabalho_marcacoes_
 
             ligarDB.Open();
 
-            //var input = password_guardar.Text;
+            var in_pass = password_guardar.Text;
+            
 
-            //Regex valid = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8}");
+            Regex valid_pass = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8}$");
+           ;
 
-            //if(input == "" )
+            if (in_pass == "" )
+            {
+                MessageBox.Show("Tem de ter passs");
+                return;
+            }
+            else if (!valid_pass.IsMatch(in_pass))
+            {
+                MessageBox.Show("Tem alguma coisa de errado");
+                return;
+            }
+            //var in_nome = nome_guardar.Text;
+            //Regex valid_nome = new Regex("^(?=.*[A-Z]{1})(?=.*[a-zA-Z])$");
+            //if (in_nome == "")
             //{
             //    MessageBox.Show("Tem de ter passs");
             //    return;
             //}
-            //else if(!valid.IsMatch(input))
+            //else if (!valid_nome.IsMatch(in_nome))
             //{
             //    MessageBox.Show("Tem alguma coisa de errado");
             //    return;

@@ -43,5 +43,12 @@ namespace Trabalho_marcacoes_
         {
             current_user.Text = Iniciar_Sessao.utilizador;
         }
+
+        private void ver_marca_Click(object sender, EventArgs e)
+        {
+            ver_marcacoes ir = new ver_marcacoes();
+            this.Hide();
+            ir.Show();
+        }
     }
 }

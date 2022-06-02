@@ -30,7 +30,7 @@ namespace Trabalho_marcacoes_
         private void InitializeComponent()
         {
             this.Perfil = new System.Windows.Forms.Button();
-            this.marcar = new System.Windows.Forms.Button();
+            this.ver_marca = new System.Windows.Forms.Button();
             this.marcar_estetica = new System.Windows.Forms.Button();
             this.ir_medico = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,33 +40,34 @@ namespace Trabalho_marcacoes_
             // Perfil
             // 
             this.Perfil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Perfil.Location = new System.Drawing.Point(62, 77);
-            this.Perfil.Margin = new System.Windows.Forms.Padding(2);
+            this.Perfil.Location = new System.Drawing.Point(83, 95);
+            this.Perfil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Perfil.Name = "Perfil";
-            this.Perfil.Size = new System.Drawing.Size(128, 60);
+            this.Perfil.Size = new System.Drawing.Size(171, 74);
             this.Perfil.TabIndex = 3;
             this.Perfil.Text = "Perfil";
             this.Perfil.UseVisualStyleBackColor = true;
             this.Perfil.Click += new System.EventHandler(this.Perfil_Click);
             // 
-            // marcar
+            // ver_marca
             // 
-            this.marcar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.marcar.Location = new System.Drawing.Point(315, 77);
-            this.marcar.Margin = new System.Windows.Forms.Padding(2);
-            this.marcar.Name = "marcar";
-            this.marcar.Size = new System.Drawing.Size(128, 60);
-            this.marcar.TabIndex = 4;
-            this.marcar.Text = "Marcações";
-            this.marcar.UseVisualStyleBackColor = true;
+            this.ver_marca.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ver_marca.Location = new System.Drawing.Point(420, 95);
+            this.ver_marca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ver_marca.Name = "ver_marca";
+            this.ver_marca.Size = new System.Drawing.Size(171, 74);
+            this.ver_marca.TabIndex = 4;
+            this.ver_marca.Text = "Marcações";
+            this.ver_marca.UseVisualStyleBackColor = true;
+            this.ver_marca.Click += new System.EventHandler(this.ver_marca_Click);
             // 
             // marcar_estetica
             // 
             this.marcar_estetica.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.marcar_estetica.Location = new System.Drawing.Point(315, 182);
-            this.marcar_estetica.Margin = new System.Windows.Forms.Padding(2);
+            this.marcar_estetica.Location = new System.Drawing.Point(420, 224);
+            this.marcar_estetica.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.marcar_estetica.Name = "marcar_estetica";
-            this.marcar_estetica.Size = new System.Drawing.Size(128, 60);
+            this.marcar_estetica.Size = new System.Drawing.Size(171, 74);
             this.marcar_estetica.TabIndex = 5;
             this.marcar_estetica.Text = "Marcar - Estetica";
             this.marcar_estetica.UseVisualStyleBackColor = true;
@@ -74,9 +75,10 @@ namespace Trabalho_marcacoes_
             // 
             // ir_medico
             // 
-            this.ir_medico.Location = new System.Drawing.Point(62, 182);
+            this.ir_medico.Location = new System.Drawing.Point(83, 224);
+            this.ir_medico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ir_medico.Name = "ir_medico";
-            this.ir_medico.Size = new System.Drawing.Size(128, 60);
+            this.ir_medico.Size = new System.Drawing.Size(171, 74);
             this.ir_medico.TabIndex = 6;
             this.ir_medico.Text = "Marcar - Medico";
             this.ir_medico.UseVisualStyleBackColor = true;
@@ -85,33 +87,35 @@ namespace Trabalho_marcacoes_
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 35);
+            this.label1.Location = new System.Drawing.Point(49, 43);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.Size = new System.Drawing.Size(78, 17);
             this.label1.TabIndex = 7;
             this.label1.Text = "Bem vindo ";
             // 
             // current_user
             // 
             this.current_user.AutoSize = true;
-            this.current_user.Location = new System.Drawing.Point(107, 35);
+            this.current_user.Location = new System.Drawing.Point(143, 43);
+            this.current_user.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.current_user.Name = "current_user";
-            this.current_user.Size = new System.Drawing.Size(0, 13);
+            this.current_user.Size = new System.Drawing.Size(0, 17);
             this.current_user.TabIndex = 8;
             // 
-            // Menu
+            // menu_cliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.ClientSize = new System.Drawing.Size(711, 359);
             this.Controls.Add(this.current_user);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ir_medico);
             this.Controls.Add(this.marcar_estetica);
-            this.Controls.Add(this.marcar);
+            this.Controls.Add(this.ver_marca);
             this.Controls.Add(this.Perfil);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Menu";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "menu_cliente";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
@@ -123,7 +127,7 @@ namespace Trabalho_marcacoes_
 
         #endregion
         private System.Windows.Forms.Button Perfil;
-        private System.Windows.Forms.Button marcar;
+        private System.Windows.Forms.Button ver_marca;
         private System.Windows.Forms.Button marcar_estetica;
         private System.Windows.Forms.Button ir_medico;
         private System.Windows.Forms.Label label1;

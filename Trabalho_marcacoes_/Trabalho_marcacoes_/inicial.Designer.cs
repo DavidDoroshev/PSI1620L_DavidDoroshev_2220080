@@ -37,7 +37,7 @@ namespace Trabalho_marcacoes_
             // cliente_botao
             // 
             this.cliente_botao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cliente_botao.Location = new System.Drawing.Point(148, 213);
+            this.cliente_botao.Location = new System.Drawing.Point(137, 189);
             this.cliente_botao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cliente_botao.Name = "cliente_botao";
             this.cliente_botao.Size = new System.Drawing.Size(175, 80);
@@ -49,7 +49,7 @@ namespace Trabalho_marcacoes_
             // iniciar_botoa
             // 
             this.iniciar_botoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iniciar_botoa.Location = new System.Drawing.Point(299, 96);
+            this.iniciar_botoa.Location = new System.Drawing.Point(288, 72);
             this.iniciar_botoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iniciar_botoa.Name = "iniciar_botoa";
             this.iniciar_botoa.Size = new System.Drawing.Size(175, 80);
@@ -61,7 +61,7 @@ namespace Trabalho_marcacoes_
             // trabalhador_botao
             // 
             this.trabalhador_botao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.trabalhador_botao.Location = new System.Drawing.Point(444, 213);
+            this.trabalhador_botao.Location = new System.Drawing.Point(433, 189);
             this.trabalhador_botao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.trabalhador_botao.Name = "trabalhador_botao";
             this.trabalhador_botao.Size = new System.Drawing.Size(175, 80);
@@ -74,7 +74,7 @@ namespace Trabalho_marcacoes_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(792, 368);
             this.Controls.Add(this.trabalhador_botao);
             this.Controls.Add(this.iniciar_botoa);
             this.Controls.Add(this.cliente_botao);

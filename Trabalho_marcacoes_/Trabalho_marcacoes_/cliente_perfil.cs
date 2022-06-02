@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 using System.Configuration;
-
+using System.Text.RegularExpressions;
 namespace Trabalho_marcacoes_
 {
     public partial class cliente_perfil : Form
@@ -23,9 +23,6 @@ namespace Trabalho_marcacoes_
      
             nome_utilizador.Text = Iniciar_Sessao.utilizador;
             nome_utilizador.Enabled = false;
-
-            
-
         }
 
         private void Voltar_Click(object sender, EventArgs e)
@@ -38,20 +35,48 @@ namespace Trabalho_marcacoes_
         private void but_salvar_Click(object sender, EventArgs e)
         {
             ligarDB.Open();
-            try
-            {
-                string query = "UPDATE cliente SET password = '" + pass_alterar + "' WHERE nome = '" + Iniciar_Sessao.utilizador + "' ";
-                SqlCommand cmd = new SqlCommand(query, ligarDB);
 
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Pass alterada");
+            var input = pass_alterar.Text;
 
-            }
-            catch(Exception ex)
+            Regex valid = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8}");
+
+            if (input == "")
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Tem de ter passs");
+                return;
             }
+            else if (!valid.IsMatch(input))
+            {
+                MessageBox.Show("Tem alguma coisa de errado");
+                return;
+            }
+
+            string query = "UPDATE cliente SET password = '" + pass_alterar.Text + "' WHERE nome = '" + Iniciar_Sessao.utilizador + "' ";
+            SqlCommand cmd = new SqlCommand(query, ligarDB);
+
+                
+            cmd.ExecuteReader();
+
+            MessageBox.Show("Pass alterada");
+
             ligarDB.Close();
+        }
+
+        private void apagar_cliente_Click(object sender, EventArgs e)
+        { 
+
+            //string query = "  DELETE FROM cliente WHERE id = '" + Iniciar_Sessao.utilizador + "'";
+            //SqlCommand cmd = new SqlCommand(query, ligarDB);
+
+
+            //cmd.ExecuteReader();
+
+            //MessageBox.Show("Utilizador apagado !!!");
+
+            inicial ir = new inicial();
+            this.Hide();
+            ir.Show();
+
         }
     }
 }

@@ -29,6 +29,8 @@ namespace Trabalho_marcacoes_
 
         public static string utilizador = "";
         public static string trabalhador = "";
+        public static string pass_utilizador = "";
+        public static string pass_trabalhador = "";
         private async void entrar_menu_Click(object sender, EventArgs e)
         {
 
@@ -60,6 +62,7 @@ namespace Trabalho_marcacoes_
                 if (reader.HasRows)
                 {
                     utilizador = nome_entrar.Text;
+                    pass_utilizador = password_entrar.Text;
                     menu_cliente principal = new menu_cliente();
                     this.Hide();
                     principal.Show();

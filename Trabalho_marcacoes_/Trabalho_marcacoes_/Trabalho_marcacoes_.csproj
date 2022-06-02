@@ -180,6 +180,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="apagar_confirmacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="apagar_confirmacao.Designer.cs">
+      <DependentUpon>apagar_confirmacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="cliente_perfil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +248,15 @@
     <Compile Include="trabalhador_criar.Designer.cs">
       <DependentUpon>trabalhador_criar.cs</DependentUpon>
     </Compile>
+    <Compile Include="ver_marcacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ver_marcacoes.Designer.cs">
+      <DependentUpon>ver_marcacoes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="apagar_confirmacao.resx">
+      <DependentUpon>apagar_confirmacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cliente_perfil.resx">
       <DependentUpon>cliente_perfil.cs</DependentUpon>
     </EmbeddedResource>
@@ -273,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="trabalhador_criar.resx">
       <DependentUpon>trabalhador_criar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ver_marcacoes.resx">
+      <DependentUpon>ver_marcacoes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
