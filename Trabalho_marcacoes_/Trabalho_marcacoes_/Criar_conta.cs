@@ -65,18 +65,6 @@ namespace Trabalho_marcacoes_
                 MessageBox.Show("Tem alguma coisa de errado");
                 return;
             }
-            //var in_nome = nome_guardar.Text;
-            //Regex valid_nome = new Regex("^(?=.*[A-Z]{1})(?=.*[a-zA-Z])$");
-            //if (in_nome == "")
-            //{
-            //    MessageBox.Show("Tem de ter passs");
-            //    return;
-            //}
-            //else if (!valid_nome.IsMatch(in_nome))
-            //{
-            //    MessageBox.Show("Tem alguma coisa de errado");
-            //    return;
-            //}
 
             SqlCommand commando = new SqlCommand();
 
