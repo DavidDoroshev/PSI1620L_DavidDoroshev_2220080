@@ -18,12 +18,20 @@ namespace Trabalho_marcacoes_
         private static SqlConnection ligarDB = new SqlConnection(connectionString);
         public menu_trabalhador()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            trabalhador_atual.Text = Iniciar_Sessao.trabalhador;
         }
 
         private void perfil_trabalhador_Click(object sender, EventArgs e)
         {
-            trabalhador_atual.Text = Iniciar_Sessao.trabalhador;
+           
+        }
+
+        private void ver_marcacoes_trabalhador_Click(object sender, EventArgs e)
+        {
+            marcacoes_trabalhador ir = new marcacoes_trabalhador();
+            this.Hide();
+            ir.Show();
         }
     }
 }

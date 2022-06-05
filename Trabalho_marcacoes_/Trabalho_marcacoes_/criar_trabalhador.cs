@@ -13,12 +13,12 @@ using System.Text.RegularExpressions;
 
 namespace Trabalho_marcacoes_
 {
-    public partial class trabalhador_criar : Form
+    public partial class criar_trabalhador : Form
     {
         static string connectionString = ConfigurationManager.ConnectionStrings["ligarDB"].ConnectionString;
         static SqlConnection ligarDB = new SqlConnection(connectionString);
 
-        public trabalhador_criar()
+        public criar_trabalhador()
         {
             
                 ligarDB.Open();
@@ -64,7 +64,7 @@ namespace Trabalho_marcacoes_
 
         private void button1_Click(object sender, EventArgs e)
         {
-            inicial voltar = new inicial();
+            menu_inicial voltar = new menu_inicial();
             voltar.Show();
             this.Hide();
         }
@@ -148,7 +148,7 @@ namespace Trabalho_marcacoes_
 
             MessageBox.Show("Trabalhador adicionado com sucesso");
 
-            inicial voltar = new inicial();
+            menu_inicial voltar = new menu_inicial();
             voltar.Show();
             this.Hide();
 

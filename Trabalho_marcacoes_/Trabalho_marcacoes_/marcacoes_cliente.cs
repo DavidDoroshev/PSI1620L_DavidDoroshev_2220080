@@ -9,16 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 using System.Configuration;
-using System.Text.RegularExpressions;
 
 namespace Trabalho_marcacoes_
 {
-    public partial class ver_marcacoes : Form
+    public partial class marcacoes_cliente : Form
     {
         private static string connectionString = ConfigurationManager.ConnectionStrings["ligarDB"].ConnectionString;
         private static SqlConnection ligarDB = new SqlConnection(connectionString);
 
-        public ver_marcacoes()
+        public marcacoes_cliente()
         {
             InitializeComponent();
 
@@ -47,11 +46,13 @@ namespace Trabalho_marcacoes_
 
             ligarDB.Close();
             Reader.Close();
-            int itemHeight = 20;
-            ImageList imgList = new ImageList();
-            imgList.ImageSize = new Size(1, itemHeight);
-            mostrar.SmallImageList = imgList;
+        }
 
+        private void voltar_Click(object sender, EventArgs e)
+        {
+            menu_cliente voltar = new menu_cliente();
+            this.Hide();
+            voltar.Show();
         }
     }
 }

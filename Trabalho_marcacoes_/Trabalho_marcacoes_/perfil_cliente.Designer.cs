@@ -1,7 +1,7 @@
 ﻿
 namespace Trabalho_marcacoes_
 {
-    partial class cliente_perfil
+    partial class perfil_cliente
     {
         /// <summary>
         /// Required designer variable.

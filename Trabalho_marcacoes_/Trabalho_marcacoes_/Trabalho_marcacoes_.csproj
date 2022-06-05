@@ -186,11 +186,17 @@
     <Compile Include="apagar_confirmacao.Designer.cs">
       <DependentUpon>apagar_confirmacao.cs</DependentUpon>
     </Compile>
-    <Compile Include="cliente_perfil.cs">
+    <Compile Include="perfil_cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cliente_perfil.Designer.cs">
-      <DependentUpon>cliente_perfil.cs</DependentUpon>
+    <Compile Include="perfil_cliente.Designer.cs">
+      <DependentUpon>perfil_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="marcacoes_trabalhador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="marcacoes_trabalhador.Designer.cs">
+      <DependentUpon>marcacoes_trabalhador.cs</DependentUpon>
     </Compile>
     <Compile Include="marcar_medico.cs">
       <SubType>Form</SubType>
@@ -235,6 +241,12 @@
     <Compile Include="menu_trabalhador.Designer.cs">
       <DependentUpon>menu_trabalhador.cs</DependentUpon>
     </Compile>
+    <Compile Include="perfil_trabalhador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="perfil_trabalhador.Designer.cs">
+      <DependentUpon>perfil_trabalhador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -257,8 +269,8 @@
     <EmbeddedResource Include="apagar_confirmacao.resx">
       <DependentUpon>apagar_confirmacao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="cliente_perfil.resx">
-      <DependentUpon>cliente_perfil.cs</DependentUpon>
+    <EmbeddedResource Include="perfil_cliente.resx">
+      <DependentUpon>perfil_cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inicial.resx">
       <DependentUpon>inicial.cs</DependentUpon>
@@ -268,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Iniciar_Sessao.resx">
       <DependentUpon>Iniciar_Sessao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="marcacoes_trabalhador.resx">
+      <DependentUpon>marcacoes_trabalhador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="marcar_estetica.resx">
       <DependentUpon>marcar_estetica.cs</DependentUpon>
@@ -280,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="menu_trabalhador.resx">
       <DependentUpon>menu_trabalhador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="perfil_trabalhador.resx">
+      <DependentUpon>perfil_trabalhador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

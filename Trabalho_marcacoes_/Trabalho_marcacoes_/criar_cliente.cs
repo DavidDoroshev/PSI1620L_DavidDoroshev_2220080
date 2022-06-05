@@ -96,7 +96,7 @@ namespace Trabalho_marcacoes_
                 commando.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = codigo_guardar.SelectedItem.ToString();
                 await commando.ExecuteNonQueryAsync();
 
-                inicial voltar = new inicial();
+                menu_inicial voltar = new menu_inicial();
                 voltar.Show();
                 this.Close();
 
@@ -108,7 +108,7 @@ namespace Trabalho_marcacoes_
 
         private void voltar_iniciar_Click(object sender, EventArgs e)
         {
-            inicial voltar = new inicial();
+            menu_inicial voltar = new menu_inicial();
             voltar.Show();
             this.Hide();
         }

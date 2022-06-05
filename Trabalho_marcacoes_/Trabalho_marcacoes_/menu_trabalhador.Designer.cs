@@ -48,18 +48,19 @@ namespace Trabalho_marcacoes_
             // 
             this.ver_marcacoes_trabalhador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ver_marcacoes_trabalhador.Location = new System.Drawing.Point(260, 89);
-            this.ver_marcacoes_trabalhador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ver_marcacoes_trabalhador.Margin = new System.Windows.Forms.Padding(2);
             this.ver_marcacoes_trabalhador.Name = "ver_marcacoes_trabalhador";
             this.ver_marcacoes_trabalhador.Size = new System.Drawing.Size(128, 60);
             this.ver_marcacoes_trabalhador.TabIndex = 10;
             this.ver_marcacoes_trabalhador.Text = "Marcações";
             this.ver_marcacoes_trabalhador.UseVisualStyleBackColor = true;
+            this.ver_marcacoes_trabalhador.Click += new System.EventHandler(this.ver_marcacoes_trabalhador_Click);
             // 
             // perfil_trabalhador
             // 
             this.perfil_trabalhador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.perfil_trabalhador.Location = new System.Drawing.Point(34, 89);
-            this.perfil_trabalhador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.perfil_trabalhador.Margin = new System.Windows.Forms.Padding(2);
             this.perfil_trabalhador.Name = "perfil_trabalhador";
             this.perfil_trabalhador.Size = new System.Drawing.Size(128, 60);
             this.perfil_trabalhador.TabIndex = 9;
@@ -85,7 +86,7 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ver_marcacoes_trabalhador);
             this.Controls.Add(this.perfil_trabalhador);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "menu_trabalhador";
             this.Text = "menu_trabalhador";
             this.ResumeLayout(false);

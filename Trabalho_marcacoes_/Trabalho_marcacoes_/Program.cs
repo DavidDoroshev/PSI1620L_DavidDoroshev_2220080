@@ -18,7 +18,7 @@ namespace Trabalho_marcacoes_
            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new inicial());
+            Application.Run(new menu_inicial());
             //DialogResult result = login.ShowDialog();
 
             //if (result == DialogResult.OK)

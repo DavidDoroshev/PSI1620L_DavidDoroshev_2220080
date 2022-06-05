@@ -45,7 +45,7 @@ namespace Trabalho_marcacoes_
 
         private void trabalhador_botao_Click(object sender, EventArgs e)
         {
-            trabalhador_criar ir = new trabalhador_criar();
+            criar_trabalhador ir = new criar_trabalhador();
             this.Hide();
             ir.Show();
             //this.DialogResult = DialogResult.OK;

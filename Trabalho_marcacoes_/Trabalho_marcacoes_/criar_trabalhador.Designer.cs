@@ -1,7 +1,7 @@
 ﻿
 namespace Trabalho_marcacoes_
 {
-    partial class trabalhador_criar
+    partial class criar_trabalhador
     {
         /// <summary>
         /// Required designer variable.

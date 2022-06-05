@@ -12,12 +12,12 @@ using System.Configuration;
 using System.Text.RegularExpressions;
 namespace Trabalho_marcacoes_
 {
-    public partial class cliente_perfil : Form
+    public partial class perfil_cliente : Form
     {
         private static string connectionString = ConfigurationManager.ConnectionStrings["ligarDB"].ConnectionString;
         private static SqlConnection ligarDB = new SqlConnection(connectionString);
 
-        public cliente_perfil()
+        public perfil_cliente()
         {
             InitializeComponent();
      
@@ -73,7 +73,7 @@ namespace Trabalho_marcacoes_
 
             //MessageBox.Show("Utilizador apagado !!!");
 
-            inicial ir = new inicial();
+            menu_inicial ir = new menu_inicial();
             this.Hide();
             ir.Show();
 

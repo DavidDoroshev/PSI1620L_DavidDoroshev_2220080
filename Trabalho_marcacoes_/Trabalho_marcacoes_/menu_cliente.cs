@@ -20,7 +20,7 @@ namespace Trabalho_marcacoes_
 
         private void Perfil_Click(object sender, EventArgs e)
         {
-            cliente_perfil ir = new cliente_perfil();
+            perfil_cliente ir = new perfil_cliente();
             ir.Show();
             this.Close();
         }
@@ -46,7 +46,7 @@ namespace Trabalho_marcacoes_
 
         private void ver_marca_Click(object sender, EventArgs e)
         {
-            ver_marcacoes ir = new ver_marcacoes();
+            marcacoes_cliente ir = new marcacoes_cliente();
             this.Hide();
             ir.Show();
         }
