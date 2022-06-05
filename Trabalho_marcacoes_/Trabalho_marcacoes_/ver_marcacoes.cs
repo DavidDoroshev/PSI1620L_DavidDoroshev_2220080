@@ -28,7 +28,7 @@ namespace Trabalho_marcacoes_
 
 
 
-            string query = " SELECT marcacoes_cliente.dia_marcacao, marcacoes_cliente.hora, trabalhadores.nome, marcacoes_cliente.especialidade_marcacao FROM marcacoes_cliente LEFT JOIN trabalhadores on marcacoes_cliente.nome_trabalhador_id = trabalhadores.id ";
+            string query = " SELECT marcacoes_cliente.dia_marcacao, marcacoes_cliente.hora, trabalhadores.nome, marcacoes_cliente.especialidade_marcacao FROM marcacoes_cliente LEFT JOIN trabalhadores on marcacoes_cliente.nome_trabalhador_id = trabalhadores.id RIGHT JOIN cliente on marcacoes_cliente.nome_cliente_id = cliente.id WHERE cliente.nome = '" + Iniciar_Sessao.utilizador + "'";
 
             SqlCommand cmd = new SqlCommand(query, ligarDB);
 
@@ -47,6 +47,11 @@ namespace Trabalho_marcacoes_
 
             ligarDB.Close();
             Reader.Close();
+            int itemHeight = 20;
+            ImageList imgList = new ImageList();
+            imgList.ImageSize = new Size(1, itemHeight);
+            mostrar.SmallImageList = imgList;
+
         }
     }
 }

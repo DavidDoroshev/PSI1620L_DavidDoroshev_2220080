@@ -40,7 +40,7 @@ namespace Trabalho_marcacoes_
             // voltar
             // 
             this.voltar.Location = new System.Drawing.Point(196, 290);
-            this.voltar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.voltar.Margin = new System.Windows.Forms.Padding(2);
             this.voltar.Name = "voltar";
             this.voltar.Size = new System.Drawing.Size(100, 31);
             this.voltar.TabIndex = 1;
@@ -62,7 +62,7 @@ namespace Trabalho_marcacoes_
             this.mostrar.MultiSelect = false;
             this.mostrar.Name = "mostrar";
             this.mostrar.Size = new System.Drawing.Size(526, 241);
-            this.mostrar.TabIndex = 9;
+            this.mostrar.TabIndex = 15;
             this.mostrar.UseCompatibleStateImageBehavior = false;
             this.mostrar.View = System.Windows.Forms.View.Details;
             // 
@@ -79,12 +79,12 @@ namespace Trabalho_marcacoes_
             // dia
             // 
             this.dia.Text = "Dia";
-            this.dia.Width = 150;
+            this.dia.Width = 100;
             // 
             // hora
             // 
             this.hora.Text = "Hora";
-            this.hora.Width = 150;
+            this.hora.Width = 100;
             // 
             // ver_marcacoes
             // 
@@ -93,7 +93,7 @@ namespace Trabalho_marcacoes_
             this.ClientSize = new System.Drawing.Size(547, 366);
             this.Controls.Add(this.mostrar);
             this.Controls.Add(this.voltar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ver_marcacoes";
             this.Text = "ver_marcacoes";
             this.ResumeLayout(false);
