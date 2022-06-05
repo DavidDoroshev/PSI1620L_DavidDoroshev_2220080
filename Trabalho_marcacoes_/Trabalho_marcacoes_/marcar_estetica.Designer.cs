@@ -94,13 +94,17 @@ namespace Trabalho_marcacoes_
             // 
             // tempo_guardar
             // 
+            this.tempo_guardar.CalendarFont = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tempo_guardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tempo_guardar.Location = new System.Drawing.Point(412, 176);
             this.tempo_guardar.MaxDate = new System.DateTime(2025, 12, 31, 0, 0, 0, 0);
             this.tempo_guardar.MinDate = new System.DateTime(1920, 1, 1, 0, 0, 0, 0);
             this.tempo_guardar.Name = "tempo_guardar";
+            this.tempo_guardar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tempo_guardar.Size = new System.Drawing.Size(200, 20);
             this.tempo_guardar.TabIndex = 0;
             this.tempo_guardar.Value = new System.DateTime(2022, 5, 30, 0, 0, 0, 0);
+            this.tempo_guardar.Visible = false;
             // 
             // mostrar
             // 

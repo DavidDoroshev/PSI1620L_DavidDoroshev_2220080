@@ -210,17 +210,17 @@
     <Compile Include="marcar_estetica.Designer.cs">
       <DependentUpon>marcar_estetica.cs</DependentUpon>
     </Compile>
-    <Compile Include="inicial.cs">
+    <Compile Include="menu_inicial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="inicial.Designer.cs">
-      <DependentUpon>inicial.cs</DependentUpon>
+    <Compile Include="menu_inicial.Designer.cs">
+      <DependentUpon>menu_inicial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Criar_conta.cs">
+    <Compile Include="criar_cliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include=".Designer.cs">
-      <DependentUpon>Criar_conta.cs</DependentUpon>
+      <DependentUpon>criar_cliente.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Iniciar_Sessao.cs">
@@ -254,17 +254,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="trabalhador_criar.cs">
+    <Compile Include="criar_trabalhador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="trabalhador_criar.Designer.cs">
-      <DependentUpon>trabalhador_criar.cs</DependentUpon>
+    <Compile Include="criar_trabalhador.Designer.cs">
+      <DependentUpon>criar_trabalhador.cs</DependentUpon>
     </Compile>
-    <Compile Include="ver_marcacoes.cs">
+    <Compile Include="marcacoes_cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ver_marcacoes.Designer.cs">
-      <DependentUpon>ver_marcacoes.cs</DependentUpon>
+    <Compile Include="marcacoes_cliente.Designer.cs">
+      <DependentUpon>marcacoes_cliente.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="apagar_confirmacao.resx">
       <DependentUpon>apagar_confirmacao.cs</DependentUpon>
@@ -272,11 +272,11 @@
     <EmbeddedResource Include="perfil_cliente.resx">
       <DependentUpon>perfil_cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="inicial.resx">
-      <DependentUpon>inicial.cs</DependentUpon>
+    <EmbeddedResource Include="menu_inicial.resx">
+      <DependentUpon>menu_inicial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Criar_conta.resx">
-      <DependentUpon>Criar_conta.cs</DependentUpon>
+    <EmbeddedResource Include="criar_cliente.resx">
+      <DependentUpon>criar_cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Iniciar_Sessao.resx">
       <DependentUpon>Iniciar_Sessao.cs</DependentUpon>
@@ -304,11 +304,11 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="trabalhador_criar.resx">
-      <DependentUpon>trabalhador_criar.cs</DependentUpon>
+    <EmbeddedResource Include="criar_trabalhador.resx">
+      <DependentUpon>criar_trabalhador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ver_marcacoes.resx">
-      <DependentUpon>ver_marcacoes.cs</DependentUpon>
+    <EmbeddedResource Include="marcacoes_cliente.resx">
+      <DependentUpon>marcacoes_cliente.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />

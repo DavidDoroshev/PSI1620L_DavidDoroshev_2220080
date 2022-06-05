@@ -13,11 +13,11 @@ using System.Windows.Forms;
 namespace Trabalho_marcacoes_
 {
     
-    public partial class inicial : Form 
+    public partial class menu_inicial : Form 
     {
         //public int teste { get; set; }
 
-        public inicial()
+        public menu_inicial()
         {        
             InitializeComponent();
 
