@@ -84,6 +84,8 @@ namespace Trabalho_marcacoes_
 
         private void Marcar_Click(object sender, EventArgs e)
         {
+            string da =  DateTime.Now.ToShortDateString();
+
             Regex ver = new Regex("^(?:[01]?[0-9]|2[0-3]):[0-5][0-9]$");
 
             var veri = horas_guardar.Text;
@@ -109,7 +111,7 @@ namespace Trabalho_marcacoes_
             SqlCommand command2 = new SqlCommand(query3, ligarDB);
 
             ns.Parameters.Add("@id", SqlDbType.VarChar).Value = Iniciar_Sessao.utilizador;
-            command2.Parameters.Add("@nome", SqlDbType.VarChar).Value = mostrar.Items[0].SubItems[0].Text.ToString();
+            command2.Parameters.Add("@nome", SqlDbType.VarChar).Value = mostrar.SelectedItems[0].SubItems[0].Text.ToString();
 
             SqlDataReader reader = ns.ExecuteReader();
             reader.Read();

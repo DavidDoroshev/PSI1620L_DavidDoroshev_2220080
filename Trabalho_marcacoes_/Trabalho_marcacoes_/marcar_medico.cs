@@ -123,7 +123,7 @@ namespace Trabalho_marcacoes_
             SqlCommand command2 = new SqlCommand(query3, ligarDB);
 
             ns.Parameters.Add("@id", SqlDbType.VarChar).Value = Iniciar_Sessao.utilizador;
-            command2.Parameters.Add("@nome", SqlDbType.VarChar).Value = mostrar_medico.Items[0].SubItems[0].Text.ToString();
+            command2.Parameters.Add("@nome", SqlDbType.VarChar).Value = mostrar_medico.SelectedItems[0].SubItems[0].Text;
 
             SqlDataReader reader = ns.ExecuteReader();
             reader.Read();

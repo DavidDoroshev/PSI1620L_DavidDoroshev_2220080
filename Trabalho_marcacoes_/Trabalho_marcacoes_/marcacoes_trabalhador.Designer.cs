@@ -46,10 +46,11 @@ namespace Trabalho_marcacoes_
             this.hora});
             this.mostrar.FullRowSelect = true;
             this.mostrar.HideSelection = false;
-            this.mostrar.Location = new System.Drawing.Point(27, 12);
+            this.mostrar.Location = new System.Drawing.Point(36, 15);
+            this.mostrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mostrar.MultiSelect = false;
             this.mostrar.Name = "mostrar";
-            this.mostrar.Size = new System.Drawing.Size(505, 241);
+            this.mostrar.Size = new System.Drawing.Size(673, 297);
             this.mostrar.TabIndex = 16;
             this.mostrar.UseCompatibleStateImageBehavior = false;
             this.mostrar.View = System.Windows.Forms.View.Details;
@@ -71,9 +72,10 @@ namespace Trabalho_marcacoes_
             // 
             // voltar
             // 
-            this.voltar.Location = new System.Drawing.Point(215, 259);
+            this.voltar.Location = new System.Drawing.Point(287, 319);
+            this.voltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.voltar.Name = "voltar";
-            this.voltar.Size = new System.Drawing.Size(120, 47);
+            this.voltar.Size = new System.Drawing.Size(160, 58);
             this.voltar.TabIndex = 17;
             this.voltar.Text = "Voltar";
             this.voltar.UseVisualStyleBackColor = true;
@@ -81,12 +83,14 @@ namespace Trabalho_marcacoes_
             // 
             // marcacoes_trabalhador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 314);
+            this.ClientSize = new System.Drawing.Size(759, 386);
             this.Controls.Add(this.voltar);
             this.Controls.Add(this.mostrar);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "marcacoes_trabalhador";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "marcacoes_trabalhador";
             this.ResumeLayout(false);
 

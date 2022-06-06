@@ -63,15 +63,26 @@ namespace Trabalho_marcacoes_
         }
 
         private void apagar_cliente_Click(object sender, EventArgs e)
-        { 
+        {
+            ligarDB.Open();
+            string query2 = "DELETE marcacoes_cliente FROM marcacoes_cliente RIGHT JOIN cliente on marcacoes_cliente.nome_cliente_id = cliente.id WHERE cliente.nome = '" + Iniciar_Sessao.utilizador + "'";
+            SqlCommand cm = new SqlCommand(query2, ligarDB);
 
-            //string query = "  DELETE FROM cliente WHERE id = '" + Iniciar_Sessao.utilizador + "'";
-            //SqlCommand cmd = new SqlCommand(query, ligarDB);
+            
+            SqlDataReader reader = cm.ExecuteReader();
+            reader.Read();
+            reader.Close();
 
 
-            //cmd.ExecuteReader();
+            string query = "  DELETE FROM cliente WHERE nome = '" + Iniciar_Sessao.utilizador + "'";
+            SqlCommand cmd = new SqlCommand(query, ligarDB);
 
-            //MessageBox.Show("Utilizador apagado !!!");
+
+            cmd.ExecuteReader();
+
+            ligarDB.Close();
+
+            MessageBox.Show("Utilizador apagado !!!");
 
             menu_inicial ir = new menu_inicial();
             this.Hide();

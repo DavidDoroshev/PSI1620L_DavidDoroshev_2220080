@@ -70,7 +70,7 @@ namespace Trabalho_marcacoes_
             this.trabalhador_botao.UseVisualStyleBackColor = true;
             this.trabalhador_botao.Click += new System.EventHandler(this.trabalhador_botao_Click);
             // 
-            // inicial
+            // menu_inicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -79,8 +79,9 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.iniciar_botoa);
             this.Controls.Add(this.cliente_botao);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "inicial";
+            this.Name = "menu_inicial";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marcações";

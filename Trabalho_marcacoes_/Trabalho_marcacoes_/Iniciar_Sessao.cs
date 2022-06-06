@@ -68,16 +68,84 @@ namespace Trabalho_marcacoes_
                     principal.Show();
                     ligarDB.Close();
                 }
-                
+
                 else
                 {
-                    MessageBox.Show("Nome ou a Password está incorreta", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    nome_entrar.Text = "";
-                    password_entrar.Text = "";
-                    nome_entrar.Select();
-                    ligarDB.Close();
+
+                    query = "SELECT * FROM admin WHERE nome = @nome AND pass = @pass";
+                    cmd = new SqlCommand(query, ligarDB);
+                    cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = nome_entrar.Text;
+                    cmd.Parameters.Add("@pass", SqlDbType.VarChar).Value = password_entrar.Text;
+                    reader.Close();
+                    reader = cmd.ExecuteReader();
+                    await reader.ReadAsync();
+                    if (reader.HasRows)
+                    {
+                        utilizador = nome_entrar.Text;
+                        pass_utilizador = password_entrar.Text;
+                        admin ir = new admin();
+                        this.Hide();
+                        ir.Show();
+                        ligarDB.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nome ou a Password está incorreta", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        nome_entrar.Text = "";
+                        password_entrar.Text = "";
+                        nome_entrar.Select();
+                        ligarDB.Close();
+                    }
                 }
+
             }
+
+            //string query = "SELECT * FROM trabalhadores WHERE nome = @nome AND password = @password ";
+            //SqlCommand cmd = new SqlCommand(query, ligarDB);
+            //cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = nome_entrar.Text;
+            //cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = password_entrar.Text;
+            //SqlDataReader reader = cmd.ExecuteReader();
+            //await reader.ReadAsync();
+
+            //if (reader.HasRows)
+            //{
+
+            //    trabalhador = nome_entrar.Text;
+            //    menu_trabalhador principal = new menu_trabalhador();
+            //    this.Hide();
+            //    principal.Show();
+            //    ligarDB.Close();
+            //}
+            //else
+            //{
+
+            //    MessageBox.Show("Nome ou a Password está incorreta", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    nome_entrar.Text = "";
+            //    password_entrar.Text = "";
+            //    nome_entrar.Select();
+            //    query = "SELECT * FROM cliente WHERE nome = @nome AND password = @password";
+            //    cmd = new SqlCommand(query, ligarDB);
+            //    cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = nome_entrar.Text;
+            //    cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = password_entrar.Text;
+            //    reader.Close();
+            //    reader = cmd.ExecuteReader();
+            //    await reader.ReadAsync();
+            //    if (reader.HasRows)
+            //    {
+            //        menu_cliente principal = new menu_cliente();
+            //        this.Hide();
+            //        principal.Show();
+            //        ligarDB.Close();
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Nome ou a Password está incorreta", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        nome_entrar.Text = "";
+            //        password_entrar.Text = "";
+            //        nome_entrar.Select();
+            //        ligarDB.Close();
+            //    }
+            //}
         }
 
         private void ver_CheckedChanged(object sender, EventArgs e)

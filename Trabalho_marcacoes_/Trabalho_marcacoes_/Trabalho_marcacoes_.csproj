@@ -180,11 +180,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="apagar_confirmacao.cs">
+    <Compile Include="admin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="apagar_confirmacao.Designer.cs">
-      <DependentUpon>apagar_confirmacao.cs</DependentUpon>
+    <Compile Include="admin.Designer.cs">
+      <DependentUpon>admin.cs</DependentUpon>
     </Compile>
     <Compile Include="perfil_cliente.cs">
       <SubType>Form</SubType>
@@ -266,8 +266,8 @@
     <Compile Include="marcacoes_cliente.Designer.cs">
       <DependentUpon>marcacoes_cliente.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="apagar_confirmacao.resx">
-      <DependentUpon>apagar_confirmacao.cs</DependentUpon>
+    <EmbeddedResource Include="admin.resx">
+      <DependentUpon>admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="perfil_cliente.resx">
       <DependentUpon>perfil_cliente.cs</DependentUpon>
