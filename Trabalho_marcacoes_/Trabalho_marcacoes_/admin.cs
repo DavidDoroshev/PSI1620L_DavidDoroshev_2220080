@@ -108,5 +108,41 @@ namespace Trabalho_marcacoes_
 
 
         }
+
+        private void apagar_Click(object sender, EventArgs e)
+        {
+            ligarDB.Open();
+            try
+            {
+                string query2 = "DELETE marcacoes_cliente FROM marcacoes_cliente RIGHT JOIN cliente on marcacoes_cliente.nome_cliente_id = cliente.id WHERE cliente.id = @id";
+                SqlCommand cm = new SqlCommand(query2, ligarDB);
+                cm.Parameters.Add("@id", System.Data.SqlDbType.VarChar).Value = cliente_mos.SelectedItems[0].SubItems[0].Text.ToString();
+
+                SqlDataReader reader = cm.ExecuteReader();
+                reader.Read();
+                reader.Close();
+
+
+                string query = "  DELETE FROM cliente WHERE id = @id ";
+                SqlCommand cmd = new SqlCommand(query, ligarDB);
+                cmd.Parameters.Add("@id", System.Data.SqlDbType.VarChar).Value = cliente_mos.SelectedItems[0].SubItems[0].Text.ToString();
+
+                
+
+                cmd.ExecuteReader();
+
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+            MessageBox.Show("Cliente apagado com sucesso !!");
+            cliente_mos.Refresh();
+
+            ligarDB.Close();
+        }
     }
 }

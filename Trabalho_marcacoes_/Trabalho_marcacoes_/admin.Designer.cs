@@ -163,10 +163,11 @@ namespace Trabalho_marcacoes_
             // 
             this.apagar.Location = new System.Drawing.Point(12, 227);
             this.apagar.Name = "apagar";
-            this.apagar.Size = new System.Drawing.Size(81, 40);
+            this.apagar.Size = new System.Drawing.Size(119, 40);
             this.apagar.TabIndex = 13;
-            this.apagar.Text = "Apagar ";
+            this.apagar.Text = "Apagar CLiente";
             this.apagar.UseVisualStyleBackColor = true;
+            this.apagar.Click += new System.EventHandler(this.apagar_Click);
             // 
             // apagar_tra
             // 
@@ -190,11 +191,11 @@ namespace Trabalho_marcacoes_
             this.hora});
             this.marcacoes_mos.FullRowSelect = true;
             this.marcacoes_mos.HideSelection = false;
-            this.marcacoes_mos.Location = new System.Drawing.Point(13, 335);
+            this.marcacoes_mos.Location = new System.Drawing.Point(12, 335);
             this.marcacoes_mos.Margin = new System.Windows.Forms.Padding(4);
             this.marcacoes_mos.MultiSelect = false;
             this.marcacoes_mos.Name = "marcacoes_mos";
-            this.marcacoes_mos.Size = new System.Drawing.Size(718, 177);
+            this.marcacoes_mos.Size = new System.Drawing.Size(778, 177);
             this.marcacoes_mos.TabIndex = 15;
             this.marcacoes_mos.UseCompatibleStateImageBehavior = false;
             this.marcacoes_mos.View = System.Windows.Forms.View.Details;
@@ -224,6 +225,7 @@ namespace Trabalho_marcacoes_
             // 
             this.dia_marcacao.Tag = "";
             this.dia_marcacao.Text = "Dia";
+            this.dia_marcacao.Width = 105;
             // 
             // hora
             // 
@@ -242,38 +244,38 @@ namespace Trabalho_marcacoes_
             // 
             // adicionar
             // 
-            this.adicionar.Location = new System.Drawing.Point(172, 227);
+            this.adicionar.Location = new System.Drawing.Point(191, 227);
             this.adicionar.Name = "adicionar";
-            this.adicionar.Size = new System.Drawing.Size(81, 40);
+            this.adicionar.Size = new System.Drawing.Size(135, 40);
             this.adicionar.TabIndex = 17;
-            this.adicionar.Text = "Adicionar";
+            this.adicionar.Text = "Adicionar Cliente";
             this.adicionar.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(786, 228);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(81, 40);
+            this.button1.Size = new System.Drawing.Size(161, 40);
             this.button1.TabIndex = 18;
-            this.button1.Text = "Adicionar";
+            this.button1.Text = "Adicionar trabalhador";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(816, 399);
+            this.button2.Location = new System.Drawing.Point(858, 335);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(99, 50);
             this.button2.TabIndex = 19;
-            this.button2.Text = "Criar marcacões";
+            this.button2.Text = "Criar Marcacões";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(816, 478);
+            this.button3.Location = new System.Drawing.Point(858, 437);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(99, 50);
             this.button3.TabIndex = 20;
-            this.button3.Text = "button3";
+            this.button3.Text = "Criar Código Postal";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // admin
