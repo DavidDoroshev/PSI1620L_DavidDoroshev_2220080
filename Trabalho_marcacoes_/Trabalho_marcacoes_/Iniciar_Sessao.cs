@@ -78,7 +78,7 @@ namespace Trabalho_marcacoes_
                     cmd.Parameters.Add("@pass", SqlDbType.VarChar).Value = password_entrar.Text;
                     reader.Close();
                     reader = cmd.ExecuteReader();
-                    await reader.ReadAsync();
+                    
                     if (reader.HasRows)
                     {
                         utilizador = nome_entrar.Text;
