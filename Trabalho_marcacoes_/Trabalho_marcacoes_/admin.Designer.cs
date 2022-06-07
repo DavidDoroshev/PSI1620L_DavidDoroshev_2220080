@@ -53,6 +53,8 @@ namespace Trabalho_marcacoes_
             this.label3 = new System.Windows.Forms.Label();
             this.adicionar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cliente_mos
@@ -142,7 +144,7 @@ namespace Trabalho_marcacoes_
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 22);
+            this.label1.Location = new System.Drawing.Point(13, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 17);
             this.label1.TabIndex = 11;
@@ -188,7 +190,7 @@ namespace Trabalho_marcacoes_
             this.hora});
             this.marcacoes_mos.FullRowSelect = true;
             this.marcacoes_mos.HideSelection = false;
-            this.marcacoes_mos.Location = new System.Drawing.Point(15, 369);
+            this.marcacoes_mos.Location = new System.Drawing.Point(13, 335);
             this.marcacoes_mos.Margin = new System.Windows.Forms.Padding(4);
             this.marcacoes_mos.MultiSelect = false;
             this.marcacoes_mos.Name = "marcacoes_mos";
@@ -232,7 +234,7 @@ namespace Trabalho_marcacoes_
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 345);
+            this.label3.Location = new System.Drawing.Point(10, 314);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 17);
             this.label3.TabIndex = 16;
@@ -256,11 +258,31 @@ namespace Trabalho_marcacoes_
             this.button1.Text = "Adicionar";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(816, 399);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(99, 50);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "Criar marcacões";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(816, 478);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(99, 50);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(999, 593);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.adicionar);
             this.Controls.Add(this.label3);
@@ -271,7 +293,9 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.label1);
             this.Controls.Add(this.trabalhador_mos);
             this.Controls.Add(this.cliente_mos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "admin";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "admin";
             this.ResumeLayout(false);
@@ -305,5 +329,7 @@ namespace Trabalho_marcacoes_
         private System.Windows.Forms.ColumnHeader dia_marcacao;
         private System.Windows.Forms.ColumnHeader hora;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

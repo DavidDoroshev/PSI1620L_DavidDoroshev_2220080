@@ -127,7 +127,8 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "perfil_trabalhador";
             this.Text = "perfil_trabalhador";
             this.ResumeLayout(false);

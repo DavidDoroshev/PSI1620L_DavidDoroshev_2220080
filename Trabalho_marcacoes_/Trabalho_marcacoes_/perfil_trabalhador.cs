@@ -32,7 +32,7 @@ namespace Trabalho_marcacoes_
         private void apagar_trabalhador_Click(object sender, EventArgs e)
         {
             ligarDB.Open();
-            string query2 = "";
+            string query2 = "DELETE marcacoes_cliente  FROM marcacoes_cliente INNER JOIN trabalhadores on marcacoes_cliente.nome_trabalhador_id = trabalhadores.id where trabalhadores.nome = '"+ Iniciar_Sessao.trabalhador +"' ";
             SqlCommand cm = new SqlCommand(query2, ligarDB);
 
 
@@ -41,7 +41,7 @@ namespace Trabalho_marcacoes_
             reader.Close();
 
 
-            string query = "  DELETE FROM cliente WHERE nome = '" + Iniciar_Sessao.utilizador + "'";
+            string query = "  DELETE FROM trabalhadores WHERE nome = '" + Iniciar_Sessao.trabalhador + "'";
             SqlCommand cmd = new SqlCommand(query, ligarDB);
 
 
@@ -49,7 +49,7 @@ namespace Trabalho_marcacoes_
 
             ligarDB.Close();
 
-            MessageBox.Show("Utilizador apagado !!!");
+            MessageBox.Show("Trabalhador apagado !!!");
 
             menu_inicial ir = new menu_inicial();
             this.Hide();
@@ -84,6 +84,13 @@ namespace Trabalho_marcacoes_
             MessageBox.Show("Pass alterada");
 
             ligarDB.Close();
+        }
+
+        private void Voltar_Click(object sender, EventArgs e)
+        {
+            menu_trabalhador ir = new menu_trabalhador();
+            this.Hide();
+            ir.Show();
         }
     }
 }

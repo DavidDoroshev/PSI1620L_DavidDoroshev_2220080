@@ -41,10 +41,10 @@ namespace Trabalho_marcacoes_
             // entrar_menu
             // 
             this.entrar_menu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.entrar_menu.Location = new System.Drawing.Point(324, 26);
-            this.entrar_menu.Margin = new System.Windows.Forms.Padding(2);
+            this.entrar_menu.Location = new System.Drawing.Point(432, 32);
+            this.entrar_menu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.entrar_menu.Name = "entrar_menu";
-            this.entrar_menu.Size = new System.Drawing.Size(128, 60);
+            this.entrar_menu.Size = new System.Drawing.Size(171, 74);
             this.entrar_menu.TabIndex = 0;
             this.entrar_menu.Text = "Entrar";
             this.entrar_menu.UseVisualStyleBackColor = true;
@@ -53,46 +53,44 @@ namespace Trabalho_marcacoes_
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 41);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(33, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.Size = new System.Drawing.Size(49, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nome:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 119);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(33, 146);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(73, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Password:";
             // 
             // nome_entrar
             // 
-            this.nome_entrar.Location = new System.Drawing.Point(118, 38);
-            this.nome_entrar.Margin = new System.Windows.Forms.Padding(2);
+            this.nome_entrar.Location = new System.Drawing.Point(157, 47);
+            this.nome_entrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nome_entrar.Name = "nome_entrar";
-            this.nome_entrar.Size = new System.Drawing.Size(76, 20);
+            this.nome_entrar.Size = new System.Drawing.Size(100, 22);
             this.nome_entrar.TabIndex = 6;
             // 
             // password_entrar
             // 
-            this.password_entrar.Location = new System.Drawing.Point(118, 119);
-            this.password_entrar.Margin = new System.Windows.Forms.Padding(2);
+            this.password_entrar.Location = new System.Drawing.Point(157, 146);
+            this.password_entrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.password_entrar.Name = "password_entrar";
-            this.password_entrar.Size = new System.Drawing.Size(76, 20);
+            this.password_entrar.Size = new System.Drawing.Size(100, 22);
             this.password_entrar.TabIndex = 7;
             // 
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(339, 131);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(452, 161);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 24);
+            this.button1.Size = new System.Drawing.Size(121, 30);
             this.button1.TabIndex = 8;
             this.button1.Text = "Voltar";
             this.button1.UseVisualStyleBackColor = true;
@@ -100,19 +98,20 @@ namespace Trabalho_marcacoes_
             // ver
             // 
             this.ver.AutoSize = true;
-            this.ver.Location = new System.Drawing.Point(199, 122);
+            this.ver.Location = new System.Drawing.Point(265, 150);
+            this.ver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ver.Name = "ver";
-            this.ver.Size = new System.Drawing.Size(15, 14);
+            this.ver.Size = new System.Drawing.Size(18, 17);
             this.ver.TabIndex = 9;
             this.ver.UseVisualStyleBackColor = true;
             this.ver.CheckedChanged += new System.EventHandler(this.ver_CheckedChanged);
             // 
             // Iniciar_Sessao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(490, 176);
+            this.ClientSize = new System.Drawing.Size(653, 217);
             this.Controls.Add(this.ver);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.password_entrar);
@@ -120,7 +119,8 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.entrar_menu);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Iniciar_Sessao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar_Sessao";

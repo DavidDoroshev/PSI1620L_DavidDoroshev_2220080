@@ -76,7 +76,7 @@ namespace Trabalho_marcacoes_
             // ir_medico
             // 
             this.ir_medico.Location = new System.Drawing.Point(83, 224);
-            this.ir_medico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ir_medico.Margin = new System.Windows.Forms.Padding(4);
             this.ir_medico.Name = "ir_medico";
             this.ir_medico.Size = new System.Drawing.Size(171, 74);
             this.ir_medico.TabIndex = 6;
@@ -114,6 +114,7 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.marcar_estetica);
             this.Controls.Add(this.ver_marca);
             this.Controls.Add(this.Perfil);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "menu_cliente";
             this.ShowIcon = false;

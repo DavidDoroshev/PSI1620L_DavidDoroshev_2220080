@@ -86,6 +86,7 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ver_marcacoes_trabalhador);
             this.Controls.Add(this.perfil_trabalhador);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "menu_trabalhador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

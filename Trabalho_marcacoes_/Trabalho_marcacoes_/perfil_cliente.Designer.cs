@@ -115,7 +115,7 @@ namespace Trabalho_marcacoes_
             this.but_salvar.UseVisualStyleBackColor = true;
             this.but_salvar.Click += new System.EventHandler(this.but_salvar_Click);
             // 
-            // cliente_perfil
+            // perfil_cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -128,8 +128,9 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "cliente_perfil";
+            this.Name = "perfil_cliente";
             this.ResumeLayout(false);
             this.PerformLayout();
 

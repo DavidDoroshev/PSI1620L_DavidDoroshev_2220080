@@ -39,10 +39,10 @@ namespace Trabalho_marcacoes_
             // 
             // voltar
             // 
-            this.voltar.Location = new System.Drawing.Point(222, 298);
-            this.voltar.Margin = new System.Windows.Forms.Padding(2);
+            this.voltar.Location = new System.Drawing.Point(296, 367);
+            this.voltar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.voltar.Name = "voltar";
-            this.voltar.Size = new System.Drawing.Size(115, 38);
+            this.voltar.Size = new System.Drawing.Size(153, 47);
             this.voltar.TabIndex = 1;
             this.voltar.Text = "Voltar";
             this.voltar.UseVisualStyleBackColor = true;
@@ -59,10 +59,11 @@ namespace Trabalho_marcacoes_
             this.columnHeader3});
             this.mostrar.FullRowSelect = true;
             this.mostrar.HideSelection = false;
-            this.mostrar.Location = new System.Drawing.Point(12, 12);
+            this.mostrar.Location = new System.Drawing.Point(16, 15);
+            this.mostrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mostrar.MultiSelect = false;
             this.mostrar.Name = "mostrar";
-            this.mostrar.Size = new System.Drawing.Size(545, 241);
+            this.mostrar.Size = new System.Drawing.Size(727, 297);
             this.mostrar.TabIndex = 17;
             this.mostrar.UseCompatibleStateImageBehavior = false;
             this.mostrar.View = System.Windows.Forms.View.Details;
@@ -87,15 +88,16 @@ namespace Trabalho_marcacoes_
             this.columnHeader3.Text = "Hora";
             this.columnHeader3.Width = 144;
             // 
-            // ver_marcacoes
+            // marcacoes_cliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 366);
+            this.ClientSize = new System.Drawing.Size(791, 450);
             this.Controls.Add(this.mostrar);
             this.Controls.Add(this.voltar);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "ver_marcacoes";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "marcacoes_cliente";
             this.Text = "ver_marcacoes";
             this.ResumeLayout(false);
 
