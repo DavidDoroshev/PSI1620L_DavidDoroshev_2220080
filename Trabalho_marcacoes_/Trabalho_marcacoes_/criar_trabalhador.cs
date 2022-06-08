@@ -120,19 +120,23 @@ namespace Trabalho_marcacoes_
             ligarDB.Open();
 
 
-            var input = password_trabalhador.Text;
+            var pass_veri = password_trabalhador.Text;
 
-            Regex valid = new Regex("^(?!.*[!@#$%^&*()_+=\\[/{}];:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8}");
+            var nome_veri = nome_trabalhador.Text;
 
-            if (input == "")
+
+            Regex valid_pass = new Regex("^(?!.*[!@#$%^&*()_+=\\[/{}];:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8}");
+            
+            Regex valid_nome = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])[A-Z]{1}[a-zA-Z]{2,}$");
+
+            if (pass_veri == "" || nome_veri == "")
             {
                 MessageBox.Show("Tem de ter passs");
                 return;
             }
-            else if (!valid.IsMatch(input))
-            {        
+            else if (!valid_pass.IsMatch(pass_veri) || !valid_nome.IsMatch(nome_veri))
+            {
                 MessageBox.Show("Tem alguma coisa de errado");
-                password_trabalhador.Text = "";
                 return;
             }
 
@@ -146,7 +150,7 @@ namespace Trabalho_marcacoes_
 
             ligarDB.Close();
 
-            MessageBox.Show("Trabalhador adicionado com sucesso");
+            MessageBox.Show("Trabalhador adicionado com sucesso!!!");
 
             menu_inicial voltar = new menu_inicial();
             voltar.Show();

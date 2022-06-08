@@ -49,18 +49,20 @@ namespace Trabalho_marcacoes_
 
             ligarDB.Open();
 
-            var in_pass = password_guardar.Text;
-            
+            var pass_veri = password_guardar.Text;
 
-            Regex valid_pass = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8}$");
-           ;
+            var nome_veri = nome_guardar.Text;           
 
-            if (in_pass == "" )
+            Regex valid_pass = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{3,15}$");
+
+            Regex valid_nome = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])[A-Z]{1}[a-zA-Z]{2,}$");
+
+            if (pass_veri == "" || nome_veri == "" )
             {
-                MessageBox.Show("Tem de ter passs");
+                MessageBox.Show("Tem algo escrito");
                 return;
             }
-            else if (!valid_pass.IsMatch(in_pass))
+            else if (!valid_pass.IsMatch(pass_veri) || !valid_nome.IsMatch(nome_veri))
             {
                 MessageBox.Show("Tem alguma coisa de errado");
                 return;
@@ -76,10 +78,10 @@ namespace Trabalho_marcacoes_
             if (reader.HasRows)
             {
 
+
                 MessageBox.Show("Nome ja se encontra registado");
                 nome_guardar.Text = "";
                 nome_guardar.Select();
-
                 reader.Close();
                 ligarDB.Close();
                 return;
@@ -95,6 +97,8 @@ namespace Trabalho_marcacoes_
                 //codigo = codigo_guardar.SelectedItem.ToString() ;
                 commando.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = codigo_guardar.SelectedItem.ToString();
                 await commando.ExecuteNonQueryAsync();
+
+                MessageBox.Show("Cliente adicionado com sucesso!!!");
 
                 menu_inicial voltar = new menu_inicial();
                 voltar.Show();

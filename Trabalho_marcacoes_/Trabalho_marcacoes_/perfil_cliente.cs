@@ -38,7 +38,7 @@ namespace Trabalho_marcacoes_
 
             var input = pass_alterar.Text;
 
-            Regex valid = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8}");
+            Regex valid = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8}$");
 
             if (input == "")
             {
