@@ -192,6 +192,18 @@
     <Compile Include="admin_cliente.Designer.cs">
       <DependentUpon>admin_cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="admin_marcar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_marcar.Designer.cs">
+      <DependentUpon>admin_marcar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_trabalhador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_trabalhador.Designer.cs">
+      <DependentUpon>admin_trabalhador.cs</DependentUpon>
+    </Compile>
     <Compile Include="perfil_cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,6 +289,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="admin_cliente.resx">
       <DependentUpon>admin_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_marcar.resx">
+      <DependentUpon>admin_marcar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_trabalhador.resx">
+      <DependentUpon>admin_trabalhador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="perfil_cliente.resx">
       <DependentUpon>perfil_cliente.cs</DependentUpon>

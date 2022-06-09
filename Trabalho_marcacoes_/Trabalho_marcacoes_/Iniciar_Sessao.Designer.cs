@@ -34,7 +34,7 @@ namespace Trabalho_marcacoes_
             this.label2 = new System.Windows.Forms.Label();
             this.nome_entrar = new System.Windows.Forms.TextBox();
             this.password_entrar = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.voltar = new System.Windows.Forms.Button();
             this.ver = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
@@ -45,7 +45,7 @@ namespace Trabalho_marcacoes_
             this.entrar_menu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.entrar_menu.Name = "entrar_menu";
             this.entrar_menu.Size = new System.Drawing.Size(171, 74);
-            this.entrar_menu.TabIndex = 0;
+            this.entrar_menu.TabIndex = 3;
             this.entrar_menu.Text = "Entrar";
             this.entrar_menu.UseVisualStyleBackColor = true;
             this.entrar_menu.Click += new System.EventHandler(this.entrar_menu_Click);
@@ -74,7 +74,7 @@ namespace Trabalho_marcacoes_
             this.nome_entrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nome_entrar.Name = "nome_entrar";
             this.nome_entrar.Size = new System.Drawing.Size(100, 22);
-            this.nome_entrar.TabIndex = 6;
+            this.nome_entrar.TabIndex = 1;
             // 
             // password_entrar
             // 
@@ -82,24 +82,25 @@ namespace Trabalho_marcacoes_
             this.password_entrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.password_entrar.Name = "password_entrar";
             this.password_entrar.Size = new System.Drawing.Size(100, 22);
-            this.password_entrar.TabIndex = 7;
+            this.password_entrar.TabIndex = 2;
             // 
-            // button1
+            // voltar
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(452, 161);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 30);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Voltar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.voltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.voltar.Location = new System.Drawing.Point(452, 161);
+            this.voltar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.voltar.Name = "voltar";
+            this.voltar.Size = new System.Drawing.Size(121, 30);
+            this.voltar.TabIndex = 4;
+            this.voltar.Text = "Voltar";
+            this.voltar.UseVisualStyleBackColor = true;
+            this.voltar.Click += new System.EventHandler(this.voltar_Click);
             // 
             // ver
             // 
             this.ver.AutoSize = true;
             this.ver.Location = new System.Drawing.Point(265, 150);
-            this.ver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ver.Margin = new System.Windows.Forms.Padding(4);
             this.ver.Name = "ver";
             this.ver.Size = new System.Drawing.Size(18, 17);
             this.ver.TabIndex = 9;
@@ -113,7 +114,7 @@ namespace Trabalho_marcacoes_
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(653, 217);
             this.Controls.Add(this.ver);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.voltar);
             this.Controls.Add(this.password_entrar);
             this.Controls.Add(this.nome_entrar);
             this.Controls.Add(this.label2);
@@ -136,7 +137,7 @@ namespace Trabalho_marcacoes_
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox nome_entrar;
         private System.Windows.Forms.TextBox password_entrar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button voltar;
         private System.Windows.Forms.CheckBox ver;
     }
 }
