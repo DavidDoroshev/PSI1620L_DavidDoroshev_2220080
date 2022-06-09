@@ -56,7 +56,7 @@ namespace Trabalho_marcacoes_
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 141);
+            this.label3.Location = new System.Drawing.Point(7, 141);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 13);
@@ -76,7 +76,7 @@ namespace Trabalho_marcacoes_
             // nome_guardar
             // 
             this.nome_guardar.Location = new System.Drawing.Point(59, 39);
-            this.nome_guardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nome_guardar.Margin = new System.Windows.Forms.Padding(2);
             this.nome_guardar.Name = "nome_guardar";
             this.nome_guardar.Size = new System.Drawing.Size(76, 20);
             this.nome_guardar.TabIndex = 4;
@@ -84,7 +84,7 @@ namespace Trabalho_marcacoes_
             // password_guardar
             // 
             this.password_guardar.Location = new System.Drawing.Point(507, 34);
-            this.password_guardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.password_guardar.Margin = new System.Windows.Forms.Padding(2);
             this.password_guardar.Name = "password_guardar";
             this.password_guardar.Size = new System.Drawing.Size(76, 20);
             this.password_guardar.TabIndex = 5;
@@ -93,7 +93,7 @@ namespace Trabalho_marcacoes_
             // 
             this.guardar_cliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guardar_cliente.Location = new System.Drawing.Point(453, 271);
-            this.guardar_cliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guardar_cliente.Margin = new System.Windows.Forms.Padding(2);
             this.guardar_cliente.Name = "guardar_cliente";
             this.guardar_cliente.Size = new System.Drawing.Size(130, 44);
             this.guardar_cliente.TabIndex = 6;
@@ -105,7 +105,7 @@ namespace Trabalho_marcacoes_
             // 
             this.voltar_iniciar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.voltar_iniciar.Location = new System.Drawing.Point(14, 271);
-            this.voltar_iniciar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.voltar_iniciar.Margin = new System.Windows.Forms.Padding(2);
             this.voltar_iniciar.Name = "voltar_iniciar";
             this.voltar_iniciar.Size = new System.Drawing.Size(130, 44);
             this.voltar_iniciar.TabIndex = 7;
@@ -116,8 +116,8 @@ namespace Trabalho_marcacoes_
             // codigo_guardar
             // 
             this.codigo_guardar.FormattingEnabled = true;
-            this.codigo_guardar.Location = new System.Drawing.Point(86, 139);
-            this.codigo_guardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.codigo_guardar.Location = new System.Drawing.Point(85, 139);
+            this.codigo_guardar.Margin = new System.Windows.Forms.Padding(2);
             this.codigo_guardar.Name = "codigo_guardar";
             this.codigo_guardar.Size = new System.Drawing.Size(92, 21);
             this.codigo_guardar.TabIndex = 8;
@@ -126,7 +126,7 @@ namespace Trabalho_marcacoes_
             // textconselho
             // 
             this.textconselho.Location = new System.Drawing.Point(239, 138);
-            this.textconselho.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textconselho.Margin = new System.Windows.Forms.Padding(2);
             this.textconselho.Name = "textconselho";
             this.textconselho.Size = new System.Drawing.Size(76, 20);
             this.textconselho.TabIndex = 9;
@@ -135,7 +135,7 @@ namespace Trabalho_marcacoes_
             // textdistrito
             // 
             this.textdistrito.Location = new System.Drawing.Point(376, 138);
-            this.textdistrito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textdistrito.Margin = new System.Windows.Forms.Padding(2);
             this.textdistrito.Name = "textdistrito";
             this.textdistrito.Size = new System.Drawing.Size(76, 20);
             this.textdistrito.TabIndex = 10;
@@ -144,7 +144,7 @@ namespace Trabalho_marcacoes_
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(182, 142);
+            this.label2.Location = new System.Drawing.Point(181, 142);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 13);
@@ -179,7 +179,7 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "criar_conta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Criar Conta ";

@@ -65,15 +65,6 @@ namespace Trabalho_marcacoes_
             }
             ligarDB.Close();
             Reader.Close();
-
-           
-
-            int itemHeight = 20;
-            ImageList imgList = new ImageList();
-            imgList.ImageSize = new Size(1, itemHeight);
-            mostrar.SmallImageList = imgList;
-
-
         }
 
         private void mostrar_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
@@ -84,7 +75,14 @@ namespace Trabalho_marcacoes_
 
         private void Marcar_Click(object sender, EventArgs e)
         {
-            string da =  DateTime.Now.ToShortDateString();
+          
+            var data = Convert.ToDateTime(tempo_guardar.Text);
+
+            if (data < DateTime.Now)
+            {
+                MessageBox.Show("Não pode pôr essa data!!!");
+                return;
+            }
 
             Regex ver = new Regex("^(?:[01]?[0-9]|2[0-3]):[0-5][0-9]$");
 
@@ -92,7 +90,7 @@ namespace Trabalho_marcacoes_
 
             if(!ver.IsMatch(veri))
             {
-                MessageBox.Show("Não pode por essas horas");
+                MessageBox.Show("Não pode pôr essas horas!!!");
                 return;
             }
 
@@ -179,5 +177,9 @@ namespace Trabalho_marcacoes_
 
         }
 
+        private void tempo_guardar_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

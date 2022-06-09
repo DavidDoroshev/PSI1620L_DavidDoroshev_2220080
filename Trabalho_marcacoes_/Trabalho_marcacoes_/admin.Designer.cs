@@ -53,11 +53,10 @@ namespace Trabalho_marcacoes_
             this.hora = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label3 = new System.Windows.Forms.Label();
             this.adicionar = new System.Windows.Forms.Button();
-            this.criar_cp = new System.Windows.Forms.Button();
             this.add_tra = new System.Windows.Forms.Button();
             this.apagar_mar = new System.Windows.Forms.Button();
             this.add_marca = new System.Windows.Forms.Button();
-            this.criar_especialidade = new System.Windows.Forms.Button();
+            this.Sair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cliente_mos
@@ -71,11 +70,10 @@ namespace Trabalho_marcacoes_
             this.cp});
             this.cliente_mos.FullRowSelect = true;
             this.cliente_mos.HideSelection = false;
-            this.cliente_mos.Location = new System.Drawing.Point(13, 43);
-            this.cliente_mos.Margin = new System.Windows.Forms.Padding(4);
+            this.cliente_mos.Location = new System.Drawing.Point(10, 34);
             this.cliente_mos.MultiSelect = false;
             this.cliente_mos.Name = "cliente_mos";
-            this.cliente_mos.Size = new System.Drawing.Size(440, 177);
+            this.cliente_mos.Size = new System.Drawing.Size(356, 144);
             this.cliente_mos.TabIndex = 9;
             this.cliente_mos.UseCompatibleStateImageBehavior = false;
             this.cliente_mos.View = System.Windows.Forms.View.Details;
@@ -115,11 +113,10 @@ namespace Trabalho_marcacoes_
             this.especialidade_tr});
             this.trabalhador_mos.FullRowSelect = true;
             this.trabalhador_mos.HideSelection = false;
-            this.trabalhador_mos.Location = new System.Drawing.Point(496, 42);
-            this.trabalhador_mos.Margin = new System.Windows.Forms.Padding(4);
+            this.trabalhador_mos.Location = new System.Drawing.Point(380, 34);
             this.trabalhador_mos.MultiSelect = false;
             this.trabalhador_mos.Name = "trabalhador_mos";
-            this.trabalhador_mos.Size = new System.Drawing.Size(691, 178);
+            this.trabalhador_mos.Size = new System.Drawing.Size(518, 145);
             this.trabalhador_mos.TabIndex = 10;
             this.trabalhador_mos.UseCompatibleStateImageBehavior = false;
             this.trabalhador_mos.View = System.Windows.Forms.View.Details;
@@ -153,27 +150,29 @@ namespace Trabalho_marcacoes_
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 22);
+            this.label1.Location = new System.Drawing.Point(10, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 17);
+            this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 11;
             this.label1.Text = "Utilizador";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(492, 22);
+            this.label2.Location = new System.Drawing.Point(377, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 17);
+            this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 12;
             this.label2.Text = "Trabalhador";
             // 
             // apagar
             // 
-            this.apagar.Location = new System.Drawing.Point(17, 226);
-            this.apagar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.apagar.Location = new System.Drawing.Point(13, 183);
+            this.apagar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.apagar.Name = "apagar";
-            this.apagar.Size = new System.Drawing.Size(119, 39);
+            this.apagar.Size = new System.Drawing.Size(89, 32);
             this.apagar.TabIndex = 1;
             this.apagar.Text = "Apagar CLiente";
             this.apagar.UseVisualStyleBackColor = true;
@@ -181,10 +180,10 @@ namespace Trabalho_marcacoes_
             // 
             // apagar_tra
             // 
-            this.apagar_tra.Location = new System.Drawing.Point(496, 226);
-            this.apagar_tra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.apagar_tra.Location = new System.Drawing.Point(380, 184);
+            this.apagar_tra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.apagar_tra.Name = "apagar_tra";
-            this.apagar_tra.Size = new System.Drawing.Size(157, 39);
+            this.apagar_tra.Size = new System.Drawing.Size(118, 32);
             this.apagar_tra.TabIndex = 3;
             this.apagar_tra.Text = "Apagar trabalhador";
             this.apagar_tra.UseVisualStyleBackColor = true;
@@ -203,11 +202,10 @@ namespace Trabalho_marcacoes_
             this.hora});
             this.marcacoes_mos.FullRowSelect = true;
             this.marcacoes_mos.HideSelection = false;
-            this.marcacoes_mos.Location = new System.Drawing.Point(16, 301);
-            this.marcacoes_mos.Margin = new System.Windows.Forms.Padding(4);
+            this.marcacoes_mos.Location = new System.Drawing.Point(12, 245);
             this.marcacoes_mos.MultiSelect = false;
             this.marcacoes_mos.Name = "marcacoes_mos";
-            this.marcacoes_mos.Size = new System.Drawing.Size(779, 177);
+            this.marcacoes_mos.Size = new System.Drawing.Size(604, 144);
             this.marcacoes_mos.TabIndex = 15;
             this.marcacoes_mos.UseCompatibleStateImageBehavior = false;
             this.marcacoes_mos.View = System.Windows.Forms.View.Details;
@@ -248,38 +246,30 @@ namespace Trabalho_marcacoes_
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 280);
+            this.label3.Location = new System.Drawing.Point(10, 228);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 17);
+            this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 16;
             this.label3.Text = "Marcações";
             // 
             // adicionar
             // 
-            this.adicionar.Location = new System.Drawing.Point(141, 226);
-            this.adicionar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.adicionar.Location = new System.Drawing.Point(106, 183);
+            this.adicionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.adicionar.Name = "adicionar";
-            this.adicionar.Size = new System.Drawing.Size(135, 39);
+            this.adicionar.Size = new System.Drawing.Size(101, 32);
             this.adicionar.TabIndex = 2;
             this.adicionar.Text = "Adicionar Cliente";
             this.adicionar.UseVisualStyleBackColor = true;
             this.adicionar.Click += new System.EventHandler(this.adicionar_Click);
             // 
-            // criar_cp
-            // 
-            this.criar_cp.Location = new System.Drawing.Point(837, 301);
-            this.criar_cp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.criar_cp.Name = "criar_cp";
-            this.criar_cp.Size = new System.Drawing.Size(155, 50);
-            this.criar_cp.TabIndex = 7;
-            this.criar_cp.Text = "Criar Código Postal";
-            this.criar_cp.UseVisualStyleBackColor = true;
-            // 
             // add_tra
             // 
-            this.add_tra.Location = new System.Drawing.Point(660, 226);
+            this.add_tra.Location = new System.Drawing.Point(502, 184);
+            this.add_tra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.add_tra.Name = "add_tra";
-            this.add_tra.Size = new System.Drawing.Size(161, 38);
+            this.add_tra.Size = new System.Drawing.Size(121, 32);
             this.add_tra.TabIndex = 4;
             this.add_tra.Text = "Adicionar Trabalhador";
             this.add_tra.UseVisualStyleBackColor = true;
@@ -287,10 +277,10 @@ namespace Trabalho_marcacoes_
             // 
             // apagar_mar
             // 
-            this.apagar_mar.Location = new System.Drawing.Point(12, 477);
-            this.apagar_mar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.apagar_mar.Location = new System.Drawing.Point(10, 394);
+            this.apagar_mar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.apagar_mar.Name = "apagar_mar";
-            this.apagar_mar.Size = new System.Drawing.Size(139, 39);
+            this.apagar_mar.Size = new System.Drawing.Size(104, 32);
             this.apagar_mar.TabIndex = 5;
             this.apagar_mar.Text = "Apagar Marcação";
             this.apagar_mar.UseVisualStyleBackColor = true;
@@ -298,34 +288,34 @@ namespace Trabalho_marcacoes_
             // 
             // add_marca
             // 
-            this.add_marca.Location = new System.Drawing.Point(157, 477);
+            this.add_marca.Location = new System.Drawing.Point(118, 394);
+            this.add_marca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.add_marca.Name = "add_marca";
-            this.add_marca.Size = new System.Drawing.Size(161, 38);
+            this.add_marca.Size = new System.Drawing.Size(121, 32);
             this.add_marca.TabIndex = 6;
             this.add_marca.Text = "Adicionar Marcação";
             this.add_marca.UseVisualStyleBackColor = true;
             this.add_marca.Click += new System.EventHandler(this.add_marca_Click);
             // 
-            // criar_especialidade
+            // Sair
             // 
-            this.criar_especialidade.Location = new System.Drawing.Point(837, 380);
-            this.criar_especialidade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.criar_especialidade.Name = "criar_especialidade";
-            this.criar_especialidade.Size = new System.Drawing.Size(155, 50);
-            this.criar_especialidade.TabIndex = 8;
-            this.criar_especialidade.Text = "Criar Código Postal";
-            this.criar_especialidade.UseVisualStyleBackColor = true;
+            this.Sair.Location = new System.Drawing.Point(814, 394);
+            this.Sair.Name = "Sair";
+            this.Sair.Size = new System.Drawing.Size(84, 32);
+            this.Sair.TabIndex = 17;
+            this.Sair.Text = "Sair";
+            this.Sair.UseVisualStyleBackColor = true;
+            this.Sair.Click += new System.EventHandler(this.Sair_Click);
             // 
             // admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1213, 553);
-            this.Controls.Add(this.criar_especialidade);
+            this.ClientSize = new System.Drawing.Size(910, 449);
+            this.Controls.Add(this.Sair);
             this.Controls.Add(this.add_marca);
             this.Controls.Add(this.apagar_mar);
             this.Controls.Add(this.add_tra);
-            this.Controls.Add(this.criar_cp);
             this.Controls.Add(this.adicionar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.marcacoes_mos);
@@ -336,7 +326,7 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.trabalhador_mos);
             this.Controls.Add(this.cliente_mos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "admin";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -371,11 +361,10 @@ namespace Trabalho_marcacoes_
         private System.Windows.Forms.ColumnHeader especialidade;
         private System.Windows.Forms.ColumnHeader dia_marcacao;
         private System.Windows.Forms.ColumnHeader hora;
-        private System.Windows.Forms.Button criar_cp;
         private System.Windows.Forms.ColumnHeader especialidade_tr;
         private System.Windows.Forms.Button add_tra;
         private System.Windows.Forms.Button apagar_mar;
         private System.Windows.Forms.Button add_marca;
-        private System.Windows.Forms.Button criar_especialidade;
+        private System.Windows.Forms.Button Sair;
     }
 }

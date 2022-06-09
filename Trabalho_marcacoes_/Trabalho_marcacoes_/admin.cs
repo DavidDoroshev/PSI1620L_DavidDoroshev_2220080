@@ -198,6 +198,7 @@ namespace Trabalho_marcacoes_
 
                 reader = cmd3.ExecuteReader();
 
+                trabalhador_mos.Items.Clear();
 
                 while (reader.Read())
                 {
@@ -250,6 +251,11 @@ namespace Trabalho_marcacoes_
             admin_marcar ir = new admin_marcar();
             this.Hide();
             ir.Show();
+        }
+
+        private void Sair_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

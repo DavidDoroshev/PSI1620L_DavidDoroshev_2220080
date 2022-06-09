@@ -22,38 +22,14 @@ namespace Trabalho_marcacoes_
         {
             InitializeComponent();
 
-            //SqlCommand comando = new SqlCommand();
-
-            //comando.CommandText = "SELECT * FROM trabalhadores INNER JOIN especialidade_tabela on trabalhadores.especialidade_tabela_trabalhador = especialidade_tabela.especialidade inner join profissao_tabela on especialidade_tabela.profissao = profissao_tabela.id_profissao where profissao_tabela.profissao like 'Medico'";
-
-            //comando.Connection = ligarDB;
-
-            //ligarDB.Open();
-            //SqlDataReader Reader = comando.ExecuteReader();
-
-            //mostrar_medico.Items.Clear();
-
-            //while (Reader.Read())
-            //{
-
-            //    string[] bomdia = new string[] { Reader["nome"].ToString(), Reader["especialidade_tabela_trabalhador"].ToString(), Reader["codigo_postal_trabalhador"].ToString() };
-            //    mostrar_medico.Items.Add(new ListViewItem(bomdia));
-            //}
-
-            //Reader.Close();
-            //ligarDB.Close();
-
             SqlCommand comando = new SqlCommand();
             comando.Connection = ligarDB;
-
-
 
             string query = "SELECT * FROM trabalhadores INNER JOIN especialidade_tabela on trabalhadores.especialidade_tabela_trabalhador = especialidade_tabela.especialidade INNER JOIN profissao_tabela ON especialidade_tabela.profissao = profissao_tabela.id_profissao WHERE profissao_tabela.profissao like 'Medico' ";
             string query2 = "SELECT * FROM codigo_postal ";
 
             SqlCommand cmd = new SqlCommand(query, ligarDB);
             SqlCommand cmd2 = new SqlCommand(query2, ligarDB);
-
 
             ligarDB.Open();
             SqlDataReader Reader = cmd.ExecuteReader();
@@ -62,14 +38,12 @@ namespace Trabalho_marcacoes_
 
             while (Reader.Read())
             {
-
                 string[] bomdia = new string[] { Reader["nome"].ToString(), Reader["especialidade_tabela_trabalhador"].ToString(), Reader["codigo_postal_trabalhador"].ToString() };
                 mostrar_medico.Items.Add(new ListViewItem(bomdia));
             }
 
             ligarDB.Close();
             Reader.Close();
-
 
             ligarDB.Close();
             ligarDB.Open();
@@ -85,10 +59,6 @@ namespace Trabalho_marcacoes_
             }
             ligarDB.Close();
             Reader.Close();
-            int itemHeight = 20;
-            ImageList imgList = new ImageList();
-            imgList.ImageSize = new Size(1, itemHeight);
-            mostrar_medico.SmallImageList = imgList;
         }
 
         private void mostrar_medico_SelectedIndexChanged(object sender, EventArgs e)
@@ -98,15 +68,23 @@ namespace Trabalho_marcacoes_
 
         private void marcar_guardar_Click(object sender, EventArgs e)
         {
+            var data = Convert.ToDateTime(dia_guardar.Text);
 
-            int i;
-
-            for (i = 0; i < 3; i++)
-
+            if (data < DateTime.Now)
             {
-                MessageBox.Show(mostrar_medico.SelectedItems[0].SubItems[i].Text);
+                MessageBox.Show("Não pode pôr nesse dia!!!");
+                return;
             }
-            MessageBox.Show(hora_guardar.Text + dia_guardar.Text);
+
+            Regex ver = new Regex("^(?:[01]?[0-9]|2[0-3]):[0-5][0-9]$");
+
+            var veri = hora_guardar.Text;
+
+            if (!ver.IsMatch(veri))
+            {
+                MessageBox.Show("Não pode pôr essas horas!!!");
+                return;
+            }
 
             SqlCommand command = new SqlCommand();
 
@@ -177,12 +155,9 @@ namespace Trabalho_marcacoes_
 
             while (Reader.Read())
             {
-
-
                 string[] bomdia = new string[] { Reader["nome"].ToString(), Reader["especialidade_tabela_trabalhador"].ToString(), Reader["codigo_postal_trabalhador"].ToString() };
 
                 mostrar_medico.Items.Add(new ListViewItem(bomdia));
-
             }
             Reader.Close();
             ligarDB.Close();
