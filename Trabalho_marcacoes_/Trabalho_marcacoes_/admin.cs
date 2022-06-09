@@ -95,18 +95,12 @@ namespace Trabalho_marcacoes_
         {
             e.Cancel = true;
             e.NewWidth = cliente_mos.Columns[e.ColumnIndex].Width;
-
-
-
         }
 
         private void trabalhador_mos_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
         {
             e.Cancel = true;
             e.NewWidth = cliente_mos.Columns[e.ColumnIndex].Width;
-
-
-
         }
 
         private void apagar_Click(object sender, EventArgs e)
@@ -138,11 +132,18 @@ namespace Trabalho_marcacoes_
                 MessageBox.Show(ex.Message);
             }
 
-
-            MessageBox.Show("Cliente apagado com sucesso !!");
             cliente_mos.Refresh();
+            MessageBox.Show("Cliente apagado com sucesso !!");
+            
 
             ligarDB.Close();
+        }
+
+        private void adicionar_Click(object sender, EventArgs e)
+        {
+            admin_cliente ir = new admin_cliente();
+            this.Hide();
+            ir.Show();
         }
     }
 }

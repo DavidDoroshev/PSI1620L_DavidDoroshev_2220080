@@ -164,7 +164,7 @@ namespace Trabalho_marcacoes_
             // apagar
             // 
             this.apagar.Location = new System.Drawing.Point(13, 184);
-            this.apagar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.apagar.Margin = new System.Windows.Forms.Padding(2);
             this.apagar.Name = "apagar";
             this.apagar.Size = new System.Drawing.Size(89, 32);
             this.apagar.TabIndex = 13;
@@ -175,7 +175,7 @@ namespace Trabalho_marcacoes_
             // apagar_tra
             // 
             this.apagar_tra.Location = new System.Drawing.Point(372, 184);
-            this.apagar_tra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.apagar_tra.Margin = new System.Windows.Forms.Padding(2);
             this.apagar_tra.Name = "apagar_tra";
             this.apagar_tra.Size = new System.Drawing.Size(118, 32);
             this.apagar_tra.TabIndex = 14;
@@ -249,17 +249,18 @@ namespace Trabalho_marcacoes_
             // adicionar
             // 
             this.adicionar.Location = new System.Drawing.Point(106, 184);
-            this.adicionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.adicionar.Margin = new System.Windows.Forms.Padding(2);
             this.adicionar.Name = "adicionar";
             this.adicionar.Size = new System.Drawing.Size(101, 32);
             this.adicionar.TabIndex = 17;
             this.adicionar.Text = "Adicionar Cliente";
             this.adicionar.UseVisualStyleBackColor = true;
+            this.adicionar.Click += new System.EventHandler(this.adicionar_Click);
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(494, 184);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 32);
             this.button1.TabIndex = 18;
@@ -269,7 +270,7 @@ namespace Trabalho_marcacoes_
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(644, 272);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(74, 41);
             this.button2.TabIndex = 19;
@@ -279,7 +280,7 @@ namespace Trabalho_marcacoes_
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(644, 337);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(74, 41);
             this.button3.TabIndex = 20;
@@ -308,7 +309,7 @@ namespace Trabalho_marcacoes_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(749, 482);
+            this.ClientSize = new System.Drawing.Size(772, 449);
             this.Controls.Add(this.but_edit_trabalhador);
             this.Controls.Add(this.but_edit);
             this.Controls.Add(this.button3);
@@ -324,7 +325,7 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.trabalhador_mos);
             this.Controls.Add(this.cliente_mos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "admin";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

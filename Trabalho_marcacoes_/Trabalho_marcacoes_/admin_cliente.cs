@@ -13,51 +13,50 @@ using System.Text.RegularExpressions;
 
 namespace Trabalho_marcacoes_
 {
-    public partial class criar_conta : Form
+    public partial class admin_cliente : Form
     {
+
         static string connectionString = ConfigurationManager.ConnectionStrings["ligarDB"].ConnectionString;
         static SqlConnection ligarDB = new SqlConnection(connectionString);
-
-
-        public criar_conta()
+        public admin_cliente()
         {
-           
-                ligarDB.Open();
+          
 
-                InitializeComponent();
-                SqlCommand command = new SqlCommand();
-                command.Connection = ligarDB;
-                command.CommandText = "select * from codigo_postal";
-                SqlDataReader reader = command.ExecuteReader();
-                
-                while(reader.Read())
-                {
-                    codigo_guardar.Items.Add(reader["codigo_postal"].ToString());
-                }
+            ligarDB.Open();
 
-                ligarDB.Close();
+            InitializeComponent();
+            SqlCommand command = new SqlCommand();
+            command.Connection = ligarDB;
+            command.CommandText = "select * from codigo_postal";
+            SqlDataReader reader = command.ExecuteReader();
 
-                textconselho.Enabled = false;
-                textdistrito.Enabled = false;
-            
+            while (reader.Read())
+            {
+                codigo_guardar.Items.Add(reader["codigo_postal"].ToString());
+            }
+
+            ligarDB.Close();
+
+            textconselho.Enabled = false;
+            textdistrito.Enabled = false;
+
         }
 
-        public async void  guardar_cliente_Click( object sender, EventArgs e)
+        private  async void guardar_cliente_Click(object sender, EventArgs e)
         {
-
             ligarDB.Close();
 
             ligarDB.Open();
 
             var pass_veri = password_guardar.Text;
 
-            var nome_veri = nome_guardar.Text;           
+            var nome_veri = nome_guardar.Text;
 
             Regex valid_pass = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{3,15}$");
 
             Regex valid_nome = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])[A-Z]{1}[a-zA-Z]{2,24}$");
 
-            if (pass_veri == "" || nome_veri == "" )
+            if (pass_veri == "" || nome_veri == "")
             {
                 MessageBox.Show("Tem de ter algo escrito");
                 return;
@@ -100,23 +99,22 @@ namespace Trabalho_marcacoes_
 
                 MessageBox.Show("Cliente adicionado com sucesso!!!");
 
-                menu_inicial voltar = new menu_inicial();
+                admin voltar = new admin();
                 voltar.Show();
                 this.Close();
 
                 ligarDB.Close();
 
             }
-
         }
 
         private void voltar_iniciar_Click(object sender, EventArgs e)
         {
-            menu_inicial voltar = new menu_inicial();
+            admin voltar = new admin();
             voltar.Show();
             this.Hide();
         }
-       
+
         private void codigo_guardar_SelectedIndexChanged(object sender, EventArgs e)
         {
             SqlCommand command = new SqlCommand();
@@ -126,7 +124,7 @@ namespace Trabalho_marcacoes_
             ligarDB.Close();
             ligarDB.Open();
 
-            command.CommandText = "SELECT codigo_postal, distrito_tabela.distrito, conselho_tabela.conselho FROM codigo_postal INNER JOIN distrito_tabela ON distrito_codigo = distrito_tabela.distrito INNER JOIN conselho_tabela ON conselho_distrito = conselho_tabela.conselho WHERE codigo_postal = @codigo"; 
+            command.CommandText = "SELECT codigo_postal, distrito_tabela.distrito, conselho_tabela.conselho FROM codigo_postal INNER JOIN distrito_tabela ON distrito_codigo = distrito_tabela.distrito INNER JOIN conselho_tabela ON conselho_distrito = conselho_tabela.conselho WHERE codigo_postal = @codigo";
 
             command.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = codigo_guardar.Text;
 
@@ -151,6 +149,5 @@ namespace Trabalho_marcacoes_
         {
 
         }
-        
     }
 }
