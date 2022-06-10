@@ -85,8 +85,7 @@ namespace Trabalho_marcacoes_
 
             ligarDB.Close();
         }
-
-        private void Voltar_Click(object sender, EventArgs e)
+        private void Voltar_Click_1(object sender, EventArgs e)
         {
             menu_trabalhador ir = new menu_trabalhador();
             this.Hide();

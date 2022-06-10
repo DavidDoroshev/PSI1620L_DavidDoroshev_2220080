@@ -34,11 +34,13 @@ namespace Trabalho_marcacoes_
 
         private void but_salvar_Click(object sender, EventArgs e)
         {
+            ligarDB.Close();
+
             ligarDB.Open();
 
             var input = pass_alterar.Text;
 
-            Regex valid = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8}$");
+            Regex valid = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{3,15}$");
 
             if (input == "")
             {
