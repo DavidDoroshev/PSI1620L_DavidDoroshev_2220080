@@ -31,7 +31,7 @@ namespace Trabalho_marcacoes_
 
             SqlCommand cmd = new SqlCommand(query, ligarDB);
 
-
+            ligarDB.Close();
             ligarDB.Open();
             SqlDataReader Reader = cmd.ExecuteReader();
 

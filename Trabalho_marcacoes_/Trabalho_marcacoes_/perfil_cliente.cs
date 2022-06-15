@@ -20,9 +20,27 @@ namespace Trabalho_marcacoes_
         public perfil_cliente()
         {
             InitializeComponent();
-     
+            ligarDB.Close();
+
+            ligarDB.Open();
+
             nome_utilizador.Text = Iniciar_Sessao.utilizador;
             nome_utilizador.Enabled = false;
+
+            SqlCommand command = new SqlCommand();
+            command.Connection = ligarDB;
+            command.CommandText = "select * from codigo_postal";
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                codigo_alterar.Items.Add(reader["codigo_postal"].ToString());
+            }
+
+            ligarDB.Close();
+
+            textconselho.Enabled = false;
+            textdistrito.Enabled = false;
         }
 
         private void Voltar_Click(object sender, EventArgs e)
@@ -66,6 +84,8 @@ namespace Trabalho_marcacoes_
 
         private void apagar_cliente_Click(object sender, EventArgs e)
         {
+            ligarDB.Close();
+
             ligarDB.Open();
             string query2 = "DELETE marcacoes_cliente FROM marcacoes_cliente RIGHT JOIN cliente on marcacoes_cliente.nome_cliente_id = cliente.id WHERE cliente.nome = '" + Iniciar_Sessao.utilizador + "'";
             SqlCommand cm = new SqlCommand(query2, ligarDB);
@@ -91,5 +111,54 @@ namespace Trabalho_marcacoes_
             ir.Show();
 
         }
+
+        private void salvar_codigo_Click(object sender, EventArgs e)
+        {
+            ligarDB.Close();
+
+            ligarDB.Open();
+            
+            if(codigo_alterar.Text == "")
+            {
+                MessageBox.Show("Tem de selecionar algum Código Postal");
+                return;
+            }
+
+            string query = "UPDATE cliente SET codigo_postal_cliente = '" + codigo_alterar.Text + "' WHERE nome = '" + Iniciar_Sessao.utilizador + "' ";
+            SqlCommand cmd = new SqlCommand(query, ligarDB);
+
+
+            cmd.ExecuteReader();
+
+            MessageBox.Show("CP alterado");
+
+            ligarDB.Close();
+        }
+
+        private void codigo_alterar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlCommand command = new SqlCommand();
+            command.Connection = ligarDB;
+
+            ligarDB.Close();
+ 
+            ligarDB.Open();
+
+            command.CommandText = "SELECT codigo_postal, distrito_tabela.distrito, conselho_tabela.conselho FROM codigo_postal INNER JOIN distrito_tabela ON distrito_codigo = distrito_tabela.distrito INNER JOIN conselho_tabela ON conselho_distrito = conselho_tabela.conselho WHERE codigo_postal = @codigo";
+
+            command.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = codigo_alterar.Text;
+
+            SqlDataReader reader = command.ExecuteReader();
+            reader.Read();
+
+            string concelho = reader["conselho"].ToString();
+            string distrito = reader["distrito"].ToString();
+
+            textconselho.Text = concelho;
+            textdistrito.Text = distrito;
+
+            ligarDB.Close();
+        }
+
     }
 }

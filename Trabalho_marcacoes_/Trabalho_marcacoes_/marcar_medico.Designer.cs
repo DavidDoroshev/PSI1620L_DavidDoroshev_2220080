@@ -46,21 +46,21 @@ namespace Trabalho_marcacoes_
             // 
             // hora_guardar
             // 
-            this.hora_guardar.Location = new System.Drawing.Point(387, 219);
-            this.hora_guardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.hora_guardar.Location = new System.Drawing.Point(290, 178);
+            this.hora_guardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.hora_guardar.Mask = "00:00";
             this.hora_guardar.Name = "hora_guardar";
-            this.hora_guardar.Size = new System.Drawing.Size(56, 22);
+            this.hora_guardar.Size = new System.Drawing.Size(32, 20);
             this.hora_guardar.TabIndex = 17;
             this.hora_guardar.ValidatingType = typeof(System.DateTime);
             // 
             // codigo_pesquisar
             // 
             this.codigo_pesquisar.FormattingEnabled = true;
-            this.codigo_pesquisar.Location = new System.Drawing.Point(143, 218);
-            this.codigo_pesquisar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.codigo_pesquisar.Location = new System.Drawing.Point(107, 177);
+            this.codigo_pesquisar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.codigo_pesquisar.Name = "codigo_pesquisar";
-            this.codigo_pesquisar.Size = new System.Drawing.Size(113, 24);
+            this.codigo_pesquisar.Size = new System.Drawing.Size(86, 21);
             this.codigo_pesquisar.TabIndex = 16;
             this.codigo_pesquisar.SelectedIndexChanged += new System.EventHandler(this.codigo_pesquisar_SelectedIndexChanged);
             // 
@@ -74,11 +74,10 @@ namespace Trabalho_marcacoes_
             this.cp});
             this.mostrar_medico.FullRowSelect = true;
             this.mostrar_medico.HideSelection = false;
-            this.mostrar_medico.Location = new System.Drawing.Point(39, 15);
-            this.mostrar_medico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mostrar_medico.Location = new System.Drawing.Point(29, 12);
             this.mostrar_medico.MultiSelect = false;
             this.mostrar_medico.Name = "mostrar_medico";
-            this.mostrar_medico.Size = new System.Drawing.Size(1000, 177);
+            this.mostrar_medico.Size = new System.Drawing.Size(750, 144);
             this.mostrar_medico.TabIndex = 15;
             this.mostrar_medico.UseCompatibleStateImageBehavior = false;
             this.mostrar_medico.View = System.Windows.Forms.View.Details;
@@ -101,48 +100,44 @@ namespace Trabalho_marcacoes_
             // 
             // dia_guardar
             // 
-            this.dia_guardar.Location = new System.Drawing.Point(560, 219);
-            this.dia_guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dia_guardar.Location = new System.Drawing.Point(420, 178);
             this.dia_guardar.Name = "dia_guardar";
-            this.dia_guardar.Size = new System.Drawing.Size(235, 22);
+            this.dia_guardar.Size = new System.Drawing.Size(177, 20);
             this.dia_guardar.TabIndex = 11;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(517, 222);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(388, 180);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 17);
+            this.label5.Size = new System.Drawing.Size(26, 13);
             this.label5.TabIndex = 14;
             this.label5.Text = "Dia:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(329, 222);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(247, 180);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 17);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 13;
             this.label2.Text = "Horas:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 222);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(27, 180);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 17);
+            this.label1.Size = new System.Drawing.Size(75, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Codigo-Postal:";
             // 
             // voltar
             // 
-            this.voltar.Location = new System.Drawing.Point(39, 347);
-            this.voltar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.voltar.Location = new System.Drawing.Point(29, 282);
+            this.voltar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.voltar.Name = "voltar";
-            this.voltar.Size = new System.Drawing.Size(129, 49);
+            this.voltar.Size = new System.Drawing.Size(97, 40);
             this.voltar.TabIndex = 18;
             this.voltar.Text = "Voltar";
             this.voltar.UseVisualStyleBackColor = true;
@@ -150,10 +145,10 @@ namespace Trabalho_marcacoes_
             // 
             // marcar_guardar
             // 
-            this.marcar_guardar.Location = new System.Drawing.Point(909, 347);
-            this.marcar_guardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.marcar_guardar.Location = new System.Drawing.Point(682, 282);
+            this.marcar_guardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.marcar_guardar.Name = "marcar_guardar";
-            this.marcar_guardar.Size = new System.Drawing.Size(129, 49);
+            this.marcar_guardar.Size = new System.Drawing.Size(97, 40);
             this.marcar_guardar.TabIndex = 19;
             this.marcar_guardar.Text = "MARCAR";
             this.marcar_guardar.UseVisualStyleBackColor = true;
@@ -161,9 +156,9 @@ namespace Trabalho_marcacoes_
             // 
             // marcar_medico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 423);
+            this.ClientSize = new System.Drawing.Size(800, 344);
             this.Controls.Add(this.marcar_guardar);
             this.Controls.Add(this.voltar);
             this.Controls.Add(this.hora_guardar);
@@ -175,7 +170,6 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "marcar_medico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marcar Medico";

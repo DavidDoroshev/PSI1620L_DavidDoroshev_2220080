@@ -80,10 +80,8 @@ namespace Trabalho_marcacoes_
             SqlCommand command = new SqlCommand();
             command.Connection = ligarDB;
 
-            
 
-            try
-            {
+
                 especialidade_select.Items.Clear();
                 especialidade_select.Text = "";
 
@@ -101,13 +99,7 @@ namespace Trabalho_marcacoes_
                 }
 
                 ligarDB.Close();
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
+            
             
         }
 

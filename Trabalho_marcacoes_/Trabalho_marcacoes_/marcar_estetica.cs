@@ -76,6 +76,12 @@ namespace Trabalho_marcacoes_
         private void Marcar_Click(object sender, EventArgs e)
         {
           
+            if(mostrar.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Tem de selecionar algum trabalhador");
+                return;
+            }    
+
             var data = Convert.ToDateTime(tempo_guardar.Text);
 
             if (data < DateTime.Now)
@@ -152,6 +158,8 @@ namespace Trabalho_marcacoes_
 
         private void codigo_pesquisar_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ligarDB.Close();
+
             ligarDB.Open();
             SqlCommand comando = new SqlCommand();
             comando.Connection = ligarDB;
@@ -174,11 +182,6 @@ namespace Trabalho_marcacoes_
             }
             Reader.Close();
             ligarDB.Close();
-
-        }
-
-        private void tempo_guardar_ValueChanged(object sender, EventArgs e)
-        {
 
         }
     }

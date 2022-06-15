@@ -31,6 +31,7 @@ namespace Trabalho_marcacoes_
             SqlCommand cmd = new SqlCommand(query, ligarDB);
             SqlCommand cmd2 = new SqlCommand(query2, ligarDB);
 
+            ligarDB.Close();
             ligarDB.Open();
             SqlDataReader Reader = cmd.ExecuteReader();
 
@@ -68,6 +69,12 @@ namespace Trabalho_marcacoes_
 
         private void marcar_guardar_Click(object sender, EventArgs e)
         {
+            if (mostrar_medico.SelectedItems.Count == 0 )
+            {
+                MessageBox.Show("Tem de selecionar algum médico para fazer a marcação");
+                return;
+            }
+
             var data = Convert.ToDateTime(dia_guardar.Text);
 
             if (data < DateTime.Now)
@@ -142,6 +149,8 @@ namespace Trabalho_marcacoes_
 
         private void codigo_pesquisar_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ligarDB.Close();
+
             ligarDB.Open();
             SqlCommand comando = new SqlCommand();
             comando.Connection = ligarDB;

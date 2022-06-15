@@ -154,7 +154,6 @@ namespace Trabalho_marcacoes_
             this.tempo_guardar.Size = new System.Drawing.Size(151, 20);
             this.tempo_guardar.TabIndex = 11;
             this.tempo_guardar.Value = new System.DateTime(2022, 6, 6, 0, 0, 0, 0);
-            this.tempo_guardar.ValueChanged += new System.EventHandler(this.tempo_guardar_ValueChanged);
             // 
             // marcar_estetica
             // 
