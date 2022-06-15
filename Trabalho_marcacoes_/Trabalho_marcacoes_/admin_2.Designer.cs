@@ -36,8 +36,8 @@ namespace Trabalho_marcacoes_
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.cp_apagar = new System.Windows.Forms.Button();
+            this.cp_adicionar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.especialidade_mos = new System.Windows.Forms.ListView();
@@ -105,23 +105,23 @@ namespace Trabalho_marcacoes_
             this.button1.Text = "Pag anterior";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // cp_apagar
             // 
-            this.button2.Location = new System.Drawing.Point(12, 175);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Apagar CP";
-            this.button2.UseVisualStyleBackColor = true;
+            this.cp_apagar.Location = new System.Drawing.Point(12, 175);
+            this.cp_apagar.Name = "cp_apagar";
+            this.cp_apagar.Size = new System.Drawing.Size(75, 23);
+            this.cp_apagar.TabIndex = 15;
+            this.cp_apagar.Text = "Apagar CP";
+            this.cp_apagar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // cp_adicionar
             // 
-            this.button3.Location = new System.Drawing.Point(93, 175);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(84, 23);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Adicionar CP";
-            this.button3.UseVisualStyleBackColor = true;
+            this.cp_adicionar.Location = new System.Drawing.Point(93, 175);
+            this.cp_adicionar.Name = "cp_adicionar";
+            this.cp_adicionar.Size = new System.Drawing.Size(84, 23);
+            this.cp_adicionar.TabIndex = 16;
+            this.cp_adicionar.Text = "Adicionar CP";
+            this.cp_adicionar.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -176,8 +176,8 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.especialidade_mos);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.cp_adicionar);
+            this.Controls.Add(this.cp_apagar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -198,8 +198,8 @@ namespace Trabalho_marcacoes_
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button cp_apagar;
+        private System.Windows.Forms.Button cp_adicionar;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ListView especialidade_mos;
