@@ -184,5 +184,41 @@ namespace Trabalho_marcacoes_
             ligarDB.Close();
 
         }
+
+        private void proximo_CheckedChanged(object sender, EventArgs e)
+        {
+            ligarDB.Close();
+
+            ligarDB.Open();
+
+            string query = "SELECT * FROM trabalhadores INNER JOIN especialidade_tabela on trabalhadores.especialidade_tabela_trabalhador = especialidade_tabela.especialidade INNER JOIN profissao_tabela ON especialidade_tabela.profissao = profissao_tabela.id_profissao INNER JOIN codigo_postal on trabalhadores.codigo_postal_trabalhador = codigo_postal.codigo_postal INNER JOIN cliente on codigo_postal.codigo_postal = cliente.codigo_postal_cliente WHERE profissao_tabela.profissao like 'Estética' AND cliente.codigo_postal_cliente = ''";
+            string query2 = "SELECT * FROM cliente WHERE codigo_postal_cliente = @codigo_cliente and nome = '" +Iniciar_Sessao.utilizador+ "' " ;
+
+            SqlCommand cmd = new SqlCommand(query, ligarDB);
+            SqlCommand cmd2 = new SqlCommand(query2, ligarDB);
+
+            cmd.Parameters.Add("@codigo_cliente", System.Data.SqlDbType.VarChar).Value = Iniciar_Sessao.utilizador ;
+            SqlDataReader Reader = cmd.ExecuteReader();
+            Reader.Close();
+
+            cmd2.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = "@codigo_cliente";
+            Reader = cmd2.ExecuteReader();
+
+            mostrar.Items.Clear();
+
+            while (Reader.Read())
+            {
+
+
+                string[] bomdia = new string[] { Reader["nome"].ToString(), Reader["especialidade_tabela_trabalhador"].ToString(), Reader["codigo_postal_trabalhador"].ToString() };
+
+                mostrar.Items.Add(new ListViewItem(bomdia));
+
+            }
+            Reader.Close();
+            ligarDB.Close();
+
+
+        }
     }
 }
