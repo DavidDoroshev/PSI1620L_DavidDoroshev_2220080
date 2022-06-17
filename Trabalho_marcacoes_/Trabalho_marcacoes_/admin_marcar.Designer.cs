@@ -46,7 +46,7 @@ namespace Trabalho_marcacoes_
             // 
             this.cliente_mostrar.FormattingEnabled = true;
             this.cliente_mostrar.Location = new System.Drawing.Point(65, 21);
-            this.cliente_mostrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cliente_mostrar.Margin = new System.Windows.Forms.Padding(2);
             this.cliente_mostrar.Name = "cliente_mostrar";
             this.cliente_mostrar.Size = new System.Drawing.Size(92, 21);
             this.cliente_mostrar.TabIndex = 2;
@@ -56,7 +56,7 @@ namespace Trabalho_marcacoes_
             // 
             this.trabalhador_nome.FormattingEnabled = true;
             this.trabalhador_nome.Location = new System.Drawing.Point(386, 19);
-            this.trabalhador_nome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trabalhador_nome.Margin = new System.Windows.Forms.Padding(2);
             this.trabalhador_nome.Name = "trabalhador_nome";
             this.trabalhador_nome.Size = new System.Drawing.Size(92, 21);
             this.trabalhador_nome.TabIndex = 3;
@@ -95,7 +95,7 @@ namespace Trabalho_marcacoes_
             // especialidade
             // 
             this.especialidade.Location = new System.Drawing.Point(394, 77);
-            this.especialidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.especialidade.Margin = new System.Windows.Forms.Padding(2);
             this.especialidade.Name = "especialidade";
             this.especialidade.Size = new System.Drawing.Size(76, 20);
             this.especialidade.TabIndex = 8;
@@ -114,17 +114,18 @@ namespace Trabalho_marcacoes_
             // voltar
             // 
             this.voltar.Location = new System.Drawing.Point(9, 178);
-            this.voltar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.voltar.Margin = new System.Windows.Forms.Padding(2);
             this.voltar.Name = "voltar";
             this.voltar.Size = new System.Drawing.Size(94, 35);
             this.voltar.TabIndex = 10;
             this.voltar.Text = "Voltar";
             this.voltar.UseVisualStyleBackColor = true;
+            this.voltar.Click += new System.EventHandler(this.voltar_Click);
             // 
             // guardar
             // 
             this.guardar.Location = new System.Drawing.Point(383, 178);
-            this.guardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guardar.Margin = new System.Windows.Forms.Padding(2);
             this.guardar.Name = "guardar";
             this.guardar.Size = new System.Drawing.Size(94, 35);
             this.guardar.TabIndex = 11;
@@ -166,7 +167,7 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.label1);
             this.Controls.Add(this.trabalhador_nome);
             this.Controls.Add(this.cliente_mostrar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "admin_marcar";
             this.Text = "admin_marcar";
             this.ResumeLayout(false);

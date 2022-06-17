@@ -61,6 +61,31 @@ namespace Trabalho_marcacoes_
 
         }
 
+        private void cp_apagar_Click(object sender, EventArgs e)
+        {
+            admin_cp principal = new admin_cp();
+            this.Hide();
+            principal.Show();
+        }
 
+        private void cp_adicionar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void apa_espe_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void add_espe_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

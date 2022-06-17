@@ -166,9 +166,15 @@ namespace Trabalho_marcacoes_
 
             MessageBox.Show("Marcação feita com sucesso");
 
+            
+        }
+
+        private void voltar_Click(object sender, EventArgs e)
+        {
             admin principal = new admin();
             this.Hide();
             principal.Show();
+
         }
     }
 }

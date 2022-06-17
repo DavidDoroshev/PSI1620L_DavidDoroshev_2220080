@@ -242,6 +242,23 @@ namespace Trabalho_marcacoes_
                 reader.Read();
                 reader.Close();
 
+
+                string query3 = "select * from marcacoes_cliente";
+                SqlCommand cmd3 = new SqlCommand(query3, ligarDB);
+
+                reader = cmd3.ExecuteReader();
+
+                marcacoes_mos.Items.Clear();
+
+                while (reader.Read())
+                {
+                    string[] marcacao = new string[] { reader["id"].ToString(), reader["nome_cliente_id"].ToString(), reader["nome_trabalhador_id"].ToString(), reader["especialidade_marcacao"].ToString(), ((DateTime)reader["dia_marcacao"]).ToShortDateString(), reader["hora"].ToString() };
+                    marcacoes_mos.Items.Add(new ListViewItem(marcacao));
+                }
+
+                ligarDB.Close();
+                reader.Close();
+
                 MessageBox.Show("Marcação apagada com sucesso !!!");
             }
             

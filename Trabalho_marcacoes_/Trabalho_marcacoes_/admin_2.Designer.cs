@@ -38,11 +38,11 @@ namespace Trabalho_marcacoes_
             this.button1 = new System.Windows.Forms.Button();
             this.cp_apagar = new System.Windows.Forms.Button();
             this.cp_adicionar = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.especialidade_mos = new System.Windows.Forms.ListView();
             this.profissao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.especialidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.apa_espe = new System.Windows.Forms.Button();
+            this.add_espe = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cp_mos
@@ -113,6 +113,7 @@ namespace Trabalho_marcacoes_
             this.cp_apagar.TabIndex = 15;
             this.cp_apagar.Text = "Apagar CP";
             this.cp_apagar.UseVisualStyleBackColor = true;
+            this.cp_apagar.Click += new System.EventHandler(this.cp_apagar_Click);
             // 
             // cp_adicionar
             // 
@@ -122,24 +123,7 @@ namespace Trabalho_marcacoes_
             this.cp_adicionar.TabIndex = 16;
             this.cp_adicionar.Text = "Adicionar CP";
             this.cp_adicionar.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(412, 175);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(109, 42);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Apagar Especialidade";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(537, 175);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(109, 42);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "Adicionar especialidade";
-            this.button5.UseVisualStyleBackColor = true;
+            this.cp_adicionar.Click += new System.EventHandler(this.cp_adicionar_Click);
             // 
             // especialidade_mos
             // 
@@ -168,14 +152,34 @@ namespace Trabalho_marcacoes_
             this.especialidade.Text = "Especialidade";
             this.especialidade.Width = 150;
             // 
+            // apa_espe
+            // 
+            this.apa_espe.Location = new System.Drawing.Point(412, 175);
+            this.apa_espe.Name = "apa_espe";
+            this.apa_espe.Size = new System.Drawing.Size(109, 42);
+            this.apa_espe.TabIndex = 20;
+            this.apa_espe.Text = "Apagar Especialidade";
+            this.apa_espe.UseVisualStyleBackColor = true;
+            this.apa_espe.Click += new System.EventHandler(this.apa_espe_Click);
+            // 
+            // add_espe
+            // 
+            this.add_espe.Location = new System.Drawing.Point(527, 175);
+            this.add_espe.Name = "add_espe";
+            this.add_espe.Size = new System.Drawing.Size(109, 42);
+            this.add_espe.TabIndex = 21;
+            this.add_espe.Text = "Adicionar Especialidade";
+            this.add_espe.UseVisualStyleBackColor = true;
+            this.add_espe.Click += new System.EventHandler(this.add_espe_Click);
+            // 
             // admin_2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 309);
+            this.Controls.Add(this.add_espe);
+            this.Controls.Add(this.apa_espe);
             this.Controls.Add(this.especialidade_mos);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.cp_adicionar);
             this.Controls.Add(this.cp_apagar);
             this.Controls.Add(this.button1);
@@ -200,10 +204,10 @@ namespace Trabalho_marcacoes_
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button cp_apagar;
         private System.Windows.Forms.Button cp_adicionar;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ListView especialidade_mos;
         private System.Windows.Forms.ColumnHeader profissao;
         private System.Windows.Forms.ColumnHeader especialidade;
+        private System.Windows.Forms.Button apa_espe;
+        private System.Windows.Forms.Button add_espe;
     }
 }
