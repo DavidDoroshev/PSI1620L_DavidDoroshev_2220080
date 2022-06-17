@@ -59,12 +59,9 @@ namespace Trabalho_marcacoes_
             reader.Read();
             reader.Close();
 
+            MessageBox.Show("CP guardado com sucesso");
+
             ligarDB.Close();
-        }
-
-        private void conselho_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

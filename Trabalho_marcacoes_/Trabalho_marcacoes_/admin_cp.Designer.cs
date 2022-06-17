@@ -91,7 +91,6 @@ namespace Trabalho_marcacoes_
             this.conselho.Name = "conselho";
             this.conselho.Size = new System.Drawing.Size(100, 20);
             this.conselho.TabIndex = 5;
-            this.conselho.TextChanged += new System.EventHandler(this.conselho_TextChanged);
             // 
             // distrito
             // 
