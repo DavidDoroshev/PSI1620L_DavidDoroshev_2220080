@@ -43,43 +43,45 @@ namespace Trabalho_marcacoes_
             this.horas_guardar = new System.Windows.Forms.MaskedTextBox();
             this.tempo_guardar = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.proximo = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 188);
+            this.label1.Location = new System.Drawing.Point(33, 231);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.Size = new System.Drawing.Size(96, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Codigo-Postal";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(247, 180);
+            this.label2.Location = new System.Drawing.Point(329, 222);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(50, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Horas:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(387, 176);
+            this.label5.Location = new System.Drawing.Point(516, 217);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 13);
+            this.label5.Size = new System.Drawing.Size(33, 17);
             this.label5.TabIndex = 5;
             this.label5.Text = "Dia:";
             // 
             // Marcar
             // 
             this.Marcar.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.Marcar.Location = new System.Drawing.Point(673, 287);
+            this.Marcar.Location = new System.Drawing.Point(897, 353);
+            this.Marcar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Marcar.Name = "Marcar";
-            this.Marcar.Size = new System.Drawing.Size(105, 43);
+            this.Marcar.Size = new System.Drawing.Size(140, 53);
             this.Marcar.TabIndex = 6;
             this.Marcar.Text = "MARCAR";
             this.Marcar.UseVisualStyleBackColor = true;
@@ -87,9 +89,10 @@ namespace Trabalho_marcacoes_
             // 
             // voltar
             // 
-            this.voltar.Location = new System.Drawing.Point(28, 286);
+            this.voltar.Location = new System.Drawing.Point(37, 352);
+            this.voltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.voltar.Name = "voltar";
-            this.voltar.Size = new System.Drawing.Size(105, 44);
+            this.voltar.Size = new System.Drawing.Size(140, 54);
             this.voltar.TabIndex = 7;
             this.voltar.Text = "Voltar";
             this.voltar.UseVisualStyleBackColor = true;
@@ -105,10 +108,11 @@ namespace Trabalho_marcacoes_
             this.cp});
             this.mostrar.FullRowSelect = true;
             this.mostrar.HideSelection = false;
-            this.mostrar.Location = new System.Drawing.Point(28, 12);
+            this.mostrar.Location = new System.Drawing.Point(37, 15);
+            this.mostrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mostrar.MultiSelect = false;
             this.mostrar.Name = "mostrar";
-            this.mostrar.Size = new System.Drawing.Size(750, 144);
+            this.mostrar.Size = new System.Drawing.Size(1000, 177);
             this.mostrar.TabIndex = 8;
             this.mostrar.UseCompatibleStateImageBehavior = false;
             this.mostrar.View = System.Windows.Forms.View.Details;
@@ -132,67 +136,47 @@ namespace Trabalho_marcacoes_
             // codigo_pesquisar
             // 
             this.codigo_pesquisar.FormattingEnabled = true;
-            this.codigo_pesquisar.Location = new System.Drawing.Point(116, 185);
-            this.codigo_pesquisar.Margin = new System.Windows.Forms.Padding(2);
+            this.codigo_pesquisar.Location = new System.Drawing.Point(155, 228);
+            this.codigo_pesquisar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.codigo_pesquisar.Name = "codigo_pesquisar";
-            this.codigo_pesquisar.Size = new System.Drawing.Size(92, 21);
+            this.codigo_pesquisar.Size = new System.Drawing.Size(121, 24);
             this.codigo_pesquisar.TabIndex = 9;
             this.codigo_pesquisar.SelectedIndexChanged += new System.EventHandler(this.codigo_pesquisar_SelectedIndexChanged);
             // 
             // horas_guardar
             // 
-            this.horas_guardar.Location = new System.Drawing.Point(282, 178);
-            this.horas_guardar.Margin = new System.Windows.Forms.Padding(2);
+            this.horas_guardar.Location = new System.Drawing.Point(376, 219);
+            this.horas_guardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.horas_guardar.Mask = "00:00";
             this.horas_guardar.Name = "horas_guardar";
-            this.horas_guardar.Size = new System.Drawing.Size(32, 20);
+            this.horas_guardar.Size = new System.Drawing.Size(41, 22);
             this.horas_guardar.TabIndex = 10;
             this.horas_guardar.ValidatingType = typeof(System.DateTime);
             // 
             // tempo_guardar
             // 
-            this.tempo_guardar.Location = new System.Drawing.Point(417, 176);
-            this.tempo_guardar.Margin = new System.Windows.Forms.Padding(2);
+            this.tempo_guardar.Location = new System.Drawing.Point(556, 217);
+            this.tempo_guardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tempo_guardar.Name = "tempo_guardar";
-            this.tempo_guardar.Size = new System.Drawing.Size(151, 20);
+            this.tempo_guardar.Size = new System.Drawing.Size(200, 22);
             this.tempo_guardar.TabIndex = 11;
             this.tempo_guardar.Value = new System.DateTime(2022, 6, 6, 0, 0, 0, 0);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 171);
+            this.label3.Location = new System.Drawing.Point(33, 210);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 13);
+            this.label3.Size = new System.Drawing.Size(100, 17);
             this.label3.TabIndex = 12;
             this.label3.Text = "Pesquisar por:";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 218);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 13);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Proximidade";
-            // 
-            // proximo
-            // 
-            this.proximo.AutoSize = true;
-            this.proximo.Location = new System.Drawing.Point(116, 218);
-            this.proximo.Name = "proximo";
-            this.proximo.Size = new System.Drawing.Size(15, 14);
-            this.proximo.TabIndex = 14;
-            this.proximo.UseVisualStyleBackColor = true;
-            this.proximo.CheckedChanged += new System.EventHandler(this.proximo_CheckedChanged);
-            // 
             // marcar_estetica
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 341);
-            this.Controls.Add(this.proximo);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(1067, 420);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tempo_guardar);
             this.Controls.Add(this.horas_guardar);
@@ -205,6 +189,7 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "marcar_estetica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -227,7 +212,5 @@ namespace Trabalho_marcacoes_
         private System.Windows.Forms.MaskedTextBox horas_guardar;
         private System.Windows.Forms.DateTimePicker tempo_guardar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox proximo;
     }
 }
