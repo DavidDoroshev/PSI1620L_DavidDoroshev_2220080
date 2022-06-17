@@ -191,18 +191,19 @@ namespace Trabalho_marcacoes_
 
             ligarDB.Open();
 
-            string query = "SELECT * FROM trabalhadores INNER JOIN especialidade_tabela on trabalhadores.especialidade_tabela_trabalhador = especialidade_tabela.especialidade INNER JOIN profissao_tabela ON especialidade_tabela.profissao = profissao_tabela.id_profissao INNER JOIN codigo_postal on trabalhadores.codigo_postal_trabalhador = codigo_postal.codigo_postal INNER JOIN cliente on codigo_postal.codigo_postal = cliente.codigo_postal_cliente WHERE profissao_tabela.profissao like 'Estética' AND cliente.codigo_postal_cliente = ''";
-            string query2 = "SELECT * FROM cliente WHERE codigo_postal_cliente = @codigo_cliente and nome = '" + Iniciar_Sessao.utilizador + "' ";
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = ligarDB;
 
-            SqlCommand cmd = new SqlCommand(query, ligarDB);
-            SqlCommand cmd2 = new SqlCommand(query2, ligarDB);
+            cmd.CommandText = "SELECT codigo_postal_cliente FROM cliente WHERE nome = @nome";
 
-            cmd.Parameters.Add("@codigo_cliente", System.Data.SqlDbType.VarChar).Value = Iniciar_Sessao.utilizador;
+            int cp = Convert.ToInt32(cmd.ExecuteScalar().ToString());
+            cmd.Parameters.Clear();
+
+            cmd.CommandText = "SELECT * FROM trabalhadores INNER JOIN especialidade_tabela on trabalhadores.especialidade_tabela_trabalhador = especialidade_tabela.especialidade INNER JOIN profissao_tabela ON especialidade_tabela.profissao = profissao_tabela.id_profissao INNER JOIN codigo_postal on trabalhadores.codigo_postal_trabalhador = codigo_postal.codigo_postal INNER JOIN cliente on codigo_postal.codigo_postal = cliente.codigo_postal_cliente where codigo_postal_cliente = @codigo_cliente and cliente.nome = @nome_cliente and trabalhadores.codigo_postal_trabalhador = @codigo_trabalhador";
+
+            cmd.Parameters.Add("@nome_cliente", SqlDbType.VarChar).Value = Iniciar_Sessao.utilizador;
+            cmd.Parameters.Add("@codigo_cliente", System.Data.SqlDbType.VarChar).Value = cp;
             SqlDataReader Reader = cmd.ExecuteReader();
-            Reader.Close();
-
-            cmd2.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = "@codigo_cliente";
-            Reader = cmd2.ExecuteReader();
 
             mostrar.Items.Clear();
 
