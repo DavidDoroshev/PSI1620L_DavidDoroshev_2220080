@@ -204,6 +204,12 @@
     <Compile Include="admin_cp.Designer.cs">
       <DependentUpon>admin_cp.cs</DependentUpon>
     </Compile>
+    <Compile Include="admin_espe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_espe.Designer.cs">
+      <DependentUpon>admin_espe.cs</DependentUpon>
+    </Compile>
     <Compile Include="admin_marcar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -307,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="admin_cp.resx">
       <DependentUpon>admin_cp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_espe.resx">
+      <DependentUpon>admin_espe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admin_marcar.resx">
       <DependentUpon>admin_marcar.cs</DependentUpon>

@@ -72,12 +72,6 @@ namespace Trabalho_marcacoes_
             this.Hide();
             principal.Show();
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void apa_espe_Click(object sender, EventArgs e)
         {
 
@@ -85,7 +79,9 @@ namespace Trabalho_marcacoes_
 
         private void add_espe_Click(object sender, EventArgs e)
         {
-
+            admin_espe ir = new admin_espe();
+            this.Hide();
+            ir.Show();
         }
     }
 }
