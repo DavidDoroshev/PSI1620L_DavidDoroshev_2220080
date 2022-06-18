@@ -130,7 +130,6 @@ namespace Trabalho_marcacoes_
             this.textconselho.Name = "textconselho";
             this.textconselho.Size = new System.Drawing.Size(76, 20);
             this.textconselho.TabIndex = 9;
-            this.textconselho.TextChanged += new System.EventHandler(this.textconselho_TextChanged);
             // 
             // textdistrito
             // 
@@ -139,7 +138,6 @@ namespace Trabalho_marcacoes_
             this.textdistrito.Name = "textdistrito";
             this.textdistrito.Size = new System.Drawing.Size(76, 20);
             this.textdistrito.TabIndex = 10;
-            this.textdistrito.TextChanged += new System.EventHandler(this.textdistrito_TextChanged);
             // 
             // label2
             // 

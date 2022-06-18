@@ -105,9 +105,7 @@ namespace Trabalho_marcacoes_
 
         public async void guardar_button_Click(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand();
-
-            command.Connection = ligarDB;
+            ligarDB.Close();
 
             ligarDB.Open();
 
@@ -117,8 +115,8 @@ namespace Trabalho_marcacoes_
             var nome_veri = nome_trabalhador.Text;
 
 
-            Regex valid_pass = new Regex("^(?!.*[!@#$%^&*()_+=\\[/{}];:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{3,15}$");
-            
+            Regex valid_pass = new Regex("^(?!.*[!@#$%^&*()_+=\\[/{}];:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,15}$");
+
             Regex valid_nome = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])[A-Z]{1}[a-zA-Z]{2,}$");
 
             if (pass_veri == "" || nome_veri == "")
@@ -132,22 +130,34 @@ namespace Trabalho_marcacoes_
                 return;
             }
 
-            command.CommandText = "INSERT INTO trabalhadores(nome, password, codigo_postal_trabalhador, especialidade_tabela_trabalhador) VALUES(@nome, @password, @codigo_postal, @especialidade)";
-            command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = nome_trabalhador.Text;
-            command.Parameters.Add("@password", System.Data.SqlDbType.VarChar).Value = password_trabalhador.Text;
-            command.Parameters.Add("@codigo_postal", System.Data.SqlDbType.VarChar).Value = codigo_postal_trabalhador.SelectedItem.ToString();
-            command.Parameters.Add("@especialidade", System.Data.SqlDbType.VarChar).Value = especialidade_select.SelectedItem.ToString();
+            SqlCommand commando = new SqlCommand();
 
-            await command.ExecuteReaderAsync();
+            string query = "SELECT * FROM trabalhadores WHERE nome = '" + nome_trabalhador.Text + "'";
+            commando = new SqlCommand(query, ligarDB);
+            SqlDataReader reader = await commando.ExecuteReaderAsync();
+            await reader.ReadAsync();
+            if (reader.HasRows)
+            {
 
-            ligarDB.Close();
+            }
+            else
+            {
+                commando.CommandText = "INSERT INTO trabalhadores(nome, password, codigo_postal_trabalhador, especialidade_tabela_trabalhador) VALUES(@nome, @password, @codigo_postal, @especialidade)";
+                commando.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = nome_trabalhador.Text;
+                commando.Parameters.Add("@password", System.Data.SqlDbType.VarChar).Value = password_trabalhador.Text;
+                commando.Parameters.Add("@codigo_postal", System.Data.SqlDbType.VarChar).Value = codigo_postal_trabalhador.SelectedItem.ToString();
+                commando.Parameters.Add("@especialidade", System.Data.SqlDbType.VarChar).Value = especialidade_select.SelectedItem.ToString();
 
-            MessageBox.Show("Trabalhador adicionado com sucesso!!!");
+                await commando.ExecuteNonQueryAsync();
 
-            menu_inicial voltar = new menu_inicial();
-            voltar.Show();
-            this.Hide();
+                ligarDB.Close();
 
+                MessageBox.Show("Trabalhador adicionado com sucesso!!!");
+
+                menu_inicial voltar = new menu_inicial();
+                voltar.Show();
+                this.Hide();
+            }
         }
 
         private void codigo_postal_trabalhador_SelectedIndexChanged(object sender, EventArgs e) 

@@ -53,7 +53,7 @@ namespace Trabalho_marcacoes_
 
             var nome_veri = nome_guardar.Text;           
 
-            Regex valid_pass = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{3,15}$");
+            Regex valid_pass = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{3,7}$");
 
             Regex valid_nome = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])[A-Z]{1}[a-zA-Z]{2,24}$");
 
@@ -139,17 +139,6 @@ namespace Trabalho_marcacoes_
             textdistrito.Text = distrito;
 
             ligarDB.Close();
-        }
-
-        private void textconselho_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textdistrito_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        
+        }      
     }
 }

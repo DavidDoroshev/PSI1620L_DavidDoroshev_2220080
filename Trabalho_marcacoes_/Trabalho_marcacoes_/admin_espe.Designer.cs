@@ -34,7 +34,7 @@ namespace Trabalho_marcacoes_
             this.label2 = new System.Windows.Forms.Label();
             this.add_espe = new System.Windows.Forms.TextBox();
             this.Voltar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.add = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -80,21 +80,22 @@ namespace Trabalho_marcacoes_
             this.Voltar.Text = "Voltar";
             this.Voltar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // add
             // 
-            this.button2.Location = new System.Drawing.Point(364, 125);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Adicionar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.add.Location = new System.Drawing.Point(364, 125);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(75, 23);
+            this.add.TabIndex = 5;
+            this.add.Text = "Adicionar";
+            this.add.UseVisualStyleBackColor = true;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // admin_espe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(462, 164);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.add);
             this.Controls.Add(this.Voltar);
             this.Controls.Add(this.add_espe);
             this.Controls.Add(this.label2);
@@ -115,6 +116,6 @@ namespace Trabalho_marcacoes_
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox add_espe;
         private System.Windows.Forms.Button Voltar;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button add;
     }
 }
