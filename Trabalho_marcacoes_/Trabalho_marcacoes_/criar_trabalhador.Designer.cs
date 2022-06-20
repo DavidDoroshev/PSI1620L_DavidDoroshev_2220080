@@ -45,6 +45,8 @@ namespace Trabalho_marcacoes_
             this.especialidade_select = new System.Windows.Forms.ComboBox();
             this.textconselho = new System.Windows.Forms.TextBox();
             this.textdistrito = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -95,7 +97,7 @@ namespace Trabalho_marcacoes_
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(439, 63);
+            this.label6.Location = new System.Drawing.Point(414, 60);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 17);
             this.label6.TabIndex = 5;
@@ -112,7 +114,7 @@ namespace Trabalho_marcacoes_
             // 
             // password_trabalhador
             // 
-            this.password_trabalhador.Location = new System.Drawing.Point(517, 60);
+            this.password_trabalhador.Location = new System.Drawing.Point(493, 60);
             this.password_trabalhador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.password_trabalhador.Name = "password_trabalhador";
             this.password_trabalhador.Size = new System.Drawing.Size(100, 22);
@@ -195,11 +197,31 @@ namespace Trabalho_marcacoes_
             this.textdistrito.Size = new System.Drawing.Size(100, 22);
             this.textdistrito.TabIndex = 20;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(407, 99);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(392, 17);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Têm de começar obrigatoriamente com uma letra maiúsculas";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(407, 82);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(350, 17);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Têm de ter no minimos 9 caracteres até 15 caracteres";
+            // 
             // criar_trabalhador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.textdistrito);
             this.Controls.Add(this.textconselho);
             this.Controls.Add(this.especialidade_select);
@@ -221,7 +243,6 @@ namespace Trabalho_marcacoes_
             this.Name = "criar_trabalhador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "trabalhador_criar";
-            this.Load += new System.EventHandler(this.trabalhador_criar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,5 +266,7 @@ namespace Trabalho_marcacoes_
         private System.Windows.Forms.ComboBox especialidade_select;
         private System.Windows.Forms.TextBox textconselho;
         private System.Windows.Forms.TextBox textdistrito;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }

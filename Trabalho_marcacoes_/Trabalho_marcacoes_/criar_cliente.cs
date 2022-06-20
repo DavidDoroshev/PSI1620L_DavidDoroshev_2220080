@@ -49,13 +49,25 @@ namespace Trabalho_marcacoes_
 
             ligarDB.Open();
 
-            var pass_veri = password_guardar.Text;
+            var pass_veri = password_guardar.Text.Trim();
 
-            var nome_veri = nome_guardar.Text;           
+            var nome_veri = nome_guardar.Text.Trim();     
+            
+
+            if (nome_veri == "")
+            {
+                MessageBox.Show("Tem de colocar algo");
+                return;
+            }
+            if(pass_veri == "")
+            {
+                MessageBox.Show("Tem de colocar algo");
+                return;
+            }
 
             Regex valid_pass = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{3,7}$");
 
-            Regex valid_nome = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])[A-Z]{1}[a-zA-Z]{2,24}$");
+            Regex valid_nome = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])[A-Z]{1}[a-zA-Z]{2,8}$");
 
             if (pass_veri == "" || nome_veri == "" )
             {

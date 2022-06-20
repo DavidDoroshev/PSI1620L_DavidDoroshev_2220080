@@ -154,8 +154,6 @@ namespace Trabalho_marcacoes_
             principal.Show();     
    
         }
-
-
         private void codigo_pesquisar_SelectedIndexChanged(object sender, EventArgs e)
         {
             ligarDB.Close();
@@ -168,7 +166,7 @@ namespace Trabalho_marcacoes_
             comando.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = codigo_pesquisar.SelectedItem.ToString();
             SqlDataReader Reader = comando.ExecuteReader();
 
-            
+
             mostrar.Items.Clear();
 
             while (Reader.Read())
@@ -178,68 +176,11 @@ namespace Trabalho_marcacoes_
                 string[] bomdia = new string[] { Reader["nome"].ToString(), Reader["especialidade_tabela_trabalhador"].ToString(), Reader["codigo_postal_trabalhador"].ToString() };
 
                 mostrar.Items.Add(new ListViewItem(bomdia));
-                
+
             }
             Reader.Close();
             ligarDB.Close();
 
-        }
-
-        //private void proximo_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    ligarDB.Close();
-
-        //    ligarDB.Open();
-
-        //    SqlCommand cmd = new SqlCommand();
-        //    cmd.Connection = ligarDB;
-
-        //    cmd.CommandText = "SELECT codigo_postal_cliente FROM cliente WHERE nome = @nome";
-
-        //    int cp = Convert.ToInt32(cmd.ExecuteScalar().ToString());
-        //    cmd.Parameters.Clear();
-
-        //    cmd.CommandText = "SELECT * FROM trabalhadores INNER JOIN especialidade_tabela on trabalhadores.especialidade_tabela_trabalhador = especialidade_tabela.especialidade INNER JOIN profissao_tabela ON especialidade_tabela.profissao = profissao_tabela.id_profissao INNER JOIN codigo_postal on trabalhadores.codigo_postal_trabalhador = codigo_postal.codigo_postal INNER JOIN cliente on codigo_postal.codigo_postal = cliente.codigo_postal_cliente where codigo_postal_cliente = @codigo_cliente and cliente.nome = @nome_cliente and trabalhadores.codigo_postal_trabalhador = @codigo_trabalhador";
-
-        //    cmd.Parameters.Add("@nome_cliente", SqlDbType.VarChar).Value = Iniciar_Sessao.utilizador;
-        //    cmd.Parameters.Add("@codigo_cliente", System.Data.SqlDbType.VarChar).Value = cp;
-        //    cmd.Parameters.Add("@codigo_trabalhador", System.Data.SqlDbType.VarChar).Value = cp;
-
-        //    SqlDataReader Reader = cmd.ExecuteReader();
-
-        //    mostrar.Items.Clear();
-
-        //    while (Reader.Read())
-        //    {
-
-
-        //        string[] bomdia = new string[] { Reader["nome"].ToString(), Reader["especialidade_tabela_trabalhador"].ToString(), Reader["codigo_postal_trabalhador"].ToString() };
-
-        //        mostrar.Items.Add(new ListViewItem(bomdia));
-
-        //    }
-        //    Reader.Close();
-        //    ligarDB.Close();
-
-
-        //    if (proximo.Checked)
-        //    {
-
-                
-                
-
-
-        //    }
-        //    else
-        //    {
-                
-
-
-
-
-        //    }
-
-
-        //}
+        } 
     }
 }

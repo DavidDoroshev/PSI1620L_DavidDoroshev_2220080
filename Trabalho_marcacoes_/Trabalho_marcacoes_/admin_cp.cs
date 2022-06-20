@@ -27,7 +27,7 @@ namespace Trabalho_marcacoes_
 
             ligarDB.Open();
 
-            string query  = "INSERT INTO conselho_tabela(conselho) VALUES (@conselho)";
+            string query = "INSERT INTO conselho_tabela(conselho) VALUES (@conselho)";
 
             string query2 = "INSERT INTO distrito_tabela(distrito, conselho_distrito) VALUES (@distrito , @conselho)";
 
@@ -62,6 +62,12 @@ namespace Trabalho_marcacoes_
             MessageBox.Show("CP guardado com sucesso");
 
             ligarDB.Close();
+        }
+        private void voltar_Click(object sender, EventArgs e)
+        {
+            admin_2 ir = new admin_2();
+            this.Close();
+            ir.Show();
         }
     }
 }

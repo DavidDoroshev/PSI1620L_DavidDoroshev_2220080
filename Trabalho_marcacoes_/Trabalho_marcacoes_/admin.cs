@@ -252,7 +252,7 @@ namespace Trabalho_marcacoes_
 
                 while (reader.Read())
                 {
-                    string[] marcacao = new string[] { reader["id"].ToString(), reader["nome_cliente_id"].ToString(), reader["nome_trabalhador_id"].ToString(), reader["especialidade_marcacao"].ToString(), ((DateTime)reader["dia_marcacao"]).ToShortDateString(), reader["hora"].ToString() };
+                    string[] marcacao = new string[] { Convert.ToInt32(reader["id"]).ToString(), reader["nome_cliente_id"].ToString(), reader["nome_trabalhador_id"].ToString(), reader["especialidade_marcacao"].ToString(), ((DateTime)reader["dia_marcacao"]).ToShortDateString(), reader["hora"].ToString() };
                     marcacoes_mos.Items.Add(new ListViewItem(marcacao));
                 }
 

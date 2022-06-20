@@ -68,10 +68,7 @@ namespace Trabalho_marcacoes_
             voltar.Show();
             this.Hide();
         }
-        private void trabalhador_criar_Load(object sender, EventArgs e)
-        {
-            
-        }
+
 
         private void profissao_select_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -115,7 +112,7 @@ namespace Trabalho_marcacoes_
             var nome_veri = nome_trabalhador.Text;
 
 
-            Regex valid_pass = new Regex("^(?!.*[!@#$%^&*()_+=\\[/{}];:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,15}$");
+            Regex valid_pass = new Regex("^(?!.*[!@#$%^&*()_+=\\[/{}];:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{9,15}$");
 
             Regex valid_nome = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])[A-Z]{1}[a-zA-Z]{2,}$");
 

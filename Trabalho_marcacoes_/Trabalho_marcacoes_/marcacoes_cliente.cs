@@ -26,26 +26,54 @@ namespace Trabalho_marcacoes_
             comando.Connection = ligarDB;
 
 
-
             string query = " SELECT marcacoes_cliente.dia_marcacao, marcacoes_cliente.hora, trabalhadores.nome, marcacoes_cliente.especialidade_marcacao FROM marcacoes_cliente LEFT JOIN trabalhadores on marcacoes_cliente.nome_trabalhador_id = trabalhadores.id RIGHT JOIN cliente on marcacoes_cliente.nome_cliente_id = cliente.id WHERE cliente.nome = '" + Iniciar_Sessao.utilizador + "'";
 
             SqlCommand cmd = new SqlCommand(query, ligarDB);
 
             ligarDB.Close();
             ligarDB.Open();
+
             SqlDataReader Reader = cmd.ExecuteReader();
 
             mostrar.Items.Clear();
 
             while (Reader.Read())
             {
-                
                 string[] bomdia = new string[] { Reader["nome"].ToString(), Reader["especialidade_marcacao"].ToString(), ((DateTime)Reader["dia_marcacao"]).ToShortDateString(), Reader["hora"].ToString() };
                 mostrar.Items.Add(new ListViewItem(bomdia));
             }
 
             ligarDB.Close();
             Reader.Close();
+
+            //SqlCommand comando = new SqlCommand();
+            //comando.Connection = ligarDB;
+
+
+            //string query = " SELECT marcacoes_cliente.id, marcacoes_cliente.dia_marcacao, marcacoes_cliente.hora, trabalhadores.nome, marcacoes_cliente.especialidade_marcacao FROM marcacoes_cliente LEFT JOIN trabalhadores on marcacoes_cliente.nome_trabalhador_id = trabalhadores.id RIGHT JOIN cliente on marcacoes_cliente.nome_cliente_id = cliente.id WHERE cliente.nome = '" + Iniciar_Sessao.utilizador + "'";
+
+            //SqlCommand cmd = new SqlCommand(query, ligarDB);
+
+            //ligarDB.Close();
+            //ligarDB.Open();
+
+            //SqlDataReader Reader = cmd.ExecuteReader();
+
+            //mostrar_teste.Items.Clear();
+
+            //if (mostrar_teste.SelectedItems.Count == 0)
+            //{
+            //    return;
+            //}
+
+            //while (Reader.Read())
+            //{
+            //    string[] bomdia = new string[] { Reader["id"].ToString(), Reader["nome"].ToString(), Reader["especialidade_marcacao"].ToString(), ((DateTime)Reader["dia_marcacao"]).ToShortDateString(), Reader["hora"].ToString() };
+            //    mostrar_teste.Items.Add(new ListViewItem(bomdia));
+            //}
+
+            //ligarDB.Close();
+            //Reader.Close();
         }
 
         private void voltar_Click(object sender, EventArgs e)
@@ -54,5 +82,47 @@ namespace Trabalho_marcacoes_
             this.Hide();
             voltar.Show();
         }
+
+        private void apagar_Click(object sender, EventArgs e)
+        {
+            //ligarDB.Close();
+
+            //ligarDB.Open();
+
+            //if (mostrar_teste.SelectedItems.Count == 0)
+            //{
+            //    MessageBox.Show("Tem de selecionar uma marcação para apagar");
+            //    return;
+            //}
+            //else
+            //{
+            //    string query2 = "DELETE marcacoes_cliente  FROM marcacoes_cliente WHERE id = @id";
+            //    SqlCommand cm = new SqlCommand(query2, ligarDB);
+            //    cm.Parameters.Add("@id", System.Data.SqlDbType.VarChar).Value = mostrar_teste.SelectedItems[0].SubItems[0].Text.ToString();
+
+            //    SqlDataReader reader = cm.ExecuteReader();
+            //    reader.Read();
+            //    reader.Close();
+
+
+            //    string query3 = "select * from marcacoes_cliente";
+            //    SqlCommand cmd3 = new SqlCommand(query3, ligarDB);
+
+            //    reader = cmd3.ExecuteReader();
+
+            //    mostrar_teste.Items.Clear();
+
+            //    while (reader.Read())
+            //    {
+            //        string[] marcacao = new string[] { Convert.ToInt32(reader["id"]).ToString(), reader["nome_cliente_id"].ToString(), reader["nome_trabalhador_id"].ToString(), reader["especialidade_marcacao"].ToString(), ((DateTime)reader["dia_marcacao"]).ToShortDateString(), reader["hora"].ToString() };
+            //        mostrar_teste.Items.Add(new ListViewItem(marcacao));
+            //    }
+
+            //    ligarDB.Close();
+            //    reader.Close();
+
+            //    MessageBox.Show("Marcação apagada com sucesso !!!");
+            }
+        }
     }
-}
+

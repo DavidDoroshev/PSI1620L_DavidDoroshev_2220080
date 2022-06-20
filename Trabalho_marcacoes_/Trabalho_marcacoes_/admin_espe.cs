@@ -66,6 +66,10 @@ namespace Trabalho_marcacoes_
         {
             ligarDB.Close();
 
+
+
+
+
             ligarDB.Open();            
         }
     }

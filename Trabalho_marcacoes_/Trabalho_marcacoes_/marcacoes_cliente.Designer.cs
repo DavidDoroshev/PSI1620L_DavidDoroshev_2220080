@@ -31,18 +31,25 @@ namespace Trabalho_marcacoes_
         {
             this.voltar = new System.Windows.Forms.Button();
             this.mostrar = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Trabalhador = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.especialidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dia_marcacao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.hora = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.apagar = new System.Windows.Forms.Button();
+            this.mostrar_teste = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // voltar
             // 
-            this.voltar.Location = new System.Drawing.Point(222, 298);
-            this.voltar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.voltar.Location = new System.Drawing.Point(296, 367);
+            this.voltar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.voltar.Name = "voltar";
-            this.voltar.Size = new System.Drawing.Size(115, 38);
+            this.voltar.Size = new System.Drawing.Size(153, 47);
             this.voltar.TabIndex = 1;
             this.voltar.Text = "Voltar";
             this.voltar.UseVisualStyleBackColor = true;
@@ -53,49 +60,111 @@ namespace Trabalho_marcacoes_
             this.mostrar.BackColor = System.Drawing.SystemColors.Menu;
             this.mostrar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mostrar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
+            this.Trabalhador,
             this.especialidade,
-            this.columnHeader2,
-            this.columnHeader3});
+            this.dia_marcacao,
+            this.hora});
             this.mostrar.FullRowSelect = true;
             this.mostrar.HideSelection = false;
-            this.mostrar.Location = new System.Drawing.Point(12, 12);
+            this.mostrar.Location = new System.Drawing.Point(13, 13);
+            this.mostrar.Margin = new System.Windows.Forms.Padding(4);
             this.mostrar.MultiSelect = false;
             this.mostrar.Name = "mostrar";
-            this.mostrar.Size = new System.Drawing.Size(545, 241);
-            this.mostrar.TabIndex = 17;
+            this.mostrar.Size = new System.Drawing.Size(765, 117);
+            this.mostrar.TabIndex = 16;
             this.mostrar.UseCompatibleStateImageBehavior = false;
             this.mostrar.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader1
+            // Trabalhador
             // 
-            this.columnHeader1.Text = "Trabalhador";
-            this.columnHeader1.Width = 150;
+            this.Trabalhador.Text = "Nome - trabalhador";
+            this.Trabalhador.Width = 135;
             // 
             // especialidade
             // 
             this.especialidade.Text = "Especialidade";
-            this.especialidade.Width = 150;
+            this.especialidade.Width = 100;
+            // 
+            // dia_marcacao
+            // 
+            this.dia_marcacao.Tag = "";
+            this.dia_marcacao.Text = "Dia";
+            this.dia_marcacao.Width = 105;
+            // 
+            // hora
+            // 
+            this.hora.Tag = "";
+            this.hora.Text = "Hora";
+            this.hora.Width = 70;
+            // 
+            // apagar
+            // 
+            this.apagar.Location = new System.Drawing.Point(666, 356);
+            this.apagar.Name = "apagar";
+            this.apagar.Size = new System.Drawing.Size(100, 58);
+            this.apagar.TabIndex = 18;
+            this.apagar.Text = "Apagar";
+            this.apagar.UseVisualStyleBackColor = true;
+            this.apagar.Click += new System.EventHandler(this.apagar_Click);
+            // 
+            // mostrar_teste
+            // 
+            this.mostrar_teste.BackColor = System.Drawing.SystemColors.Menu;
+            this.mostrar_teste.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mostrar_teste.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.mostrar_teste.FullRowSelect = true;
+            this.mostrar_teste.HideSelection = false;
+            this.mostrar_teste.Location = new System.Drawing.Point(13, 167);
+            this.mostrar_teste.Margin = new System.Windows.Forms.Padding(4);
+            this.mostrar_teste.MultiSelect = false;
+            this.mostrar_teste.Name = "mostrar_teste";
+            this.mostrar_teste.Size = new System.Drawing.Size(765, 117);
+            this.mostrar_teste.TabIndex = 19;
+            this.mostrar_teste.UseCompatibleStateImageBehavior = false;
+            this.mostrar_teste.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Nome - trabalhador";
+            this.columnHeader1.Width = 135;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Dia";
+            this.columnHeader2.Text = "Especialidade";
             this.columnHeader2.Width = 100;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Hora";
-            this.columnHeader3.Width = 144;
+            this.columnHeader3.Tag = "";
+            this.columnHeader3.Text = "Dia";
+            this.columnHeader3.Width = 105;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Tag = "";
+            this.columnHeader4.Text = "Hora";
+            this.columnHeader4.Width = 70;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "id";
             // 
             // marcacoes_cliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 366);
+            this.ClientSize = new System.Drawing.Size(791, 450);
+            this.Controls.Add(this.mostrar_teste);
+            this.Controls.Add(this.apagar);
             this.Controls.Add(this.mostrar);
             this.Controls.Add(this.voltar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "marcacoes_cliente";
             this.Text = "ver_marcacoes";
             this.ResumeLayout(false);
@@ -105,9 +174,16 @@ namespace Trabalho_marcacoes_
         #endregion
         private System.Windows.Forms.Button voltar;
         private System.Windows.Forms.ListView mostrar;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader Trabalhador;
         private System.Windows.Forms.ColumnHeader especialidade;
+        private System.Windows.Forms.ColumnHeader dia_marcacao;
+        private System.Windows.Forms.ColumnHeader hora;
+        private System.Windows.Forms.Button apagar;
+        private System.Windows.Forms.ListView mostrar_teste;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }
