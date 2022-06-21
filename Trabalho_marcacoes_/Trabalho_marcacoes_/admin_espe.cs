@@ -64,12 +64,8 @@ namespace Trabalho_marcacoes_
 
         private void add_Click(object sender, EventArgs e)
         {
+            //#todo
             ligarDB.Close();
-
-
-
-
-
             ligarDB.Open();            
         }
     }
