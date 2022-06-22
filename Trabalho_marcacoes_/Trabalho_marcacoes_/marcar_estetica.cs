@@ -109,10 +109,12 @@ namespace Trabalho_marcacoes_
             string query  = "INSERT INTO marcacoes_cliente(dia_marcacao, hora, nome_cliente_id, nome_trabalhador_id, especialidade_marcacao ) VALUES(@dia, @hora ,@id, @nome_trabalhador, @especialidade)";
             string query2 = "SELECT id FROM cliente WHERE nome = @id";
             string query3 = "SELECT id FROM trabalhadores WHERE nome = @nome";
+            string query4 = "SELECT marcacoes_cliente.id, marcacoes_cliente.dia_marcacao, marcacoes_cliente.hora, trabalhadores.nome, marcacoes_cliente.especialidade_marcacao FROM marcacoes_cliente INNER JOIN trabalhadores on marcacoes_cliente.nome_trabalhador_id = trabalhadores.id INNER JOIN cliente on marcacoes_cliente.nome_cliente_id = cliente.id WHERE nome_trabalhador_id = @id AND hora = @hora ";
 
             SqlCommand cmd = new SqlCommand(query, ligarDB);
             SqlCommand ns = new SqlCommand(query2, ligarDB);
             SqlCommand command2 = new SqlCommand(query3, ligarDB);
+            SqlCommand command3 = new SqlCommand(query4, ligarDB);
 
             ns.Parameters.Add("@id", SqlDbType.VarChar).Value = Iniciar_Sessao.utilizador;
             command2.Parameters.Add("@nome", SqlDbType.VarChar).Value = mostrar.SelectedItems[0].SubItems[0].Text.ToString();
