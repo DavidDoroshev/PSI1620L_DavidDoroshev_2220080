@@ -72,5 +72,12 @@ namespace Trabalho_marcacoes_
             this.Hide();
             ir.Show();
         }
+
+        private void voltar_Click(object sender, EventArgs e)
+        {
+            admin voltar = new admin();
+            this.Hide();
+            voltar.Show();
+        }
     }
 }

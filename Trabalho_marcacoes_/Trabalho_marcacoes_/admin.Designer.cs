@@ -170,6 +170,7 @@ namespace Trabalho_marcacoes_
             // 
             // apagar
             // 
+            this.apagar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.apagar.Location = new System.Drawing.Point(13, 183);
             this.apagar.Margin = new System.Windows.Forms.Padding(2);
             this.apagar.Name = "apagar";
@@ -181,6 +182,7 @@ namespace Trabalho_marcacoes_
             // 
             // apagar_tra
             // 
+            this.apagar_tra.Cursor = System.Windows.Forms.Cursors.Hand;
             this.apagar_tra.Location = new System.Drawing.Point(380, 184);
             this.apagar_tra.Margin = new System.Windows.Forms.Padding(2);
             this.apagar_tra.Name = "apagar_tra";
@@ -256,6 +258,7 @@ namespace Trabalho_marcacoes_
             // 
             // adicionar
             // 
+            this.adicionar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.adicionar.Location = new System.Drawing.Point(106, 183);
             this.adicionar.Margin = new System.Windows.Forms.Padding(2);
             this.adicionar.Name = "adicionar";
@@ -267,6 +270,7 @@ namespace Trabalho_marcacoes_
             // 
             // add_tra
             // 
+            this.add_tra.Cursor = System.Windows.Forms.Cursors.Hand;
             this.add_tra.Location = new System.Drawing.Point(502, 184);
             this.add_tra.Margin = new System.Windows.Forms.Padding(2);
             this.add_tra.Name = "add_tra";
@@ -278,6 +282,7 @@ namespace Trabalho_marcacoes_
             // 
             // apagar_mar
             // 
+            this.apagar_mar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.apagar_mar.Location = new System.Drawing.Point(10, 394);
             this.apagar_mar.Margin = new System.Windows.Forms.Padding(2);
             this.apagar_mar.Name = "apagar_mar";
@@ -289,6 +294,7 @@ namespace Trabalho_marcacoes_
             // 
             // add_marca
             // 
+            this.add_marca.Cursor = System.Windows.Forms.Cursors.Hand;
             this.add_marca.Location = new System.Drawing.Point(118, 394);
             this.add_marca.Margin = new System.Windows.Forms.Padding(2);
             this.add_marca.Name = "add_marca";
@@ -300,6 +306,7 @@ namespace Trabalho_marcacoes_
             // 
             // Sair
             // 
+            this.Sair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Sair.Location = new System.Drawing.Point(814, 394);
             this.Sair.Name = "Sair";
             this.Sair.Size = new System.Drawing.Size(84, 32);
@@ -310,6 +317,7 @@ namespace Trabalho_marcacoes_
             // 
             // proximo
             // 
+            this.proximo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.proximo.Location = new System.Drawing.Point(814, 350);
             this.proximo.Name = "proximo";
             this.proximo.Size = new System.Drawing.Size(84, 23);

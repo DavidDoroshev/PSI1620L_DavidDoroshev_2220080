@@ -135,10 +135,16 @@ namespace Trabalho_marcacoes_
             await reader.ReadAsync();
             if (reader.HasRows)
             {
-
+                MessageBox.Show("Nome ja se encontra registado");
+                nome_trabalhador.Text = "";
+                nome_trabalhador.Select();
+                reader.Close();
+                ligarDB.Close();
+                return;
             }
             else
             {
+                reader.Close();
                 commando.CommandText = "INSERT INTO trabalhadores(nome, password, codigo_postal_trabalhador, especialidade_tabela_trabalhador) VALUES(@nome, @password, @codigo_postal, @especialidade)";
                 commando.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = nome_trabalhador.Text;
                 commando.Parameters.Add("@password", System.Data.SqlDbType.VarChar).Value = password_trabalhador.Text;

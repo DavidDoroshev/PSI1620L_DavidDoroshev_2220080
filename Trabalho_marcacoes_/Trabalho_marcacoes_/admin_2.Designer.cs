@@ -35,7 +35,7 @@ namespace Trabalho_marcacoes_
             this.conselho = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.voltar = new System.Windows.Forms.Button();
             this.cp_adicionar = new System.Windows.Forms.Button();
             this.especialidade_mos = new System.Windows.Forms.ListView();
             this.profissao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -53,11 +53,10 @@ namespace Trabalho_marcacoes_
             this.conselho});
             this.cp_mos.FullRowSelect = true;
             this.cp_mos.HideSelection = false;
-            this.cp_mos.Location = new System.Drawing.Point(16, 31);
-            this.cp_mos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cp_mos.Location = new System.Drawing.Point(12, 25);
             this.cp_mos.MultiSelect = false;
             this.cp_mos.Name = "cp_mos";
-            this.cp_mos.Size = new System.Drawing.Size(475, 177);
+            this.cp_mos.Size = new System.Drawing.Size(356, 144);
             this.cp_mos.TabIndex = 10;
             this.cp_mos.UseCompatibleStateImageBehavior = false;
             this.cp_mos.View = System.Windows.Forms.View.Details;
@@ -80,39 +79,38 @@ namespace Trabalho_marcacoes_
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 17);
+            this.label1.Size = new System.Drawing.Size(75, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Código Postal:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(545, 11);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(409, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 17);
+            this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 13;
             this.label2.Text = "Especialidades:";
             // 
-            // button1
+            // voltar
             // 
-            this.button1.Location = new System.Drawing.Point(20, 337);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 28);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Pag anterior";
-            this.button1.UseVisualStyleBackColor = true;
+            this.voltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.voltar.Location = new System.Drawing.Point(15, 274);
+            this.voltar.Name = "voltar";
+            this.voltar.Size = new System.Drawing.Size(84, 23);
+            this.voltar.TabIndex = 14;
+            this.voltar.Text = "Pag anterior";
+            this.voltar.UseVisualStyleBackColor = true;
+            this.voltar.Click += new System.EventHandler(this.voltar_Click);
             // 
             // cp_adicionar
             // 
-            this.cp_adicionar.Location = new System.Drawing.Point(16, 204);
-            this.cp_adicionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cp_adicionar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cp_adicionar.Location = new System.Drawing.Point(12, 166);
             this.cp_adicionar.Name = "cp_adicionar";
-            this.cp_adicionar.Size = new System.Drawing.Size(112, 28);
+            this.cp_adicionar.Size = new System.Drawing.Size(84, 23);
             this.cp_adicionar.TabIndex = 16;
             this.cp_adicionar.Text = "Adicionar CP";
             this.cp_adicionar.UseVisualStyleBackColor = true;
@@ -127,11 +125,10 @@ namespace Trabalho_marcacoes_
             this.especialidade});
             this.especialidade_mos.FullRowSelect = true;
             this.especialidade_mos.HideSelection = false;
-            this.especialidade_mos.Location = new System.Drawing.Point(549, 31);
-            this.especialidade_mos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.especialidade_mos.Location = new System.Drawing.Point(412, 25);
             this.especialidade_mos.MultiSelect = false;
             this.especialidade_mos.Name = "especialidade_mos";
-            this.especialidade_mos.Size = new System.Drawing.Size(475, 177);
+            this.especialidade_mos.Size = new System.Drawing.Size(356, 144);
             this.especialidade_mos.TabIndex = 19;
             this.especialidade_mos.UseCompatibleStateImageBehavior = false;
             this.especialidade_mos.View = System.Windows.Forms.View.Details;
@@ -148,10 +145,10 @@ namespace Trabalho_marcacoes_
             // 
             // add_espe
             // 
-            this.add_espe.Location = new System.Drawing.Point(548, 192);
-            this.add_espe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.add_espe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.add_espe.Location = new System.Drawing.Point(411, 156);
             this.add_espe.Name = "add_espe";
-            this.add_espe.Size = new System.Drawing.Size(145, 52);
+            this.add_espe.Size = new System.Drawing.Size(109, 42);
             this.add_espe.TabIndex = 21;
             this.add_espe.Text = "Adicionar Especialidade";
             this.add_espe.UseVisualStyleBackColor = true;
@@ -159,19 +156,21 @@ namespace Trabalho_marcacoes_
             // 
             // admin_2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 380);
+            this.ClientSize = new System.Drawing.Size(800, 309);
             this.Controls.Add(this.add_espe);
             this.Controls.Add(this.especialidade_mos);
             this.Controls.Add(this.cp_adicionar);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.voltar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cp_mos);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
             this.Name = "admin_2";
-            this.Text = "admin_2";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "admin";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,7 +184,7 @@ namespace Trabalho_marcacoes_
         private System.Windows.Forms.ColumnHeader cp;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button voltar;
         private System.Windows.Forms.Button cp_adicionar;
         private System.Windows.Forms.ListView especialidade_mos;
         private System.Windows.Forms.ColumnHeader profissao;
