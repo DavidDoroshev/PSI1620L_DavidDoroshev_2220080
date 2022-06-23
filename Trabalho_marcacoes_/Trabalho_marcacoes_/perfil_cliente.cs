@@ -27,6 +27,24 @@ namespace Trabalho_marcacoes_
             nome_utilizador.Text = Iniciar_Sessao.utilizador;
             nome_utilizador.Enabled = false;
 
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = ligarDB;
+            cmd.CommandText = "SELECT * FROM cliente WHERE nome = @nome ";
+            cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = Iniciar_Sessao.utilizador;
+            SqlDataReader read = cmd.ExecuteReader();
+
+            while(read.Read())
+            {
+
+                pass_atual.Text = read["password"].ToString();
+                pass_atual.Enabled = false;
+
+                cp_mostrar.Text = read["codigo_postal_cliente"].ToString();
+                cp_mostrar.Enabled = false;
+            }
+
+            read.Close();
+
             SqlCommand command = new SqlCommand();
             command.Connection = ligarDB;
             command.CommandText = "select * from codigo_postal";
@@ -74,8 +92,18 @@ namespace Trabalho_marcacoes_
             string query = "UPDATE cliente SET password = '" + pass_alterar.Text + "' WHERE nome = '" + Iniciar_Sessao.utilizador + "' ";
             SqlCommand cmd = new SqlCommand(query, ligarDB);
 
-                
             cmd.ExecuteReader();
+
+            cmd.CommandText = "SELECT * FROM cliente WHERE nome = @nome ";
+            cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = Iniciar_Sessao.utilizador;
+            SqlDataReader read = cmd.ExecuteReader();
+
+            while (read.Read())
+            {
+                pass_atual.Text = read["password"].ToString();
+                pass_atual.Enabled = false;
+            }
+
 
             MessageBox.Show("Pass alterada");
 
@@ -159,6 +187,5 @@ namespace Trabalho_marcacoes_
 
             ligarDB.Close();
         }
-
     }
 }

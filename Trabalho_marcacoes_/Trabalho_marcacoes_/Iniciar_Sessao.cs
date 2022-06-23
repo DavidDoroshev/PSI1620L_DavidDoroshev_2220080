@@ -109,16 +109,19 @@ namespace Trabalho_marcacoes_
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void voltar_Click(object sender, EventArgs e)
         {
             menu_inicial voltar = new menu_inicial();
             this.Hide();
             voltar.Show();
+        }
+
+        private void entrar_menu_KeyDown(object sender, KeyEventArgs e)
+        {
+        //    if (e.KeyCode == Keys.Enter)
+        //    {
+               
+        //    }
         }
     }
 }

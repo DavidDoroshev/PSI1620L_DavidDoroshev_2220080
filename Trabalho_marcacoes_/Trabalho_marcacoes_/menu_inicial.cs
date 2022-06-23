@@ -20,7 +20,6 @@ namespace Trabalho_marcacoes_
         public menu_inicial()
         {        
             InitializeComponent();
-
         }
 
         private void iniciar_botoa_Click(object sender, EventArgs e)
@@ -51,7 +50,5 @@ namespace Trabalho_marcacoes_
             //this.DialogResult = DialogResult.OK;
             //teste = 2;
         }
-
-        
     }
 }

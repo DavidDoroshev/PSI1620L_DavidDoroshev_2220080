@@ -109,7 +109,7 @@ namespace Trabalho_marcacoes_
             string query  = "INSERT INTO marcacoes_cliente(dia_marcacao, hora, nome_cliente_id, nome_trabalhador_id, especialidade_marcacao ) VALUES(@dia, @hora ,@id, @nome_trabalhador, @especialidade)";
             string query2 = "SELECT id FROM cliente WHERE nome = @id";
             string query3 = "SELECT id FROM trabalhadores WHERE nome = @nome";
-            string query4 = "SELECT marcacoes_cliente.id, marcacoes_cliente.dia_marcacao, marcacoes_cliente.hora, trabalhadores.nome, marcacoes_cliente.especialidade_marcacao FROM marcacoes_cliente INNER JOIN trabalhadores on marcacoes_cliente.nome_trabalhador_id = trabalhadores.id INNER JOIN cliente on marcacoes_cliente.nome_cliente_id = cliente.id WHERE nome_trabalhador_id = @id AND hora = @hora ";
+            string query4 = "SELECT marcacoes_cliente.id, marcacoes_cliente.dia_marcacao, marcacoes_cliente.hora, trabalhadores.nome, marcacoes_cliente.especialidade_marcacao  FROM marcacoes_cliente INNER JOIN trabalhadores on marcacoes_cliente.nome_trabalhador_id = trabalhadores.id where trabalhadores.nome = @nome and marcacoes_cliente.hora = @hora_marcacacao";
 
             SqlCommand cmd = new SqlCommand(query, ligarDB);
             SqlCommand ns = new SqlCommand(query2, ligarDB);

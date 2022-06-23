@@ -29,6 +29,7 @@ namespace Trabalho_marcacoes_
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Iniciar_Sessao));
             this.entrar_menu = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@ namespace Trabalho_marcacoes_
             this.entrar_menu.Text = "Entrar";
             this.entrar_menu.UseVisualStyleBackColor = true;
             this.entrar_menu.Click += new System.EventHandler(this.entrar_menu_Click);
+            this.entrar_menu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.entrar_menu_KeyDown);
             // 
             // label1
             // 
@@ -121,7 +123,9 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.label1);
             this.Controls.Add(this.entrar_menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "Iniciar_Sessao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar_Sessao";
