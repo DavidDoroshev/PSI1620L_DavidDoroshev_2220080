@@ -27,12 +27,14 @@ namespace Trabalho_marcacoes_
             comando.Connection = ligarDB;
 
 
-            
+
             string query = "SELECT * FROM trabalhadores INNER JOIN especialidade_tabela on trabalhadores.especialidade_tabela_trabalhador = especialidade_tabela.especialidade INNER JOIN profissao_tabela ON especialidade_tabela.profissao = profissao_tabela.id_profissao WHERE profissao_tabela.profissao like 'Estética' ";
             string query2 = "SELECT * FROM codigo_postal ";
+            string query3 = "select * from marcacoes_cliente";
 
             SqlCommand cmd = new SqlCommand(query, ligarDB);
             SqlCommand cmd2 = new SqlCommand(query2, ligarDB);
+            SqlCommand cmd3 = new SqlCommand(query3, ligarDB);
 
 
             ligarDB.Open();
@@ -56,12 +58,8 @@ namespace Trabalho_marcacoes_
 
             Reader = cmd2.ExecuteReader();
             while (Reader.Read())
-            {
-
-             codigo_pesquisar.Items.Add(Reader["codigo_postal"].ToString());         
-             
-
-
+            { 
+                codigo_pesquisar.Items.Add(Reader["codigo_postal"].ToString());         
             }
             ligarDB.Close();
             Reader.Close();
@@ -69,9 +67,12 @@ namespace Trabalho_marcacoes_
 
         private void mostrar_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
         {
-                e.Cancel = true;
-                e.NewWidth = mostrar.Columns[e.ColumnIndex].Width;
+              e.Cancel = true;
+              e.NewWidth = mostrar.Columns[e.ColumnIndex].Width;
         }
+
+
+
 
         private void Marcar_Click(object sender, EventArgs e)
         {
@@ -84,7 +85,7 @@ namespace Trabalho_marcacoes_
 
             var data = Convert.ToDateTime(tempo_guardar.Text);
 
-            if (data < DateTime.Now)
+            if (data <= DateTime.Now)
             {
                 MessageBox.Show("Não pode pôr essa data!!!");
                 return;
@@ -149,6 +150,8 @@ namespace Trabalho_marcacoes_
        
 
         }
+
+        
         private void voltar_Click(object sender, EventArgs e)
         {
             menu_cliente principal = new menu_cliente();
@@ -171,6 +174,7 @@ namespace Trabalho_marcacoes_
 
             mostrar.Items.Clear();
 
+
             while (Reader.Read())
             {
 
@@ -183,6 +187,9 @@ namespace Trabalho_marcacoes_
             Reader.Close();
             ligarDB.Close();
 
-        } 
+        }
+
+
+       
     }
 }

@@ -29,6 +29,7 @@ namespace Trabalho_marcacoes_
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu_cliente));
             this.Perfil = new System.Windows.Forms.Button();
             this.ver_marca = new System.Windows.Forms.Button();
             this.marcar_estetica = new System.Windows.Forms.Button();
@@ -115,11 +116,12 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.ver_marca);
             this.Controls.Add(this.Perfil);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "menu_cliente";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.menu_cliente_FormClosing);
             this.Load += new System.EventHandler(this.Menu_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();

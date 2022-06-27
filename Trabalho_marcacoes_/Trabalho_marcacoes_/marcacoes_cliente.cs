@@ -39,8 +39,6 @@ namespace Trabalho_marcacoes_
             {
                 while (Reader.Read())
                 {
-                    string dia = Convert.ToDateTime(Reader["dia_marcacao"]).ToShortDateString();
-                    MessageBox.Show(dia);
                     string[] bomdia = new string[] { Reader["id"].ToString(), Reader["nome"].ToString(), Reader["especialidade_marcacao"].ToString(), ((DateTime)Reader["dia_marcacao"]).ToShortDateString(), Reader["hora"].ToString() };
                     mostrar_teste.Items.Add(new ListViewItem(bomdia));
                 }
