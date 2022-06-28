@@ -29,10 +29,12 @@ namespace Trabalho_marcacoes_
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu_trabalhador));
             this.label1 = new System.Windows.Forms.Label();
             this.ver_marcacoes_trabalhador = new System.Windows.Forms.Button();
             this.perfil_trabalhador = new System.Windows.Forms.Button();
             this.trabalhador_atual = new System.Windows.Forms.Label();
+            this.sair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -77,20 +79,32 @@ namespace Trabalho_marcacoes_
             this.trabalhador_atual.Size = new System.Drawing.Size(0, 17);
             this.trabalhador_atual.TabIndex = 14;
             // 
+            // sair
+            // 
+            this.sair.Location = new System.Drawing.Point(219, 185);
+            this.sair.Name = "sair";
+            this.sair.Size = new System.Drawing.Size(122, 45);
+            this.sair.TabIndex = 15;
+            this.sair.Text = "Sair";
+            this.sair.UseVisualStyleBackColor = true;
+            this.sair.Click += new System.EventHandler(this.sair_Click);
+            // 
             // menu_trabalhador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 242);
+            this.Controls.Add(this.sair);
             this.Controls.Add(this.trabalhador_atual);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ver_marcacoes_trabalhador);
             this.Controls.Add(this.perfil_trabalhador);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "menu_trabalhador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "menu_trabalhador";
+            this.Text = "Menu";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,5 +115,6 @@ namespace Trabalho_marcacoes_
         private System.Windows.Forms.Button ver_marcacoes_trabalhador;
         private System.Windows.Forms.Button perfil_trabalhador;
         private System.Windows.Forms.Label trabalhador_atual;
+        private System.Windows.Forms.Button sair;
     }
 }

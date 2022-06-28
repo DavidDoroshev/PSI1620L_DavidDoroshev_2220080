@@ -31,5 +31,10 @@ namespace Trabalho_marcacoes_
             this.Hide();
             ir.Show();
         }
+
+        private void sair_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

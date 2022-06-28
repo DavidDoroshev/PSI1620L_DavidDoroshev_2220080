@@ -25,7 +25,7 @@ namespace Trabalho_marcacoes_
         private void iniciar_botoa_Click(object sender, EventArgs e)
         {
             Iniciar_Sessao ir = new Iniciar_Sessao();
-            //this.Hide();
+            this.Hide();
             ir.Show();
             
             
@@ -51,6 +51,11 @@ namespace Trabalho_marcacoes_
             ir.Show();
             //this.DialogResult = DialogResult.OK;
             //teste = 2;
+        }
+
+        private void sair_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

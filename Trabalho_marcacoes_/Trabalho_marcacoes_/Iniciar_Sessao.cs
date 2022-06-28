@@ -31,6 +31,8 @@ namespace Trabalho_marcacoes_
         private async void entrar_menu_Click(object sender, EventArgs e)
         {
 
+            ligarDB.Close();
+
             ligarDB.Open();
             string query = "SELECT * FROM trabalhadores WHERE nome = @nome AND password = @password ";
             SqlCommand cmd = new SqlCommand(query, ligarDB);
@@ -41,6 +43,7 @@ namespace Trabalho_marcacoes_
 
             if (reader.HasRows)
             {
+                
                 trabalhador = nome_entrar.Text;
                 menu_trabalhador principal = new menu_trabalhador();
                 this.Hide();
@@ -49,6 +52,7 @@ namespace Trabalho_marcacoes_
             }
             else
             {
+
                 query = "SELECT * FROM cliente WHERE nome = @nome AND password = @password";
                 cmd = new SqlCommand(query, ligarDB);
                 cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = nome_entrar.Text;
@@ -74,7 +78,7 @@ namespace Trabalho_marcacoes_
                     cmd.Parameters.Add("@pass", SqlDbType.VarChar).Value = password_entrar.Text;
                     reader.Close();
                     reader = cmd.ExecuteReader();
-                    
+
                     if (reader.HasRows)
                     {
                         utilizador = nome_entrar.Text;
@@ -95,6 +99,82 @@ namespace Trabalho_marcacoes_
                 }
 
             }
+
+
+            //string query = "SELECT * FROM trabalhadores WHERE nome = @nome AND password = @password ";
+            //SqlCommand cmd = new SqlCommand(query, ligarDB);
+            //cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = nome_entrar.Text;
+            //cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = password_entrar.Text;
+            //SqlDataReader reader = cmd.ExecuteReader();
+            //await reader.ReadAsync();
+
+            //if (reader.HasRows)
+            //{
+            //    while (await reader.ReadAsync())
+            //    {
+            //        if(reader["nome"].ToString() == nome_entrar.Text && reader["password"].ToString() == password_entrar.Text)
+            //        {
+            //            //entrou i guess
+            //            trabalhador = nome_entrar.Text;
+            //            menu_trabalhador principal = new menu_trabalhador();
+            //            this.Hide();
+            //            principal.Show();
+            //            ligarDB.Close();
+            //        }
+            //        else
+            //        {
+            //            MessageBox.Show("AJO");
+            //        }
+            //    }      
+            //}
+            //else
+            //{
+
+            //    query = "SELECT nome, password FROM cliente";
+            //    cmd = new SqlCommand(query, ligarDB);
+            //    cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = nome_entrar.Text;
+            //    cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = password_entrar.Text;
+            //    reader.Close();
+            //    reader = cmd.ExecuteReader();
+            //    await reader.ReadAsync();
+            //    if (reader.HasRows)
+            //    {
+            //        utilizador = nome_entrar.Text;
+            //        pass_utilizador = password_entrar.Text;
+            //        menu_cliente principal = new menu_cliente();
+            //        this.Hide();
+            //        principal.Show();
+            //        ligarDB.Close();
+            //    }
+            //    else
+            //    {
+
+            //        query = "SELECT * FROM admin WHERE nome = @nome AND pass = @pass";
+            //        cmd = new SqlCommand(query, ligarDB);
+            //        cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = nome_entrar.Text;
+            //        cmd.Parameters.Add("@pass", SqlDbType.VarChar).Value = password_entrar.Text;
+            //        reader.Close();
+            //        reader = cmd.ExecuteReader();
+
+            //        if (reader.HasRows)
+            //        {
+            //            utilizador = nome_entrar.Text;
+            //            pass_utilizador = password_entrar.Text;
+            //            admin ir = new admin();
+            //            this.Hide();
+            //            ir.Show();
+            //            ligarDB.Close();
+            //        }
+            //        else
+            //        {
+            //            MessageBox.Show("Nome ou a Password está incorreta", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //            nome_entrar.Text = "";
+            //            password_entrar.Text = "";
+            //            nome_entrar.Select();
+            //            ligarDB.Close();
+            //        }
+            //    }
+            //}
         }
 
         private void ver_CheckedChanged(object sender, EventArgs e)
@@ -114,14 +194,6 @@ namespace Trabalho_marcacoes_
             menu_inicial voltar = new menu_inicial();
             this.Hide();
             voltar.Show();
-        }
-
-        private void entrar_menu_KeyDown(object sender, KeyEventArgs e)
-        {
-        //    if (e.KeyCode == Keys.Enter)
-        //    {
-               
-        //    }
         }
     }
 }

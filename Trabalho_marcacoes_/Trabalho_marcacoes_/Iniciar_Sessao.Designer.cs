@@ -50,7 +50,6 @@ namespace Trabalho_marcacoes_
             this.entrar_menu.Text = "Entrar";
             this.entrar_menu.UseVisualStyleBackColor = true;
             this.entrar_menu.Click += new System.EventHandler(this.entrar_menu_Click);
-            this.entrar_menu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.entrar_menu_KeyDown);
             // 
             // label1
             // 

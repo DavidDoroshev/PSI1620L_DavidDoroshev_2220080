@@ -30,10 +30,28 @@ namespace Trabalho_marcacoes_
             nome_trabalhador.Text = Iniciar_Sessao.trabalhador;
             nome_trabalhador.Enabled = false;
 
-            SqlCommand command = new SqlCommand();
-            command.Connection = ligarDB;
-            command.CommandText = "select * from codigo_postal";
-            SqlDataReader reader = command.ExecuteReader();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = ligarDB;
+            cmd.CommandText = "SELECT * FROM trabalhadores WHERE nome = @nome ";
+            cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = Iniciar_Sessao.trabalhador ;
+            SqlDataReader read = cmd.ExecuteReader();
+
+            while (read.Read())
+            {
+
+                pass_mostrar.Text = read["password"].ToString();
+                pass_mostrar.Enabled = false;
+
+                cp_mostrar.Text = read["codigo_postal_trabalhador"].ToString();
+                cp_mostrar.Enabled = false;
+            }
+
+            read.Close();
+
+            cmd = new SqlCommand();
+            cmd.Connection = ligarDB;
+            cmd.CommandText = "select * from codigo_postal";
+            SqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read())
             {
@@ -86,7 +104,7 @@ namespace Trabalho_marcacoes_
 
             var input = pass_alterar.Text;
 
-            Regex valid = new Regex("^(?!.*[!@#$%^&*()_+={};:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{3,15}$");
+            Regex valid = new Regex("^(?!.*[!@#$%^&*()_+=\\[/{}];:<>|./?,-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{9,15}$");
 
             if (input == "")
             {
@@ -102,8 +120,11 @@ namespace Trabalho_marcacoes_
             string query = "UPDATE trabalhadores SET password = '" + pass_alterar.Text + "' WHERE nome = '" + Iniciar_Sessao.trabalhador + "' ";
             SqlCommand cmd = new SqlCommand(query, ligarDB);
 
-
             cmd.ExecuteReader();
+
+            
+            pass_mostrar.Text = pass_alterar.Text;
+            pass_alterar.Text = "";
 
             MessageBox.Show("Pass alterada");
 
@@ -133,6 +154,10 @@ namespace Trabalho_marcacoes_
 
             cmd.ExecuteReader();
 
+            cp_mostrar.Text = codigo_alterar.Text;
+            codigo_alterar.Text = "";
+            textconselho.Text = "";
+            textdistrito.Text = "";
             MessageBox.Show("CP alterado");
 
             ligarDB.Close();

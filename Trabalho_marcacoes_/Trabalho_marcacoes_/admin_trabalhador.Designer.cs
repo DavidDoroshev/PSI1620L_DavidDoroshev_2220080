@@ -185,6 +185,7 @@ namespace Trabalho_marcacoes_
             // 
             // voltar
             // 
+            this.voltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.voltar.Location = new System.Drawing.Point(12, 293);
             this.voltar.Name = "voltar";
             this.voltar.Size = new System.Drawing.Size(164, 57);
@@ -216,6 +217,7 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.label1);
             this.Name = "admin_trabalhador";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "admin_trabalhador";
             this.ResumeLayout(false);
             this.PerformLayout();

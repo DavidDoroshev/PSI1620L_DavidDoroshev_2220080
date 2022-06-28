@@ -32,6 +32,7 @@ namespace Trabalho_marcacoes_
             this.cliente_botao = new System.Windows.Forms.Button();
             this.iniciar_botoa = new System.Windows.Forms.Button();
             this.trabalhador_botao = new System.Windows.Forms.Button();
+            this.sair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cliente_botao
@@ -73,11 +74,22 @@ namespace Trabalho_marcacoes_
             this.trabalhador_botao.UseVisualStyleBackColor = true;
             this.trabalhador_botao.Click += new System.EventHandler(this.trabalhador_botao_Click);
             // 
+            // sair
+            // 
+            this.sair.Location = new System.Drawing.Point(316, 311);
+            this.sair.Name = "sair";
+            this.sair.Size = new System.Drawing.Size(122, 45);
+            this.sair.TabIndex = 3;
+            this.sair.Text = "Sair";
+            this.sair.UseVisualStyleBackColor = true;
+            this.sair.Click += new System.EventHandler(this.sair_Click);
+            // 
             // menu_inicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 368);
+            this.Controls.Add(this.sair);
             this.Controls.Add(this.trabalhador_botao);
             this.Controls.Add(this.iniciar_botoa);
             this.Controls.Add(this.cliente_botao);
@@ -98,6 +110,7 @@ namespace Trabalho_marcacoes_
         private System.Windows.Forms.Button cliente_botao;
         private System.Windows.Forms.Button iniciar_botoa;
         private System.Windows.Forms.Button trabalhador_botao;
+        private System.Windows.Forms.Button sair;
     }
 }
 

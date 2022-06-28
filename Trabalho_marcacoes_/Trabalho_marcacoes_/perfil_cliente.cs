@@ -94,15 +94,8 @@ namespace Trabalho_marcacoes_
 
             cmd.ExecuteReader();
 
-            cmd.CommandText = "SELECT * FROM cliente WHERE nome = @nome ";
-            cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = Iniciar_Sessao.utilizador;
-            SqlDataReader read = cmd.ExecuteReader();
-
-            while (read.Read())
-            {
-                pass_atual.Text = read["password"].ToString();
-                pass_atual.Enabled = false;
-            }
+            pass_atual.Text = pass_alterar.Text;
+            pass_alterar.Text = "";
 
 
             MessageBox.Show("Pass alterada");
@@ -158,6 +151,11 @@ namespace Trabalho_marcacoes_
 
             cmd.ExecuteReader();
 
+            cp_mostrar.Text = codigo_alterar.Text;
+            codigo_alterar.Text = "";
+            textconselho.Text   = "";
+            textdistrito.Text   = "";
+
             MessageBox.Show("CP alterado");
 
             ligarDB.Close();
@@ -184,6 +182,8 @@ namespace Trabalho_marcacoes_
 
             textconselho.Text = concelho;
             textdistrito.Text = distrito;
+
+            
 
             ligarDB.Close();
         }

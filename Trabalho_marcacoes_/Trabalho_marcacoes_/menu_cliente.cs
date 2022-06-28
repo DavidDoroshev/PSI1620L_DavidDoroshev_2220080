@@ -51,14 +51,9 @@ namespace Trabalho_marcacoes_
             ir.Show();
         }
 
-        private void menu_cliente_FormClosing(object sender, FormClosingEventArgs e)
+        private void sair_Click(object sender, EventArgs e)
         {
-            //if (!string.Equals((sender as Button).Name, @"CloseButton"))
-            //{
-            //    Environment.Exit(0);
-            //}
-
-            Application.Exit();
+            Environment.Exit(0);
         }
     }
 }

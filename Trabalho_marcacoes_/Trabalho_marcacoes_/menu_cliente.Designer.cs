@@ -36,6 +36,7 @@ namespace Trabalho_marcacoes_
             this.ir_medico = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.current_user = new System.Windows.Forms.Label();
+            this.sair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Perfil
@@ -104,11 +105,22 @@ namespace Trabalho_marcacoes_
             this.current_user.Size = new System.Drawing.Size(0, 17);
             this.current_user.TabIndex = 8;
             // 
+            // sair
+            // 
+            this.sair.Location = new System.Drawing.Point(275, 302);
+            this.sair.Name = "sair";
+            this.sair.Size = new System.Drawing.Size(122, 45);
+            this.sair.TabIndex = 9;
+            this.sair.Text = "Sair";
+            this.sair.UseVisualStyleBackColor = true;
+            this.sair.Click += new System.EventHandler(this.sair_Click);
+            // 
             // menu_cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 359);
+            this.Controls.Add(this.sair);
             this.Controls.Add(this.current_user);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ir_medico);
@@ -121,7 +133,6 @@ namespace Trabalho_marcacoes_
             this.Name = "menu_cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.menu_cliente_FormClosing);
             this.Load += new System.EventHandler(this.Menu_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -135,5 +146,6 @@ namespace Trabalho_marcacoes_
         private System.Windows.Forms.Button ir_medico;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label current_user;
+        private System.Windows.Forms.Button sair;
     }
 }

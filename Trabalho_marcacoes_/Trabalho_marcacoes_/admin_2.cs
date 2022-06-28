@@ -66,13 +66,6 @@ namespace Trabalho_marcacoes_
             this.Hide();
             principal.Show();
         }
-        private void add_espe_Click(object sender, EventArgs e)
-        {
-            admin_espe ir = new admin_espe();
-            this.Hide();
-            ir.Show();
-        }
-
         private void voltar_Click(object sender, EventArgs e)
         {
             admin voltar = new admin();

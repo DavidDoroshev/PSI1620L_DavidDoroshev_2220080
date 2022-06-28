@@ -71,8 +71,9 @@ namespace Trabalho_marcacoes_
             // 
             // voltar
             // 
-            this.voltar.Location = new System.Drawing.Point(16, 110);
-            this.voltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.voltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.voltar.Location = new System.Drawing.Point(14, 126);
+            this.voltar.Margin = new System.Windows.Forms.Padding(4);
             this.voltar.Name = "voltar";
             this.voltar.Size = new System.Drawing.Size(100, 46);
             this.voltar.TabIndex = 3;
@@ -82,8 +83,9 @@ namespace Trabalho_marcacoes_
             // 
             // guardar_cp
             // 
-            this.guardar_cp.Location = new System.Drawing.Point(535, 110);
-            this.guardar_cp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guardar_cp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guardar_cp.Location = new System.Drawing.Point(533, 126);
+            this.guardar_cp.Margin = new System.Windows.Forms.Padding(4);
             this.guardar_cp.Name = "guardar_cp";
             this.guardar_cp.Size = new System.Drawing.Size(100, 46);
             this.guardar_cp.TabIndex = 4;
@@ -94,7 +96,7 @@ namespace Trabalho_marcacoes_
             // conselho
             // 
             this.conselho.Location = new System.Drawing.Point(87, 15);
-            this.conselho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.conselho.Margin = new System.Windows.Forms.Padding(4);
             this.conselho.Name = "conselho";
             this.conselho.Size = new System.Drawing.Size(132, 22);
             this.conselho.TabIndex = 5;
@@ -102,7 +104,7 @@ namespace Trabalho_marcacoes_
             // distrito
             // 
             this.distrito.Location = new System.Drawing.Point(291, 15);
-            this.distrito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.distrito.Margin = new System.Windows.Forms.Padding(4);
             this.distrito.Name = "distrito";
             this.distrito.Size = new System.Drawing.Size(132, 22);
             this.distrito.TabIndex = 6;
@@ -110,7 +112,7 @@ namespace Trabalho_marcacoes_
             // cp_guardar
             // 
             this.cp_guardar.Location = new System.Drawing.Point(565, 18);
-            this.cp_guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cp_guardar.Margin = new System.Windows.Forms.Padding(4);
             this.cp_guardar.Mask = "0000-999";
             this.cp_guardar.Name = "cp_guardar";
             this.cp_guardar.Size = new System.Drawing.Size(68, 22);
@@ -129,7 +131,7 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "admin_cp";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
