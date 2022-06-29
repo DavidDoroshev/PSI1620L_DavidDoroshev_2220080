@@ -20,10 +20,9 @@ namespace Trabalho_marcacoes_
 
         private void perfil_trabalhador_Click(object sender, EventArgs e)
         {
-          
-                perfil_trabalhador ir = new perfil_trabalhador();
-                this.Hide();
-                ir.Show();                        
+            perfil_trabalhador ir = new perfil_trabalhador();
+            this.Hide();
+            ir.Show();                        
         }
         private void ver_marcacoes_trabalhador_Click(object sender, EventArgs e)
         {

@@ -80,8 +80,6 @@ namespace Trabalho_marcacoes_
 
                 ligarDB.Close();
                 Reader.Close();
-            
-            
         }
 
         private void cliente_mos_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
@@ -159,12 +157,6 @@ namespace Trabalho_marcacoes_
             this.Hide();
             ir.Show();
         }
-
-        private void but_edit_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void apagar_tra_Click(object sender, EventArgs e)
         {
             ligarDB.Close();
@@ -280,9 +272,7 @@ namespace Trabalho_marcacoes_
 
         private void proximo_Click(object sender, EventArgs e)
         {
-            admin_2 ir = new admin_2();
-            this.Hide();
-            ir.Show();
+            Environment.Exit(0);
         }
 
     }

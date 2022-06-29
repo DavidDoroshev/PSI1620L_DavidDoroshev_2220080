@@ -93,7 +93,6 @@ namespace Trabalho_marcacoes_
                 commando.CommandText = "INSERT INTO cliente(nome, password, codigo_postal_cliente) VALUES(@nome, @password, @codigo)";
                 commando.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = nome_guardar.Text;
                 commando.Parameters.Add("@password", System.Data.SqlDbType.VarChar).Value = password_guardar.Text;
-                //codigo = codigo_guardar.SelectedItem.ToString() ;
                 commando.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = codigo_guardar.SelectedItem.ToString();
                 await commando.ExecuteNonQueryAsync();
 
@@ -138,16 +137,6 @@ namespace Trabalho_marcacoes_
             textdistrito.Text = distrito;
 
             ligarDB.Close();
-        }
-
-        private void textconselho_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textdistrito_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

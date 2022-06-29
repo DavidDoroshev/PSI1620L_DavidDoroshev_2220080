@@ -52,21 +52,11 @@ namespace Trabalho_marcacoes_
             Reader = cmd2.ExecuteReader();
             while (Reader.Read())
             {
-
                 codigo_pesquisar.Items.Add(Reader["codigo_postal"].ToString());
-
-
-
             }
             ligarDB.Close();
             Reader.Close();
         }
-
-        private void mostrar_medico_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void marcar_guardar_Click(object sender, EventArgs e)
         {
             if (mostrar_medico.SelectedItems.Count == 0 )

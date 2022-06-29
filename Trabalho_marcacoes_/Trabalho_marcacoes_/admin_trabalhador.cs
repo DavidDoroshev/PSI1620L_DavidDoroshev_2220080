@@ -59,12 +59,6 @@ namespace Trabalho_marcacoes_
             ligarDB.Close();
 
         }
-
-        private void admin_trabalhador_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void guardar_button_Click(object sender, EventArgs e)
         {
             SqlCommand command = new SqlCommand();
@@ -150,8 +144,6 @@ namespace Trabalho_marcacoes_
 
             SqlCommand command = new SqlCommand();
             command.Connection = ligarDB;
-
-
 
             try
             {

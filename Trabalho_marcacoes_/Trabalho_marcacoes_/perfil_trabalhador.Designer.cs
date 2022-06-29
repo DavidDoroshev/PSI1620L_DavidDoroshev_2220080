@@ -53,8 +53,9 @@ namespace Trabalho_marcacoes_
             // 
             // but_salvar
             // 
+            this.but_salvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.but_salvar.Location = new System.Drawing.Point(559, 15);
-            this.but_salvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.but_salvar.Margin = new System.Windows.Forms.Padding(2);
             this.but_salvar.Name = "but_salvar";
             this.but_salvar.Size = new System.Drawing.Size(75, 29);
             this.but_salvar.TabIndex = 17;
@@ -64,8 +65,9 @@ namespace Trabalho_marcacoes_
             // 
             // Voltar
             // 
+            this.Voltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Voltar.Location = new System.Drawing.Point(14, 243);
-            this.Voltar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Voltar.Margin = new System.Windows.Forms.Padding(2);
             this.Voltar.Name = "Voltar";
             this.Voltar.Size = new System.Drawing.Size(74, 31);
             this.Voltar.TabIndex = 16;
@@ -76,15 +78,16 @@ namespace Trabalho_marcacoes_
             // pass_alterar
             // 
             this.pass_alterar.Location = new System.Drawing.Point(440, 26);
-            this.pass_alterar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pass_alterar.Margin = new System.Windows.Forms.Padding(2);
             this.pass_alterar.Name = "pass_alterar";
             this.pass_alterar.Size = new System.Drawing.Size(98, 20);
             this.pass_alterar.TabIndex = 14;
             // 
             // apagar_trabalhador
             // 
+            this.apagar_trabalhador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.apagar_trabalhador.Location = new System.Drawing.Point(559, 243);
-            this.apagar_trabalhador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.apagar_trabalhador.Margin = new System.Windows.Forms.Padding(2);
             this.apagar_trabalhador.Name = "apagar_trabalhador";
             this.apagar_trabalhador.Size = new System.Drawing.Size(75, 29);
             this.apagar_trabalhador.TabIndex = 13;
@@ -135,7 +138,7 @@ namespace Trabalho_marcacoes_
             // textdistrito
             // 
             this.textdistrito.Location = new System.Drawing.Point(454, 107);
-            this.textdistrito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textdistrito.Margin = new System.Windows.Forms.Padding(2);
             this.textdistrito.Name = "textdistrito";
             this.textdistrito.Size = new System.Drawing.Size(76, 20);
             this.textdistrito.TabIndex = 29;
@@ -143,15 +146,16 @@ namespace Trabalho_marcacoes_
             // textconselho
             // 
             this.textconselho.Location = new System.Drawing.Point(294, 107);
-            this.textconselho.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textconselho.Margin = new System.Windows.Forms.Padding(2);
             this.textconselho.Name = "textconselho";
             this.textconselho.Size = new System.Drawing.Size(76, 20);
             this.textconselho.TabIndex = 28;
             // 
             // salvar_codigo
             // 
+            this.salvar_codigo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.salvar_codigo.Location = new System.Drawing.Point(14, 163);
-            this.salvar_codigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.salvar_codigo.Margin = new System.Windows.Forms.Padding(2);
             this.salvar_codigo.Name = "salvar_codigo";
             this.salvar_codigo.Size = new System.Drawing.Size(131, 28);
             this.salvar_codigo.TabIndex = 27;
@@ -191,7 +195,7 @@ namespace Trabalho_marcacoes_
             // nome_trabalhador
             // 
             this.nome_trabalhador.Location = new System.Drawing.Point(49, 24);
-            this.nome_trabalhador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nome_trabalhador.Margin = new System.Windows.Forms.Padding(2);
             this.nome_trabalhador.Name = "nome_trabalhador";
             this.nome_trabalhador.Size = new System.Drawing.Size(76, 20);
             this.nome_trabalhador.TabIndex = 26;
@@ -209,7 +213,7 @@ namespace Trabalho_marcacoes_
             // pass_mostrar
             // 
             this.pass_mostrar.Location = new System.Drawing.Point(49, 42);
-            this.pass_mostrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pass_mostrar.Margin = new System.Windows.Forms.Padding(2);
             this.pass_mostrar.Name = "pass_mostrar";
             this.pass_mostrar.Size = new System.Drawing.Size(76, 20);
             this.pass_mostrar.TabIndex = 28;
@@ -227,7 +231,7 @@ namespace Trabalho_marcacoes_
             // cp_mostrar
             // 
             this.cp_mostrar.Location = new System.Drawing.Point(49, 61);
-            this.cp_mostrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cp_mostrar.Margin = new System.Windows.Forms.Padding(2);
             this.cp_mostrar.Name = "cp_mostrar";
             this.cp_mostrar.Size = new System.Drawing.Size(76, 20);
             this.cp_mostrar.TabIndex = 30;
@@ -256,7 +260,7 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.apagar_trabalhador);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "perfil_trabalhador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

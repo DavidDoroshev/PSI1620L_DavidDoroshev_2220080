@@ -15,7 +15,6 @@ namespace Trabalho_marcacoes_
     
     public partial class menu_inicial : Form 
     {
-        //public int teste { get; set; }
 
         public menu_inicial()
         {        
@@ -27,12 +26,6 @@ namespace Trabalho_marcacoes_
             Iniciar_Sessao ir = new Iniciar_Sessao();
             this.Hide();
             ir.Show();
-            
-            
-            
-
-            //this.DialogResult = DialogResult.OK;
-            //teste = 3;
         }
 
         private void cliente_botao_Click(object sender, EventArgs e)
@@ -40,8 +33,6 @@ namespace Trabalho_marcacoes_
             criar_conta ir = new criar_conta();
             this.Hide();
             ir.Show();
-            //this.DialogResult = DialogResult.OK;
-            //teste = 1;
         }
 
         private void trabalhador_botao_Click(object sender, EventArgs e)
@@ -49,8 +40,6 @@ namespace Trabalho_marcacoes_
             criar_trabalhador ir = new criar_trabalhador();
             this.Hide();
             ir.Show();
-            //this.DialogResult = DialogResult.OK;
-            //teste = 2;
         }
 
         private void sair_Click(object sender, EventArgs e)

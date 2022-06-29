@@ -19,6 +19,8 @@ namespace Trabalho_marcacoes_
         static SqlConnection ligarDB = new SqlConnection(connectionString);
         public admin_marcar()
         {
+            
+
             ligarDB.Open();
 
             InitializeComponent();
@@ -64,7 +66,6 @@ namespace Trabalho_marcacoes_
             ligarDB.Open();
 
 
-
             command.CommandText = "SELECT nome FROM cliente WHERE nome = @nome";
 
             command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar).Value = cliente_mostrar.Text;
@@ -76,10 +77,6 @@ namespace Trabalho_marcacoes_
 
         }
 
-        private void especialidade_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void trabalhador_nome_SelectedIndexChanged(object sender, EventArgs e)
         {

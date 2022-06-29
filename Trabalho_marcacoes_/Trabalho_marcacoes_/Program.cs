@@ -19,29 +19,6 @@ namespace Trabalho_marcacoes_
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new menu_inicial());
-            //DialogResult result = login.ShowDialog();
-
-            //if (result == DialogResult.OK)
-            //{
-                
-                
-            //        switch (login.teste)
-            //        {
-            //            case 1:
-            //                Application.Run(new criar_conta());
-            //                break;
-
-            //            case 2:
-            //                Application.Run(new trabalhador_criar());
-            //                break;
-
-            //            default:
-            //                Application.Run(new Iniciar_Sessao());
-            //                break;
-            //        }
-                
-                
-            //}  
         }
     }
 }

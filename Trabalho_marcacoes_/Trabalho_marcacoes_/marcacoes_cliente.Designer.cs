@@ -41,10 +41,11 @@ namespace Trabalho_marcacoes_
             // 
             // voltar
             // 
-            this.voltar.Location = new System.Drawing.Point(296, 367);
-            this.voltar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.voltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.voltar.Location = new System.Drawing.Point(222, 298);
+            this.voltar.Margin = new System.Windows.Forms.Padding(2);
             this.voltar.Name = "voltar";
-            this.voltar.Size = new System.Drawing.Size(153, 47);
+            this.voltar.Size = new System.Drawing.Size(115, 38);
             this.voltar.TabIndex = 1;
             this.voltar.Text = "Voltar";
             this.voltar.UseVisualStyleBackColor = true;
@@ -52,10 +53,11 @@ namespace Trabalho_marcacoes_
             // 
             // apagar
             // 
-            this.apagar.Location = new System.Drawing.Point(667, 356);
-            this.apagar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.apagar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.apagar.Location = new System.Drawing.Point(500, 289);
+            this.apagar.Margin = new System.Windows.Forms.Padding(2);
             this.apagar.Name = "apagar";
-            this.apagar.Size = new System.Drawing.Size(100, 58);
+            this.apagar.Size = new System.Drawing.Size(75, 47);
             this.apagar.TabIndex = 18;
             this.apagar.Text = "Apagar";
             this.apagar.UseVisualStyleBackColor = true;
@@ -73,11 +75,10 @@ namespace Trabalho_marcacoes_
             this.columnHeader4});
             this.mostrar_teste.FullRowSelect = true;
             this.mostrar_teste.HideSelection = false;
-            this.mostrar_teste.Location = new System.Drawing.Point(16, 15);
-            this.mostrar_teste.Margin = new System.Windows.Forms.Padding(4);
+            this.mostrar_teste.Location = new System.Drawing.Point(12, 12);
             this.mostrar_teste.MultiSelect = false;
             this.mostrar_teste.Name = "mostrar_teste";
-            this.mostrar_teste.Size = new System.Drawing.Size(759, 277);
+            this.mostrar_teste.Size = new System.Drawing.Size(569, 225);
             this.mostrar_teste.TabIndex = 19;
             this.mostrar_teste.UseCompatibleStateImageBehavior = false;
             this.mostrar_teste.View = System.Windows.Forms.View.Details;
@@ -111,16 +112,18 @@ namespace Trabalho_marcacoes_
             // 
             // marcacoes_cliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 450);
+            this.ClientSize = new System.Drawing.Size(604, 366);
             this.Controls.Add(this.mostrar_teste);
             this.Controls.Add(this.apagar);
             this.Controls.Add(this.voltar);
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "marcacoes_cliente";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marcações";
             this.ResumeLayout(false);
 

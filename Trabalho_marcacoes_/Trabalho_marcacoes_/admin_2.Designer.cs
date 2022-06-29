@@ -52,14 +52,14 @@ namespace Trabalho_marcacoes_
             this.conselho});
             this.cp_mos.FullRowSelect = true;
             this.cp_mos.HideSelection = false;
-            this.cp_mos.Location = new System.Drawing.Point(16, 31);
-            this.cp_mos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cp_mos.Location = new System.Drawing.Point(12, 25);
             this.cp_mos.MultiSelect = false;
             this.cp_mos.Name = "cp_mos";
-            this.cp_mos.Size = new System.Drawing.Size(475, 177);
+            this.cp_mos.Size = new System.Drawing.Size(356, 144);
             this.cp_mos.TabIndex = 10;
             this.cp_mos.UseCompatibleStateImageBehavior = false;
             this.cp_mos.View = System.Windows.Forms.View.Details;
+            this.cp_mos.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.cp_mos_ColumnWidthChanging);
             // 
             // cp
             // 
@@ -79,30 +79,27 @@ namespace Trabalho_marcacoes_
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 17);
+            this.label1.Size = new System.Drawing.Size(75, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Código Postal:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(545, 11);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(409, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 17);
+            this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 13;
             this.label2.Text = "Especialidades:";
             // 
             // voltar
             // 
             this.voltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.voltar.Location = new System.Drawing.Point(19, 323);
-            this.voltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.voltar.Location = new System.Drawing.Point(14, 262);
             this.voltar.Name = "voltar";
-            this.voltar.Size = new System.Drawing.Size(112, 44);
+            this.voltar.Size = new System.Drawing.Size(84, 36);
             this.voltar.TabIndex = 14;
             this.voltar.Text = "Pag anterior";
             this.voltar.UseVisualStyleBackColor = true;
@@ -111,10 +108,9 @@ namespace Trabalho_marcacoes_
             // cp_adicionar
             // 
             this.cp_adicionar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cp_adicionar.Location = new System.Drawing.Point(16, 216);
-            this.cp_adicionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cp_adicionar.Location = new System.Drawing.Point(12, 176);
             this.cp_adicionar.Name = "cp_adicionar";
-            this.cp_adicionar.Size = new System.Drawing.Size(112, 50);
+            this.cp_adicionar.Size = new System.Drawing.Size(84, 41);
             this.cp_adicionar.TabIndex = 16;
             this.cp_adicionar.Text = "Adicionar CP";
             this.cp_adicionar.UseVisualStyleBackColor = true;
@@ -129,14 +125,14 @@ namespace Trabalho_marcacoes_
             this.especialidade});
             this.especialidade_mos.FullRowSelect = true;
             this.especialidade_mos.HideSelection = false;
-            this.especialidade_mos.Location = new System.Drawing.Point(549, 31);
-            this.especialidade_mos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.especialidade_mos.Location = new System.Drawing.Point(412, 25);
             this.especialidade_mos.MultiSelect = false;
             this.especialidade_mos.Name = "especialidade_mos";
-            this.especialidade_mos.Size = new System.Drawing.Size(475, 177);
+            this.especialidade_mos.Size = new System.Drawing.Size(356, 144);
             this.especialidade_mos.TabIndex = 19;
             this.especialidade_mos.UseCompatibleStateImageBehavior = false;
             this.especialidade_mos.View = System.Windows.Forms.View.Details;
+            this.especialidade_mos.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.especialidade_mos_ColumnWidthChanging);
             // 
             // profissao
             // 
@@ -150,16 +146,16 @@ namespace Trabalho_marcacoes_
             // 
             // admin_2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 380);
+            this.ClientSize = new System.Drawing.Size(800, 309);
             this.Controls.Add(this.especialidade_mos);
             this.Controls.Add(this.cp_adicionar);
             this.Controls.Add(this.voltar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cp_mos);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "admin_2";
             this.ShowIcon = false;

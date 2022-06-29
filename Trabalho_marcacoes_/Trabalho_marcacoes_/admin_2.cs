@@ -72,5 +72,17 @@ namespace Trabalho_marcacoes_
             this.Hide();
             voltar.Show();
         }
+
+        private void cp_mos_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
+        {
+            e.Cancel = true;
+            e.NewWidth = cp_mos.Columns[e.ColumnIndex].Width;
+        }
+
+        private void especialidade_mos_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
+        {
+            e.Cancel = true;
+            e.NewWidth = especialidade_mos.Columns[e.ColumnIndex].Width;
+        }
     }
 }
