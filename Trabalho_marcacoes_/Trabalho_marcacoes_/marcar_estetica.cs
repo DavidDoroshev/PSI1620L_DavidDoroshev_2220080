@@ -70,10 +70,6 @@ namespace Trabalho_marcacoes_
               e.Cancel = true;
               e.NewWidth = mostrar.Columns[e.ColumnIndex].Width;
         }
-
-
-
-
         private void Marcar_Click(object sender, EventArgs e)
         {
           
@@ -110,22 +106,20 @@ namespace Trabalho_marcacoes_
             string query  = "INSERT INTO marcacoes_cliente(dia_marcacao, hora, nome_cliente_id, nome_trabalhador_id, especialidade_marcacao ) VALUES(@dia, @hora ,@id, @nome_trabalhador, @especialidade)";
             string query2 = "SELECT id FROM cliente WHERE nome = @id";
             string query3 = "SELECT id FROM trabalhadores WHERE nome = @nome";
-            string query4 = "SELECT marcacoes_cliente.id, marcacoes_cliente.dia_marcacao, marcacoes_cliente.hora, trabalhadores.nome, marcacoes_cliente.especialidade_marcacao  FROM marcacoes_cliente INNER JOIN trabalhadores on marcacoes_cliente.nome_trabalhador_id = trabalhadores.id where trabalhadores.nome = @nome and marcacoes_cliente.hora = @hora_marcacacao";
 
             SqlCommand cmd = new SqlCommand(query, ligarDB);
-            SqlCommand ns = new SqlCommand(query2, ligarDB);
-            SqlCommand command2 = new SqlCommand(query3, ligarDB);
-            SqlCommand command3 = new SqlCommand(query4, ligarDB);
+            SqlCommand cmd2 = new SqlCommand(query2, ligarDB);
+            SqlCommand cmd3 = new SqlCommand(query3, ligarDB);
 
-            ns.Parameters.Add("@id", SqlDbType.VarChar).Value = Iniciar_Sessao.utilizador;
-            command2.Parameters.Add("@nome", SqlDbType.VarChar).Value = mostrar.SelectedItems[0].SubItems[0].Text.ToString();
+            cmd2.Parameters.Add("@id", SqlDbType.VarChar).Value = Iniciar_Sessao.utilizador;
+            cmd3.Parameters.Add("@nome", SqlDbType.VarChar).Value = mostrar.SelectedItems[0].SubItems[0].Text.ToString();
 
-            SqlDataReader reader = ns.ExecuteReader();
+            SqlDataReader reader = cmd2.ExecuteReader();
             reader.Read();
             int id = Convert.ToInt32(reader["id"]);
             reader.Close();
 
-            reader = command2.ExecuteReader();
+            reader = cmd3.ExecuteReader();
             reader.Read();
 
             int idtrabalhador = Convert.ToInt32(reader["id"]);
@@ -150,8 +144,6 @@ namespace Trabalho_marcacoes_
        
 
         }
-
-        
         private void voltar_Click(object sender, EventArgs e)
         {
             menu_cliente principal = new menu_cliente();
@@ -171,25 +163,16 @@ namespace Trabalho_marcacoes_
             comando.Parameters.Add("@codigo", System.Data.SqlDbType.VarChar).Value = codigo_pesquisar.SelectedItem.ToString();
             SqlDataReader Reader = comando.ExecuteReader();
 
-
             mostrar.Items.Clear();
-
 
             while (Reader.Read())
             {
-
-
                 string[] bomdia = new string[] { Reader["nome"].ToString(), Reader["especialidade_tabela_trabalhador"].ToString(), Reader["codigo_postal_trabalhador"].ToString() };
 
                 mostrar.Items.Add(new ListViewItem(bomdia));
-
             }
             Reader.Close();
             ligarDB.Close();
-
-        }
-
-
-       
+        }      
     }
 }

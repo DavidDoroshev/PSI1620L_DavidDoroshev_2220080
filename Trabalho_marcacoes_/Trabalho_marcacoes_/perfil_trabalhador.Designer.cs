@@ -53,10 +53,10 @@ namespace Trabalho_marcacoes_
             // 
             // but_salvar
             // 
-            this.but_salvar.Location = new System.Drawing.Point(745, 18);
-            this.but_salvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.but_salvar.Location = new System.Drawing.Point(559, 15);
+            this.but_salvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.but_salvar.Name = "but_salvar";
-            this.but_salvar.Size = new System.Drawing.Size(100, 36);
+            this.but_salvar.Size = new System.Drawing.Size(75, 29);
             this.but_salvar.TabIndex = 17;
             this.but_salvar.Text = "Salvar pass";
             this.but_salvar.UseVisualStyleBackColor = true;
@@ -64,10 +64,10 @@ namespace Trabalho_marcacoes_
             // 
             // Voltar
             // 
-            this.Voltar.Location = new System.Drawing.Point(18, 299);
-            this.Voltar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Voltar.Location = new System.Drawing.Point(14, 243);
+            this.Voltar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Voltar.Name = "Voltar";
-            this.Voltar.Size = new System.Drawing.Size(99, 38);
+            this.Voltar.Size = new System.Drawing.Size(74, 31);
             this.Voltar.TabIndex = 16;
             this.Voltar.Text = "Voltar";
             this.Voltar.UseVisualStyleBackColor = true;
@@ -75,18 +75,18 @@ namespace Trabalho_marcacoes_
             // 
             // pass_alterar
             // 
-            this.pass_alterar.Location = new System.Drawing.Point(587, 32);
-            this.pass_alterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pass_alterar.Location = new System.Drawing.Point(440, 26);
+            this.pass_alterar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pass_alterar.Name = "pass_alterar";
-            this.pass_alterar.Size = new System.Drawing.Size(130, 22);
+            this.pass_alterar.Size = new System.Drawing.Size(98, 20);
             this.pass_alterar.TabIndex = 14;
             // 
             // apagar_trabalhador
             // 
-            this.apagar_trabalhador.Location = new System.Drawing.Point(745, 299);
-            this.apagar_trabalhador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.apagar_trabalhador.Location = new System.Drawing.Point(559, 243);
+            this.apagar_trabalhador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.apagar_trabalhador.Name = "apagar_trabalhador";
-            this.apagar_trabalhador.Size = new System.Drawing.Size(100, 36);
+            this.apagar_trabalhador.Size = new System.Drawing.Size(75, 29);
             this.apagar_trabalhador.TabIndex = 13;
             this.apagar_trabalhador.Text = "Apagar!!";
             this.apagar_trabalhador.UseVisualStyleBackColor = true;
@@ -95,61 +95,65 @@ namespace Trabalho_marcacoes_
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(462, 32);
+            this.label4.Location = new System.Drawing.Point(346, 26);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 17);
+            this.label4.Size = new System.Drawing.Size(72, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "Mudar Passe:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(638, 310);
+            this.label3.Location = new System.Drawing.Point(478, 252);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 17);
+            this.label3.Size = new System.Drawing.Size(77, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "Apagar conta :";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(529, 136);
+            this.label7.Location = new System.Drawing.Point(397, 110);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 17);
+            this.label7.Size = new System.Drawing.Size(42, 13);
             this.label7.TabIndex = 31;
             this.label7.Text = "Distrito:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(314, 136);
+            this.label8.Location = new System.Drawing.Point(236, 110);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 17);
+            this.label8.Size = new System.Drawing.Size(54, 13);
             this.label8.TabIndex = 30;
             this.label8.Text = "Conselho:";
             // 
             // textdistrito
             // 
-            this.textdistrito.Location = new System.Drawing.Point(606, 132);
-            this.textdistrito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textdistrito.Location = new System.Drawing.Point(454, 107);
+            this.textdistrito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textdistrito.Name = "textdistrito";
-            this.textdistrito.Size = new System.Drawing.Size(100, 22);
+            this.textdistrito.Size = new System.Drawing.Size(76, 20);
             this.textdistrito.TabIndex = 29;
             // 
             // textconselho
             // 
-            this.textconselho.Location = new System.Drawing.Point(392, 132);
-            this.textconselho.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textconselho.Location = new System.Drawing.Point(294, 107);
+            this.textconselho.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textconselho.Name = "textconselho";
-            this.textconselho.Size = new System.Drawing.Size(100, 22);
+            this.textconselho.Size = new System.Drawing.Size(76, 20);
             this.textconselho.TabIndex = 28;
             // 
             // salvar_codigo
             // 
-            this.salvar_codigo.Location = new System.Drawing.Point(18, 201);
-            this.salvar_codigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.salvar_codigo.Location = new System.Drawing.Point(14, 163);
+            this.salvar_codigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.salvar_codigo.Name = "salvar_codigo";
-            this.salvar_codigo.Size = new System.Drawing.Size(175, 34);
+            this.salvar_codigo.Size = new System.Drawing.Size(131, 28);
             this.salvar_codigo.TabIndex = 27;
             this.salvar_codigo.Text = "Salvar Código Postal";
             this.salvar_codigo.UseVisualStyleBackColor = true;
@@ -158,78 +162,81 @@ namespace Trabalho_marcacoes_
             // codigo_alterar
             // 
             this.codigo_alterar.FormattingEnabled = true;
-            this.codigo_alterar.Location = new System.Drawing.Point(163, 136);
-            this.codigo_alterar.Margin = new System.Windows.Forms.Padding(4);
+            this.codigo_alterar.Location = new System.Drawing.Point(122, 110);
             this.codigo_alterar.Name = "codigo_alterar";
-            this.codigo_alterar.Size = new System.Drawing.Size(117, 24);
+            this.codigo_alterar.Size = new System.Drawing.Size(89, 21);
             this.codigo_alterar.TabIndex = 26;
             this.codigo_alterar.SelectedIndexChanged += new System.EventHandler(this.codigo_alterar_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 140);
+            this.label6.Location = new System.Drawing.Point(10, 114);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(143, 17);
+            this.label6.Size = new System.Drawing.Size(108, 13);
             this.label6.TabIndex = 25;
             this.label6.Text = "Mudar Código Postal:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 28);
+            this.label2.Location = new System.Drawing.Point(11, 23);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 17);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 25;
             this.label2.Text = "Nome:";
             // 
             // nome_trabalhador
             // 
-            this.nome_trabalhador.Location = new System.Drawing.Point(65, 29);
-            this.nome_trabalhador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nome_trabalhador.Location = new System.Drawing.Point(49, 24);
+            this.nome_trabalhador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nome_trabalhador.Name = "nome_trabalhador";
-            this.nome_trabalhador.Size = new System.Drawing.Size(100, 22);
+            this.nome_trabalhador.Size = new System.Drawing.Size(76, 20);
             this.nome_trabalhador.TabIndex = 26;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 54);
+            this.label5.Location = new System.Drawing.Point(12, 44);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 17);
+            this.label5.Size = new System.Drawing.Size(33, 13);
             this.label5.TabIndex = 27;
             this.label5.Text = "Pass:";
             // 
             // pass_mostrar
             // 
-            this.pass_mostrar.Location = new System.Drawing.Point(65, 52);
-            this.pass_mostrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pass_mostrar.Location = new System.Drawing.Point(49, 42);
+            this.pass_mostrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pass_mostrar.Name = "pass_mostrar";
-            this.pass_mostrar.Size = new System.Drawing.Size(100, 22);
+            this.pass_mostrar.Size = new System.Drawing.Size(76, 20);
             this.pass_mostrar.TabIndex = 28;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(16, 75);
+            this.label9.Location = new System.Drawing.Point(12, 61);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(30, 17);
+            this.label9.Size = new System.Drawing.Size(24, 13);
             this.label9.TabIndex = 29;
             this.label9.Text = "CP:";
             // 
             // cp_mostrar
             // 
-            this.cp_mostrar.Location = new System.Drawing.Point(65, 74);
-            this.cp_mostrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cp_mostrar.Location = new System.Drawing.Point(49, 61);
+            this.cp_mostrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cp_mostrar.Name = "cp_mostrar";
-            this.cp_mostrar.Size = new System.Drawing.Size(100, 22);
+            this.cp_mostrar.Size = new System.Drawing.Size(76, 20);
             this.cp_mostrar.TabIndex = 30;
             // 
             // perfil_trabalhador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 348);
+            this.ClientSize = new System.Drawing.Size(643, 283);
             this.Controls.Add(this.cp_mostrar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label9);
@@ -251,8 +258,8 @@ namespace Trabalho_marcacoes_
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "perfil_trabalhador";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Perfil";
             this.ResumeLayout(false);
             this.PerformLayout();
